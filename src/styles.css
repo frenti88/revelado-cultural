@@ -1,0 +1,446 @@
+@import "tailwindcss";
+
+/* Fallbacks métricos locales (/typeset) para eliminar saltos de layout (CLS) */
+@font-face {
+  font-family: "Display-Metric-Fallback";
+  src: local("Arial"), local("Helvetica Neue");
+  size-adjust: 106.5%;
+  ascent-override: 91%;
+  descent-override: 23%;
+  line-gap-override: 0%;
+}
+
+@font-face {
+  font-family: "Body-Metric-Fallback";
+  src: local("Arial"), local("Helvetica Neue");
+  size-adjust: 100.2%;
+  ascent-override: 92%;
+  descent-override: 24%;
+  line-gap-override: 0%;
+}
+
+:root {
+  /* 03. Paleta Cromática — Tokens oficiales de Revelado Cultural + Codificación cromática por disciplina (/colorize) */
+  --bg-primary: #161317;
+  --bg-secondary: #211820;
+  --brand-primary: #742940;
+  --brand-deep: #482332;
+  --brand-accent: #A8B69C;
+  --text-primary: #F5F0E7;
+  --text-secondary: #D8CDC8;
+  --surface-light: #F5F0E7;
+  --text-on-light: #161317;
+  --border-subtle: #433840;
+
+  /* Acentos semánticos y por disciplina cultural (Todos con contraste WCAG AAA > 7.5:1 sobre #161317 y #211820) */
+  --color-gestion: #A8B69C;      /* Salvia botánica — Gestión cultural */
+  --color-escenicas: #E49B7E;    /* Terracota de tablas — Artes escénicas */
+  --color-musica: #E598B0;       /* Malva analógico — Música */
+  --color-investigacion: #E2C286;/* Ocre archivo barrial — Investigación */
+  --color-literatura: #E8B486;   /* Ámbar mesa de luz — Literatura */
+  --color-visuales: #C8B5DC;     /* Lavanda mineral — Artes visuales y plásticas */
+  --color-teatro-pend: #DDB09A;  /* Cobre suave — Teatro (por confirmar) */
+
+  /* 04. Sistema Tipográfico (/typeset):
+     - Montserrat (500 Medium, 600 SemiBold, 700 Bold, 800 ExtraBold) en títulos y encabezados
+     - Roboto (400 Regular >= 16px) en cuerpos de lectura
+     - IBM Plex Mono (400, 600) en numeración y metadatos de archivo */
+  --font-display: "Montserrat", "Display-Metric-Fallback", system-ui, -apple-system, sans-serif;
+  --font-sans: "Roboto", "Body-Metric-Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* Escala modular 1.25 (Major Third) con tokens semánticos (/typeset):
+     - Fijo en rem para interfaz y cuerpo (>= 1rem / 16px)
+     - Fluido con clamp() para encabezados editoriales y display */
+  --text-caption: 0.75rem;                                     /* 12px — códigos monoespaciados */
+  --text-meta: 0.875rem;                                       /* 14px — controles secundarios */
+  --text-body: 1rem;                                           /* 16px — cuerpo base (mínimo estricto) */
+  --text-lead: clamp(1.125rem, 0.45vw + 1rem, 1.3125rem);      /* 18px–21px — entradillas y sumarios */
+  --text-subheading: clamp(1.25rem, 0.8vw + 1.05rem, 1.5625rem); /* 20px–25px — subtítulos h3 */
+  --text-project-title: clamp(1.5625rem, 1.8vw + 1.1rem, 2.441rem); /* 25px–39px — títulos de proyecto */
+  --text-heading: clamp(1.953rem, 2.6vw + 1.2rem, 3.052rem);   /* 31px–49px — encabezados de sección h2 */
+  --text-hero: clamp(2.441rem, 4.2vw + 1.2rem, 4.35rem);       /* 39px–70px — titular hero h1 */
+
+  /* Parámetro de densidad en vivo (/layout) y Escala de Espaciado (Base 4px/8px) */
+  --p-density: 1;
+  --spacing-01: calc(0.25rem * var(--p-density, 1)); /* 4px  */
+  --spacing-02: calc(0.5rem * var(--p-density, 1));  /* 8px  */
+  --spacing-03: calc(1rem * var(--p-density, 1));    /* 16px */
+  --spacing-04: calc(1.5rem * var(--p-density, 1));  /* 24px */
+  --spacing-05: calc(2rem * var(--p-density, 1));    /* 32px */
+  --spacing-06: calc(3rem * var(--p-density, 1));    /* 48px */
+  --spacing-07: calc(4rem * var(--p-density, 1));    /* 64px */
+  --spacing-08: calc(6rem * var(--p-density, 1));    /* 96px */
+
+  /* Alias semánticos fluidos */
+  --space-2xs: var(--spacing-01);
+  --space-xs: var(--spacing-02);
+  --space-sm: var(--spacing-03);
+  --space-md: var(--spacing-04);
+  --space-lg: clamp(1.5rem, 2vw + 0.75rem, 2rem);
+  --space-xl: clamp(2.5rem, 4vw + 1rem, 3.5rem);
+  --space-2xl: clamp(3rem, 6vw + 1.25rem, 5.5rem);
+  --space-3xl: clamp(4rem, 7vw + 1.5rem, 6rem);
+
+  /* Escala semántica de Z-Index (dropdown -> sticky -> fixed-nav -> backdrop -> modal) */
+  --z-dropdown: 20;
+  --z-sticky: 30;
+  --z-fixed-nav: 40;
+  --z-modal-backdrop: 50;
+  --z-modal: 60;
+
+  /* Escala consistente de elevación y sombras con desplazamiento suave */
+  --shadow-sm: 0 4px 12px rgba(10, 8, 11, 0.28);
+  --shadow-md: 0 12px 32px rgba(10, 8, 11, 0.42);
+  --shadow-lg: 0 20px 48px rgba(10, 8, 11, 0.52);
+
+  /* Curvas de desaceleración natural (/animate) — nunca bounce ni elastic */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-quint: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Dimensiones de primitivas interactivas y contenedor de retícula (escala 8px) */
+  --control-height-md: 2.5rem; /* 40px */
+  --control-height-lg: 3rem;   /* 48px — objetivo táctil accesible */
+  --grid-max-width: 80rem;     /* 1280px (160 * 8px) */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  scroll-behavior: smooth;
+  color-scheme: dark;
+  caret-color: var(--brand-accent);
+  scrollbar-color: var(--border-subtle) var(--bg-primary);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--text-body);
+  line-height: 1.65; /* +0.05–0.10 de aire adicional para texto claro sobre fondo oscuro (/typeset) */
+  font-kerning: normal;
+  font-feature-settings: "kern" 1, "liga" 1;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-kerning: normal;
+  text-wrap: balance;
+}
+
+p {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: max(1rem, var(--text-body));
+  line-height: 1.65;
+  max-width: 65ch;
+  text-wrap: pretty;
+}
+
+a {
+  text-underline-offset: 0.22em;
+}
+
+code,
+kbd {
+  font-variant-ligatures: none;
+}
+
+/* Subtle photographic darkroom grain overlay */
+.bg-darkroom-grain {
+  background-image: radial-gradient(
+      circle at 18% 12%,
+      rgba(116, 41, 64, 0.14) 0%,
+      transparent 48%
+    ),
+    radial-gradient(
+      circle at 84% 78%,
+      rgba(168, 182, 156, 0.06) 0%,
+      transparent 45%
+    );
+}
+
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+  line-height: 1.16;
+  text-wrap: balance;
+}
+
+.font-sans-editorial {
+  font-family: var(--font-sans);
+}
+
+.font-mono-meta {
+  font-family: var(--font-mono);
+  letter-spacing: 0.015em;
+  font-variant-numeric: tabular-nums slashed-zero;
+  font-variant-ligatures: none;
+}
+
+.text-hero-fluid {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: var(--text-hero);
+  line-height: 1.06;
+  letter-spacing: -0.028em;
+}
+
+.text-heading-fluid {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: var(--text-heading);
+  line-height: 1.12;
+  letter-spacing: -0.022em;
+}
+
+.text-project-fluid {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-project-title);
+  line-height: 1.16;
+  letter-spacing: -0.018em;
+}
+
+.text-subheading-fluid {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--text-subheading);
+  line-height: 1.22;
+  letter-spacing: -0.014em;
+}
+
+.text-lead-fluid {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--text-lead);
+  line-height: 1.6;
+  max-width: 62ch;
+}
+
+/* Sistema de Contenedor y Retícula Responsiva (4 cols móvil / 8 tablet / 12 desktop) */
+.layout-container {
+  width: 100%;
+  max-width: var(--grid-max-width);
+  margin-inline: auto;
+  padding-inline: var(--spacing-03); /* 16px móvil */
+}
+
+@media (min-width: 640px) {
+  .layout-container {
+    padding-inline: var(--spacing-04); /* 24px tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .layout-container {
+    padding-inline: var(--spacing-06); /* 48px desktop */
+  }
+}
+
+.layout-grid-12 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--spacing-04); /* 24px gutter móvil */
+}
+
+@media (min-width: 768px) {
+  .layout-grid-12 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: var(--spacing-04); /* 24px gutter tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .layout-grid-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: var(--spacing-05); /* 32px gutter desktop */
+  }
+}
+
+.section-macro {
+  padding-block: var(--spacing-06); /* 48px móvil */
+}
+
+@media (min-width: 640px) {
+  .section-macro {
+    padding-block: var(--spacing-07); /* 64px tablet */
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-macro {
+    padding-block: var(--spacing-08); /* 96px desktop */
+  }
+}
+
+/* Selection */
+::selection {
+  background-color: var(--brand-primary);
+  color: var(--text-primary);
+}
+
+/* Accessible focus ring (WCAG 2.2 AA) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--brand-accent);
+  outline-offset: var(--spacing-01);
+}
+
+/* Hide scrollbars on horizontal chip strips while preserving scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Lightbox native dialog backdrop */
+dialog.editorial-lightbox::backdrop {
+  background: rgba(14, 11, 15, 0.92);
+  backdrop-filter: blur(8px);
+}
+
+/* Safe area utility for MobileBottomNav (88px = 11 * 8px) */
+.pb-safe-nav {
+  padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+.bottom-safe-bar {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Micro-interacciones táctiles para botones y enlaces de acción (/animate & /adapt) */
+.btn-press {
+  transition:
+    transform 140ms var(--ease-out-quart),
+    background-color 200ms var(--ease-out-quart),
+    color 200ms var(--ease-out-quart),
+    box-shadow 220ms var(--ease-out-quart);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-press:hover {
+    transform: translateY(-1px);
+  }
+
+  .btn-press:hover .icon-glide,
+  .group:hover .icon-glide {
+    transform: translate(2px, -2px);
+  }
+}
+
+.btn-press:active {
+  transform: scale(0.97) translateY(0);
+}
+
+.icon-glide {
+  transition: transform 200ms var(--ease-out-quint);
+}
+
+/* Photographic darkroom exposure reveal — GPU-composited (transform + opacity only) (/optimize) */
+@keyframes darkroomReveal {
+  0% {
+    opacity: 0.88;
+    transform: scale(1.018);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.photo-reveal {
+  animation: darkroomReveal 480ms var(--ease-out-expo) both;
+}
+
+/* Adaptación para impresión y exportación documental a PDF (/adapt) */
+@media print {
+  html,
+  body {
+    background: #ffffff !important;
+    color: #161317 !important;
+    font-size: 12pt;
+  }
+
+  header,
+  nav[aria-label="Navegación móvil inferior"],
+  dialog,
+  video,
+  .btn-press {
+    display: none !important;
+  }
+
+  article,
+  section,
+  aside,
+  div {
+    background: transparent !important;
+    color: #161317 !important;
+    box-shadow: none !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  p,
+  dd,
+  dt,
+  span {
+    color: #161317 !important;
+  }
+
+  article,
+  aside,
+  img {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .photo-reveal {
+    animation: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
+}

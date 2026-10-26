@@ -1,0 +1,433 @@
+[
+  {
+    "id": "01",
+    "slug": "festival-artes-del-movimiento-arche",
+    "name": "3er Festival Artes del Movimiento Arché",
+    "category": "Gestión cultural",
+    "categoryNote": null,
+    "shortDescription": "Arché es un proyecto artístico y cultural que explora las posibilidades del movimiento a través de la danza, el teatro y el circo, integrando diferentes lenguajes escénicos para crear experiencias que conectan el cuerpo, la expresión y la creatividad.",
+    "fullDescription": "Arché es un proyecto artístico y cultural que explora las posibilidades del movimiento a través de la danza, el teatro y el circo, integrando diferentes lenguajes escénicos para crear experiencias que conectan el cuerpo, la expresión y la creatividad.\n\nSu propuesta busca descubrir nuevas formas de comunicar, narrar historias y transmitir emociones a través del movimiento, reconociendo el cuerpo como una herramienta de creación y encuentro.",
+    "leader": null,
+    "coverImage": null,
+    "media": [
+      {
+        "id": "01-video",
+        "type": "video",
+        "title": "3er Festival Artes del Movimiento Arché: Reel documental",
+        "sourceUrl": "https://drive.google.com/file/d/1SR4bM_xbbUwKDBEwmdJ_Sld6JE5bcnTq/view?usp=drive_link",
+        "publicUrl": "/videos/arche-reel.mp4",
+        "thumbnailUrl": "/images/arche-reel-poster.webp",
+        "alt": "Presentación audiovisual del 3er Festival Artes del Movimiento Arché.",
+        "aspectRatio": "9:16",
+        "provider": "html5",
+        "status": "ready"
+      }
+    ],
+    "featured": false,
+    "order": 1,
+    "publicationStatus": "published",
+    "gallerySource": null,
+    "podcastStatus": "not_provided"
+  },
+  {
+    "id": "02",
+    "slug": "no-entres-ahi",
+    "name": "No entres Ahí",
+    "category": "Artes escénicas",
+    "categoryNote": null,
+    "shortDescription": "¡No entres ahí! ¿Alguna vez has querido gritarle a un personaje para evitar que tome una mala decisión?",
+    "fullDescription": "¡No entres ahí! ¿Alguna vez has querido gritarle a un personaje para evitar que tome una mala decisión?\n\nEn No entres ahí, tus gritos no se quedan en el público: ¡pueden cambiar el rumbo de la historia! Una obra de improvisación en la que tú ayudas a los personajes a decidir qué hacer, porque aquí nada está escrito y cada decisión puede cambiarlo todo.",
+    "leader": null,
+    "coverImage": "/images/teatro-1-1200.webp",
+    "media": [
+      {
+        "id": "teatro-1",
+        "type": "image",
+        "title": "No entres Ahí: Escena de improvisación",
+        "sourceUrl": "https://drive.google.com/file/d/19ONW4cofOnj_sHf4G8rPHU_HHhQpnuMI/view?usp=drivesdk",
+        "publicUrl": "/images/teatro-1-1200.webp",
+        "thumbnailUrl": "/images/teatro-1-480.webp",
+        "alt": "Dos intérpretes en escena junto al cartel «¡No entres ahí!» durante la función de improvisación.",
+        "status": "ready"
+      },
+      {
+        "id": "teatro-2",
+        "type": "image",
+        "title": "No entres Ahí: Atmósfera escénica",
+        "sourceUrl": "https://drive.google.com/file/d/1FTVmvx5E8mBhdKX1t_gsSs8mhPlQ8Y0c/view?usp=drivesdk",
+        "publicUrl": "/images/teatro-2-1200.webp",
+        "thumbnailUrl": "/images/teatro-2-480.webp",
+        "alt": "Silueta de los intérpretes bajo iluminación cálida y humo escénico en No entres Ahí.",
+        "status": "ready"
+      },
+      {
+        "id": "teatro-3",
+        "type": "image",
+        "title": "No entres Ahí: Saludo en tablas",
+        "sourceUrl": "https://drive.google.com/file/d/143QNU6O42jHlyjb9sZW3VOxuJgF-5aYL/view?usp=drivesdk",
+        "publicUrl": "/images/teatro-3-1200.webp",
+        "thumbnailUrl": "/images/teatro-3-480.webp",
+        "alt": "Dos intérpretes de No entres Ahí saludan al público desde el escenario de madera.",
+        "status": "ready"
+      },
+      {
+        "id": "teatro-4",
+        "type": "image",
+        "title": "No entres Ahí: Diálogo con los espectadores",
+        "sourceUrl": "https://drive.google.com/file/d/15LV9UVB3uJmrP2dn__yhQ5Z6LCUWUrfb/view?usp=drivesdk",
+        "publicUrl": "/images/teatro-4-1200.webp",
+        "thumbnailUrl": "/images/teatro-4-480.webp",
+        "alt": "El público observa y participa frente a los intérpretes de No entres Ahí desde sus asientos.",
+        "status": "ready"
+      },
+      {
+        "id": "02-video",
+        "type": "video",
+        "title": "No entres Ahí: Reel escénico",
+        "sourceUrl": "https://drive.google.com/file/d/1NB8x7lyg-k0XS9suvzToU7XFX7eet95O/view?usp=drive_link",
+        "publicUrl": "/videos/no-entres-ahi-reel.mp4",
+        "thumbnailUrl": "/images/no-entres-ahi-reel-poster.webp",
+        "alt": "Reel audiovisual de la obra de improvisación No entres Ahí.",
+        "aspectRatio": "9:16",
+        "provider": "html5",
+        "status": "ready"
+      },
+      {
+        "id": "02-audio",
+        "type": "audio",
+        "title": "Pódcast No entres Ahí",
+        "sourceUrl": "",
+        "status": "pending"
+      }
+    ],
+    "featured": false,
+    "order": 2,
+    "publicationStatus": "published",
+    "gallerySource": null,
+    "podcastStatus": "pending"
+  },
+  {
+    "id": "03",
+    "slug": "ferales",
+    "name": "Ferales",
+    "category": "Música",
+    "categoryNote": null,
+    "shortDescription": "Ferales, banda de rock alternativo, transforma el arte visual en música con Anatomía imaginaria, un disco inspirado en dos dibujos que hoy dan vida a una propuesta sonora propia.",
+    "fullDescription": "Ferales, banda de rock alternativo, transforma el arte visual en música con Anatomía imaginaria, un disco inspirado en dos dibujos que hoy dan vida a una propuesta sonora propia.",
+    "leader": null,
+    "coverImage": "/images/ferales-1-1200.webp",
+    "media": [
+      {
+        "id": "ferales-1",
+        "type": "image",
+        "title": "Ferales: Encuentro en el estudio",
+        "sourceUrl": "https://drive.google.com/file/d/1ZB_S6dgM0QciQPn-briplD5C_TYPR5TU/view?usp=drivesdk",
+        "publicUrl": "/images/ferales-1-1200.webp",
+        "thumbnailUrl": "/images/ferales-1-480.webp",
+        "alt": "Integrantes de Ferales conversan sentados en el estudio frente a una obra gráfica.",
+        "status": "ready"
+      },
+      {
+        "id": "ferales-2",
+        "type": "image",
+        "title": "Ferales: Producción de Anatomía imaginaria",
+        "sourceUrl": "https://drive.google.com/file/d/1km0dCp_4u-FJTCAHmxmPCRLiPjQzAZ2u/view?usp=drivesdk",
+        "publicUrl": "/images/ferales-2-1200.webp",
+        "thumbnailUrl": "/images/ferales-2-480.webp",
+        "alt": "Vista cenital del estudio de grabación con sintetizadores, monitores y consola.",
+        "status": "ready"
+      },
+      {
+        "id": "ferales-3",
+        "type": "image",
+        "title": "Ferales: Registro de batería",
+        "sourceUrl": "https://drive.google.com/file/d/1p72NiTq7xM9NuksZ5cQojOFHJK8_5dUz/view?usp=drivesdk",
+        "publicUrl": "/images/ferales-3-1200.webp",
+        "thumbnailUrl": "/images/ferales-3-480.webp",
+        "alt": "Baterista de Ferales interpretando en el estudio durante la sesión de Anatomía imaginaria.",
+        "status": "ready"
+      },
+      {
+        "id": "ferales-4",
+        "type": "image",
+        "title": "Ferales: Texturas sonoras",
+        "sourceUrl": "https://drive.google.com/file/d/1bIYfifQ6TaUAYTgxRTG7zGeeYcl8JJRE/view?usp=drivesdk",
+        "publicUrl": "/images/ferales-4-1200.webp",
+        "thumbnailUrl": "/images/ferales-4-480.webp",
+        "alt": "Músico de Ferales toca un sintetizador con auriculares junto a un contrabajo.",
+        "status": "ready"
+      },
+      {
+        "id": "03-video",
+        "type": "video",
+        "title": "Ferales: Reel en Instagram",
+        "sourceUrl": "https://www.instagram.com/reel/DesY47_B42C/",
+        "thumbnailUrl": "/images/ferales-2-1200.webp",
+        "alt": "Miniatura autorizada del reel de Ferales en el estudio.",
+        "aspectRatio": "9:16",
+        "provider": "instagram",
+        "status": "ready"
+      },
+      {
+        "id": "03-audio",
+        "type": "audio",
+        "title": "Pódcast Ferales",
+        "sourceUrl": "",
+        "status": "pending"
+      }
+    ],
+    "featured": true,
+    "order": 3,
+    "publicationStatus": "published",
+    "gallerySource": null,
+    "podcastStatus": "pending"
+  },
+  {
+    "id": "04",
+    "slug": "reflejos-de-corporacion-h3",
+    "name": "Reflejos de Corporación H3",
+    "category": null,
+    "categoryNote": null,
+    "shortDescription": "¿Qué tienen en común un espejo, un cepillo y una piedra? Más de lo que imaginamos.",
+    "fullDescription": "¿Qué tienen en común un espejo, un cepillo y una piedra?\n\nMás de lo que imaginamos. A través del teatro, esta obra nos invita a mirar más allá de los objetos y descubrir cómo nos reflejamos en los demás, cómo el otro nos transforma y qué tanto de nosotros mismos encontramos en quienes nos rodean.",
+    "leader": null,
+    "coverImage": "/images/reflejos-1-1200.webp",
+    "media": [
+      {
+        "id": "reflejos-1",
+        "type": "image",
+        "title": "Reflejos: Encuentro en escena",
+        "sourceUrl": "https://drive.google.com/file/d/1a3tVBowk-kin1OVRa4bXnu2ccbflK2Ue/view?usp=drivesdk",
+        "publicUrl": "/images/reflejos-1-1200.webp",
+        "thumbnailUrl": "/images/reflejos-1-480.webp",
+        "alt": "Elenco de Reflejos reunido en escena bajo iluminación verde.",
+        "status": "ready"
+      },
+      {
+        "id": "reflejos-2",
+        "type": "image",
+        "title": "Reflejos: Contraluz escénico",
+        "sourceUrl": "https://drive.google.com/file/d/1BhH8o0P5b1gC9U0bNPfqPudnfYhla0Q4/view?usp=drivesdk",
+        "publicUrl": "/images/reflejos-2-1200.webp",
+        "thumbnailUrl": "/images/reflejos-2-480.webp",
+        "alt": "Dos intérpretes de Reflejos en movimiento bajo luces rojas y esmeraldas.",
+        "status": "ready"
+      },
+      {
+        "id": "reflejos-3",
+        "type": "image",
+        "title": "Reflejos: Cuerpo colectivo",
+        "sourceUrl": "https://drive.google.com/file/d/15x3nX1xrzMWjsXjp-4EVdTwaCrGYTBLc/view?usp=drivesdk",
+        "publicUrl": "/images/reflejos-3-1200.webp",
+        "thumbnailUrl": "/images/reflejos-3-480.webp",
+        "alt": "Intérpretes de Reflejos actúan en composición coral bajo luces azules.",
+        "status": "ready"
+      },
+      {
+        "id": "reflejos-4",
+        "type": "image",
+        "title": "Reflejos: Espejo corporal",
+        "sourceUrl": "https://drive.google.com/file/d/1mc7x3_9EBVFI57GM6MnlNa9ZFc3GQhti/view?usp=drivesdk",
+        "publicUrl": "/images/reflejos-4-1200.webp",
+        "thumbnailUrl": "/images/reflejos-4-480.webp",
+        "alt": "Dúo de intérpretes de Reflejos sobre las tablas explorando el gesto compartido.",
+        "status": "ready"
+      },
+      {
+        "id": "04-video",
+        "type": "video",
+        "title": "Reflejos de Corporación H3: Reel en Instagram",
+        "sourceUrl": "https://www.instagram.com/reel/DeiN3OHzyBx/",
+        "thumbnailUrl": "/images/reflejos-2-1200.webp",
+        "alt": "Miniatura autorizada del reel de Reflejos de Corporación H3.",
+        "aspectRatio": "9:16",
+        "provider": "instagram",
+        "status": "ready"
+      },
+      {
+        "id": "04-audio",
+        "type": "audio",
+        "title": "Pódcast Reflejos de Corporación H3",
+        "sourceUrl": "",
+        "status": "pending"
+      }
+    ],
+    "featured": false,
+    "order": 4,
+    "publicationStatus": "published",
+    "gallerySource": null,
+    "podcastStatus": "pending"
+  },
+  {
+    "id": "05",
+    "slug": "tres-tristes-tigres",
+    "name": "Tres Tristes Tigres",
+    "category": "Gestión cultural",
+    "categoryNote": null,
+    "shortDescription": "Un proyecto de gestión cultural que nació entre amigos y hoy conecta la música, la danza, el performance y el audiovisual para generar improvisación viva.",
+    "fullDescription": "Un proyecto de gestión cultural que nació entre amigos y hoy conecta la música, la danza, el performance y el audiovisual para generar improvisación viva.\n\n¿Qué trajo esta edición?\n\n5 eventos únicos donde cada disciplina artística se fusionó en directo con la creación sonora de artistas locales.",
+    "leader": null,
+    "coverImage": null,
+    "media": [
+      {
+        "id": "05-video",
+        "type": "video",
+        "title": "Tres Tristes Tigres: Reel en Instagram",
+        "sourceUrl": "https://www.instagram.com/reel/DeQSxWUT2OB/",
+        "alt": "Reel de Tres Tristes Tigres sobre los cinco encuentros de improvisación en vivo.",
+        "aspectRatio": "9:16",
+        "provider": "instagram",
+        "status": "ready"
+      }
+    ],
+    "featured": false,
+    "order": 5,
+    "publicationStatus": "published",
+    "gallerySource": null,
+    "podcastStatus": "not_provided"
+  },
+  {
+    "id": "06",
+    "slug": "pensar-narrar-y-habitar-el-territorio",
+    "name": "Pensar, narrar y habitar el territorio",
+    "category": "Investigación",
+    "categoryNote": null,
+    "shortDescription": "Habitar el barrio: las huellas de una ciudad que cambia. Cada calle, cada casa y cada rincón guardan historias que nos conectan con la memoria de nuestra ciudad.",
+    "fullDescription": "Habitar el barrio: las huellas de una ciudad que cambia.\n\nCada calle, cada casa y cada rincón guardan historias que nos conectan con la memoria de nuestra ciudad.\n\nHabitar el barrio es un proyecto ganador de Presupuesto Participativo de la Comuna 11 – Laureles-Estadio, que nos invita a recorrer sus barrios, reconocer sus transformaciones y descubrir las huellas que el paso del tiempo ha dejado en el territorio.",
+    "leader": "Margarita Ortiz de Habitar el Barrio",
+    "coverImage": null,
+    "media": [
+      {
+        "id": "06-video",
+        "type": "video",
+        "title": "Pensar, narrar y habitar el territorio: Reel en Instagram",
+        "sourceUrl": "https://www.instagram.com/reel/De2wlYvz2TK/",
+        "alt": "Reel sobre recorridos y memoria barrial en Laureles y Estadio.",
+        "aspectRatio": "9:16",
+        "provider": "instagram",
+        "status": "ready"
+      }
+    ],
+    "featured": false,
+    "order": 6,
+    "publicationStatus": "published",
+    "gallerySource": null,
+    "podcastStatus": "not_provided"
+  },
+  {
+    "id": "07",
+    "slug": "narrar-la-realidad-desde-las-vinetas-un-intercambio",
+    "name": "Narrar la realidad desde las viñetas: Un intercambio",
+    "category": "Literatura",
+    "categoryNote": null,
+    "shortDescription": null,
+    "fullDescription": null,
+    "leader": "Lina Patricia Flórez",
+    "coverImage": "/images/vinetas-1-1200.webp",
+    "media": [
+      {
+        "id": "vinetas-1",
+        "type": "image",
+        "title": "Narrar la realidad desde las viñetas: Mesa de luz",
+        "sourceUrl": "https://drive.google.com/file/d/1GWS05rc0WknCb5JqhAlc3UJW_NTbF3GM/view?usp=drivesdk",
+        "publicUrl": "/images/vinetas-1-1200.webp",
+        "thumbnailUrl": "/images/vinetas-1-480.webp",
+        "alt": "Proceso de dibujo e ilustración en vivo sobre mesa de luz y retroproyector.",
+        "status": "ready"
+      },
+      {
+        "id": "vinetas-2",
+        "type": "image",
+        "title": "Narrar la realidad desde las viñetas: Proyección gráfica",
+        "sourceUrl": "https://drive.google.com/file/d/1spLghO_CbK79OMAvSfcvpFh3JunprkM-/view?usp=drivesdk",
+        "publicUrl": "/images/vinetas-2-1200.webp",
+        "thumbnailUrl": "/images/vinetas-2-480.webp",
+        "alt": "Proyección de trazos de tinta en gran formato durante la sesión artística.",
+        "status": "ready"
+      },
+      {
+        "id": "vinetas-3",
+        "type": "image",
+        "title": "Narrar la realidad desde las viñetas: Contraluz visual",
+        "sourceUrl": "https://drive.google.com/file/d/10PcLXuwKyQRhSaOD_OgVsVMX5zfjzcH4/view?usp=drivesdk",
+        "publicUrl": "/images/vinetas-3-1200.webp",
+        "thumbnailUrl": "/images/vinetas-3-480.webp",
+        "alt": "Silueta frente al lienzo luminoso de trazos gráficos proyectados.",
+        "status": "ready"
+      },
+      {
+        "id": "vinetas-4",
+        "type": "image",
+        "title": "Narrar la realidad desde las viñetas: Registro del encuentro",
+        "sourceUrl": "https://drive.google.com/file/d/1tAd4BQI3XltcDROPJMMgbvI_hUhGT6eT/view?usp=drivesdk",
+        "publicUrl": "/images/vinetas-4-1200.webp",
+        "thumbnailUrl": "/images/vinetas-4-480.webp",
+        "alt": "Vista del público registrando la proyección visual y narrativa.",
+        "status": "ready"
+      }
+    ],
+    "featured": false,
+    "order": 7,
+    "publicationStatus": "published",
+    "gallerySource": null,
+    "podcastStatus": "not_provided"
+  },
+  {
+    "id": "08",
+    "slug": "se-busca-una-raiz",
+    "name": "Se busca una Raíz",
+    "category": "Artes visuales y plásticas",
+    "categoryNote": null,
+    "shortDescription": null,
+    "fullDescription": null,
+    "leader": null,
+    "coverImage": "/images/raiz-1-1200.webp",
+    "media": [
+      {
+        "id": "raiz-1",
+        "type": "image",
+        "title": "Se busca una Raíz: Exploración en sala",
+        "sourceUrl": "https://drive.google.com/file/d/12bF_KYKvxOEclO55n940jaS1mFOfcp9n/view?usp=drivesdk",
+        "publicUrl": "/images/raiz-1-1200.webp",
+        "thumbnailUrl": "/images/raiz-1-480.webp",
+        "alt": "Participante sentado en el piso durante sesión de laboratorio corporal y visual.",
+        "status": "ready"
+      },
+      {
+        "id": "raiz-2",
+        "type": "image",
+        "title": "Se busca una Raíz: Gesto y presencia",
+        "sourceUrl": "https://drive.google.com/file/d/1a1Cv9Iah0y5bNxSJatY0sRYpBGbq4EG-/view?usp=drivesdk",
+        "publicUrl": "/images/raiz-2-1200.webp",
+        "thumbnailUrl": "/images/raiz-2-480.webp",
+        "alt": "Retrato en movimiento durante jornada de exploración artística.",
+        "status": "ready"
+      },
+      {
+        "id": "raiz-3",
+        "type": "image",
+        "title": "Se busca una Raíz: Encuentro en el espacio",
+        "sourceUrl": "https://drive.google.com/file/d/1CyCRqfW6OcJxyrBsSK0gWvac1L8ar0pc/view?usp=drivesdk",
+        "publicUrl": "/images/raiz-3-1200.webp",
+        "thumbnailUrl": "/images/raiz-3-480.webp",
+        "alt": "Dos participantes compartiendo ejercicios de expresión en sala de madera.",
+        "status": "ready"
+      },
+      {
+        "id": "raiz-4",
+        "type": "image",
+        "title": "Se busca una Raíz: Memoria nocturna",
+        "sourceUrl": "https://drive.google.com/file/d/1H3L_MMJ1oisL-NKRnZVDpOjGzm91E3dq/view?usp=drivesdk",
+        "publicUrl": "/images/raiz-4-1200.webp",
+        "thumbnailUrl": "/images/raiz-4-480.webp",
+        "alt": "Retrato de espaldas frente al follaje nocturno del barrio.",
+        "status": "ready"
+      }
+    ],
+    "featured": false,
+    "order": 8,
+    "publicationStatus": "published",
+    "gallerySource": null,
+    "podcastStatus": "not_provided"
+  }
+]

@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Production build
+dist/
+
+# Testing
+test-results/
+playwright-report/
+
+# TypeScript build cache
+*.tsbuildinfo
+
+# Environment & local OS
+.env
+.env*.local
+.DS_Store
+Thumbs.db
+
+# Vercel
+.vercel/
+
+# Agent & IDE caches
+.agents/
+skills-lock.json
+.vscode/
+.idea/
