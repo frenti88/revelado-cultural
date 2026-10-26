@@ -57,7 +57,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
   };
 
   return (
-    <div className="rounded-xl bg-[#211820] p-6 shadow-[0_12px_32px_rgba(0,0,0,0.45)]">
+    <div className="rounded-xl bg-[#222222] border border-[#2E2E2E] p-6 shadow-[0_12px_32px_rgba(0,0,0,0.45)]">
       <audio
         ref={audioRef}
         src={asset.publicUrl}
@@ -79,25 +79,25 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
                 ? `Pausar audio ${asset.title ?? projectName}`
                 : `Escuchar audio ${asset.title ?? projectName}`
             }
-            className="flex items-center justify-center w-12 h-12 rounded-full bg-[#742940] hover:bg-[#8c324e] text-[#F5F0E7] transition-colors cursor-pointer shrink-0"
+            className="flex items-center justify-center w-12 h-12 rounded-full bg-[#C9321B]text-white transition-colors cursor-pointer shrink-0 shadow-md"
           >
             {isPlaying ? (
-              <Pause className="w-5 h-5" aria-hidden="true" />
+              <Pause className="w-5 h-5 fill-current" aria-hidden="true" />
             ) : (
-              <Play className="w-5 h-5" aria-hidden="true" />
+              <Play className="w-5 h-5 fill-current ml-0.5" aria-hidden="true" />
             )}
           </button>
 
           <div>
-            <span className="font-mono-meta text-xs text-[#A8B69C] flex items-center gap-2">
-              <Headphones className="w-4 h-4" aria-hidden="true" />
+            <span className="font-mono-meta text-xs text-[#FF5C38] flex items-center gap-2 font-semibold">
+              <Headphones className="w-3.5 h-3.5" aria-hidden="true" />
               <span>Voces del territorio · Audio</span>
             </span>
-            <h4 className="font-display font-semibold text-lg text-[#F5F0E7] mt-1">
+            <h4 className="font-display font-bold text-lg text-[#F2EFE8] mt-1">
               {asset.title ?? projectName}
             </h4>
             {leader && (
-              <p className="text-base text-[#D8CDC8] mt-1">
+              <p className="text-sm font-mono-meta text-[#A7A39D] mt-1">
                 Responsable: {leader}
               </p>
             )}
@@ -108,7 +108,7 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
           type="button"
           onClick={toggleMute}
           aria-label={isMuted ? "Activar sonido" : "Silenciar audio"}
-          className="p-2 rounded-lg bg-[#161317] text-[#D8CDC8] hover:text-[#F5F0E7] cursor-pointer"
+          className="p-2 rounded-lg bg-[#151515] border border-[#2E2E2E] text-[#A7A39D] hover:text-[#F2EFE8] cursor-pointer transition-colors"
         >
           {isMuted ? (
             <VolumeX className="w-4 h-4" aria-hidden="true" />
@@ -130,9 +130,9 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
           max={duration > 0 ? duration : 100}
           value={currentTime}
           onChange={handleSeek}
-          className="w-full accent-[#A8B69C] cursor-pointer"
+          className="w-full accent-[#EB442A] cursor-pointer"
         />
-        <div className="flex items-center justify-between font-mono-meta text-xs text-[#D8CDC8]">
+        <div className="flex items-center justify-between font-mono-meta text-xs text-[#A7A39D]">
           <span>{formatTime(currentTime)}</span>
           <span>{formatTime(duration)}</span>
         </div>

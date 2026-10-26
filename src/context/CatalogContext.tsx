@@ -8,7 +8,7 @@ import React, {
 import { initialProjects } from "../data/catalog";
 import type { CulturalProject } from "../types/cultural";
 
-const STORAGE_KEY = "revelado_cultural_catalog_v4";
+const STORAGE_KEY = "revelado_cultural_catalog_v5";
 const AUTH_STORAGE_KEY = "revelado_cultural_curator_session";
 
 function persistProjects(projects: CulturalProject[]) {

@@ -20,33 +20,36 @@
 }
 
 :root {
-  /* 03. Paleta Cromática — Tokens oficiales de Revelado Cultural + Codificación cromática por disciplina (/colorize) */
-  --bg-primary: #161317;
-  --bg-secondary: #211820;
-  --brand-primary: #742940;
-  --brand-deep: #482332;
-  --brand-accent: #A8B69C;
-  --text-primary: #F5F0E7;
-  --text-secondary: #D8CDC8;
-  --surface-light: #F5F0E7;
-  --text-on-light: #161317;
-  --border-subtle: #433840;
+  /* 03. Paleta Cromática — Dirección de Arte Oficial: REVELADO */
+  --bg-primary: #151515;
+  --bg-secondary: #222222;
+  --bg-tertiary: #1C1C1C;
+  --surface-light: #F2EFE8;
+  --accent: #C9321B;
+  --accent-text: #FF5C38;             /* Bermellón de revelado analógico */
+  --accent-hover: #F0553E;
+  --accent-subtle: rgba(235, 68, 42, 0.14);
+  --text-primary: #F2EFE8;
+  --text-secondary: #D4D0C7;
+  --text-muted: #A7A39D;
+  --text-on-light: #151515;
+  --border-subtle: #2D2D2D;
+  --border-frame: #3D3D3D;
 
-  /* Acentos semánticos y por disciplina cultural (Todos con contraste WCAG AAA > 7.5:1 sobre #161317 y #211820) */
-  --color-gestion: #A8B69C;      /* Salvia botánica — Gestión cultural */
-  --color-escenicas: #E49B7E;    /* Terracota de tablas — Artes escénicas */
-  --color-musica: #E598B0;       /* Malva analógico — Música */
-  --color-investigacion: #E2C286;/* Ocre archivo barrial — Investigación */
-  --color-literatura: #E8B486;   /* Ámbar mesa de luz — Literatura */
-  --color-visuales: #C8B5DC;     /* Lavanda mineral — Artes visuales y plásticas */
-  --color-teatro-pend: #DDB09A;  /* Cobre suave — Teatro (por confirmar) */
+  /* Acentos semánticos por disciplina cultural (Contraste WCAG AA > 4.5:1 sobre #151515 y #222222) */
+  --color-gestion: #A3B899;      /* Salvia botánica — Gestión cultural */
+  --color-escenicas: #E5A88B;    /* Terracota escénico — Artes escénicas */
+  --color-musica: #E598B0;       /* Malva sonoro — Música */
+  --color-investigacion: #E5C98E;/* Ocre documental — Investigación */
+  --color-literatura: #E8B486;   /* Ámbar viñeta — Literatura */
+  --color-visuales: #C8B5DC;     /* Lavanda plástico — Artes visuales y plásticas */
 
-  /* 04. Sistema Tipográfico (/typeset):
-     - Montserrat (500 Medium, 600 SemiBold, 700 Bold, 800 ExtraBold) en títulos y encabezados
-     - Roboto (400 Regular >= 16px) en cuerpos de lectura
-     - IBM Plex Mono (400, 600) en numeración y metadatos de archivo */
-  --font-display: "Montserrat", "Display-Metric-Fallback", system-ui, -apple-system, sans-serif;
-  --font-sans: "Roboto", "Body-Metric-Fallback", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* 04. Sistema Tipográfico Oficial:
+     - Archivo Black para titulares de gran impacto editorial
+     - Inter para interfaz, lectura y navegación
+     - IBM Plex Mono para numeración, categorías y metadatos */
+  --font-display: "Archivo Black", system-ui, -apple-system, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* Escala modular 1.25 (Major Third) con tokens semánticos (/typeset):
@@ -298,7 +301,7 @@ kbd {
 
 /* Selection */
 ::selection {
-  background-color: var(--brand-primary);
+  background-color: var(--accent);
   color: var(--text-primary);
 }
 
@@ -309,8 +312,84 @@ input:focus-visible,
 select:focus-visible,
 textarea:focus-visible,
 [tabindex]:focus-visible {
-  outline: 2px solid var(--brand-accent);
+  outline: 2px solid var(--accent);
   outline-offset: var(--spacing-01);
+}
+
+/* ========================================================
+   SISTEMA GRÁFICO — REVELADO: ENCUADRES, ESQUINAS Y HOJA DE CONTACTO
+   ======================================================== */
+
+/* Esquinas de encuadre fotográfico (Viewfinder brackets) */
+.viewfinder-frame {
+  position: relative;
+}
+
+.viewfinder-corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: var(--accent);
+  pointer-events: none;
+  transition: transform 220ms var(--ease-out-quint), border-color 200ms ease;
+  z-index: 10;
+}
+
+.viewfinder-corner-tl {
+  top: 8px;
+  left: 8px;
+  border-top-width: 2px;
+  border-left-width: 2px;
+}
+
+.viewfinder-corner-tr {
+  top: 8px;
+  right: 8px;
+  border-top-width: 2px;
+  border-right-width: 2px;
+}
+
+.viewfinder-corner-bl {
+  bottom: 8px;
+  left: 8px;
+  border-bottom-width: 2px;
+  border-left-width: 2px;
+}
+
+.viewfinder-corner-br {
+  bottom: 8px;
+  right: 8px;
+  border-bottom-width: 2px;
+  border-right-width: 2px;
+}
+
+.group:hover .viewfinder-corner-tl {
+  transform: translate(-2px, -2px);
+}
+.group:hover .viewfinder-corner-tr {
+  transform: translate(2px, -2px);
+}
+.group:hover .viewfinder-corner-bl {
+  transform: translate(-2px, 2px);
+}
+.group:hover .viewfinder-corner-br {
+  transform: translate(2px, 2px);
+}
+
+/* Sello de revelado / Metadatos editoriales */
+.darkroom-stamp {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Tarjeta de superficie */
+.surface-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
 }
 
 /* Hide scrollbars on horizontal chip strips while preserving scroll */

@@ -30,6 +30,9 @@ export type CulturalProject = {
   publicationStatus: "draft" | "published";
   gallerySource?: string | null;
   podcastStatus?: "pending" | "not_provided" | "ready";
+  editorialHeadline?: string;
+  contextualCta?: string;
+  thematicGroup?: "sonido" | "territorio" | "movimiento";
 };
 
 export const CONFIRMED_CATEGORIES = [

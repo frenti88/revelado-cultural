@@ -27,23 +27,23 @@ export const ProjectDetailPage: React.FC = () => {
   if (!project) {
     return (
       <div className="max-w-3xl mx-auto px-4 py-16 sm:py-24 text-center">
-        <span className="font-mono-meta text-xs font-medium text-[#A8B69C]">
+        <span className="font-mono-meta text-xs uppercase tracking-widest text-[#FF5C38] font-semibold block mb-2">
           Archivo no encontrado
         </span>
-        <h1 className="font-display font-bold text-3xl sm:text-4xl text-[#F5F0E7] mt-2">
+        <h1 className="font-display font-black text-3xl sm:text-4xl text-[#F2EFE8] mt-2">
           Esta historia no está disponible en esa dirección
         </h1>
-        <p className="mt-4 text-base font-normal text-[#D8CDC8]">
+        <p className="mt-4 text-base font-normal text-[#A7A39D]">
           Recorre el catálogo con las ocho iniciativas culturales de Laureles y
           Estadio.
         </p>
-        <div className="mt-6">
+        <div className="mt-8">
           <Link
             to="/explorar"
-            className="inline-flex items-center gap-2 min-h-12 px-6 py-3 rounded-full bg-[#742940] hover:bg-[#8c324e] text-[#F5F0E7] text-sm font-medium"
+            className="btn-press inline-flex items-center gap-2 min-h-12 px-6 py-3 rounded-full bg-[#C9321B]text-white text-base font-semibold shadow-lg transition-colors"
           >
             <ArrowLeft className="w-4 h-4" aria-hidden="true" />
-            <span>Volver a explorar</span>
+            <span>Volver al explorador</span>
           </Link>
         </div>
       </div>

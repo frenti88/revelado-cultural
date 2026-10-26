@@ -8,7 +8,10 @@
     "shortDescription": "Arché es un proyecto artístico y cultural que explora las posibilidades del movimiento a través de la danza, el teatro y el circo, integrando diferentes lenguajes escénicos para crear experiencias que conectan el cuerpo, la expresión y la creatividad.",
     "fullDescription": "Arché es un proyecto artístico y cultural que explora las posibilidades del movimiento a través de la danza, el teatro y el circo, integrando diferentes lenguajes escénicos para crear experiencias que conectan el cuerpo, la expresión y la creatividad.\n\nSu propuesta busca descubrir nuevas formas de comunicar, narrar historias y transmitir emociones a través del movimiento, reconociendo el cuerpo como una herramienta de creación y encuentro.",
     "leader": null,
-    "coverImage": null,
+    "coverImage": "/images/arche-reel-poster.webp",
+    "editorialHeadline": "El cuerpo como territorio de encuentro",
+    "contextualCta": "Descubre a Arché",
+    "thematicGroup": "movimiento",
     "media": [
       {
         "id": "01-video",
@@ -39,6 +42,9 @@
     "fullDescription": "¡No entres ahí! ¿Alguna vez has querido gritarle a un personaje para evitar que tome una mala decisión?\n\nEn No entres ahí, tus gritos no se quedan en el público: ¡pueden cambiar el rumbo de la historia! Una obra de improvisación en la que tú ayudas a los personajes a decidir qué hacer, porque aquí nada está escrito y cada decisión puede cambiarlo todo.",
     "leader": null,
     "coverImage": "/images/teatro-1-1200.webp",
+    "editorialHeadline": "Cuando el público decide el final",
+    "contextualCta": "Entra a la obra",
+    "thematicGroup": "movimiento",
     "media": [
       {
         "id": "teatro-1",
@@ -116,6 +122,9 @@
     "fullDescription": "Ferales, banda de rock alternativo, transforma el arte visual en música con Anatomía imaginaria, un disco inspirado en dos dibujos que hoy dan vida a una propuesta sonora propia.",
     "leader": null,
     "coverImage": "/images/ferales-1-1200.webp",
+    "editorialHeadline": "¿A qué suenan dos dibujos?",
+    "contextualCta": "Descubre a Ferales",
+    "thematicGroup": "sonido",
     "media": [
       {
         "id": "ferales-1",
@@ -192,6 +201,9 @@
     "fullDescription": "¿Qué tienen en común un espejo, un cepillo y una piedra?\n\nMás de lo que imaginamos. A través del teatro, esta obra nos invita a mirar más allá de los objetos y descubrir cómo nos reflejamos en los demás, cómo el otro nos transforma y qué tanto de nosotros mismos encontramos en quienes nos rodean.",
     "leader": null,
     "coverImage": "/images/reflejos-1-1200.webp",
+    "editorialHeadline": "Lo que un espejo revela de nosotros",
+    "contextualCta": "Descubre Reflejos",
+    "thematicGroup": "movimiento",
     "media": [
       {
         "id": "reflejos-1",
@@ -268,6 +280,9 @@
     "fullDescription": "Un proyecto de gestión cultural que nació entre amigos y hoy conecta la música, la danza, el performance y el audiovisual para generar improvisación viva.\n\n¿Qué trajo esta edición?\n\n5 eventos únicos donde cada disciplina artística se fusionó en directo con la creación sonora de artistas locales.",
     "leader": null,
     "coverImage": null,
+    "editorialHeadline": "Improvisación sonora en tiempo real",
+    "contextualCta": "Conoce las sesiones",
+    "thematicGroup": "sonido",
     "media": [
       {
         "id": "05-video",
@@ -296,6 +311,9 @@
     "fullDescription": "Habitar el barrio: las huellas de una ciudad que cambia.\n\nCada calle, cada casa y cada rincón guardan historias que nos conectan con la memoria de nuestra ciudad.\n\nHabitar el barrio es un proyecto ganador de Presupuesto Participativo de la Comuna 11 – Laureles-Estadio, que nos invita a recorrer sus barrios, reconocer sus transformaciones y descubrir las huellas que el paso del tiempo ha dejado en el territorio.",
     "leader": "Margarita Ortiz de Habitar el Barrio",
     "coverImage": null,
+    "editorialHeadline": "Las huellas de una ciudad que cambia",
+    "contextualCta": "Recorre el territorio",
+    "thematicGroup": "territorio",
     "media": [
       {
         "id": "06-video",
@@ -320,10 +338,13 @@
     "name": "Narrar la realidad desde las viñetas: Un intercambio",
     "category": "Literatura",
     "categoryNote": null,
-    "shortDescription": null,
-    "fullDescription": null,
+    "shortDescription": "Un espacio de creación gráfica e intercambio donde la realidad y la memoria de barrio se narran a través del dibujo y las viñetas proyectadas.",
+    "fullDescription": "Un espacio de creación gráfica e intercambio donde la realidad y la memoria de barrio se narran a través del dibujo y las viñetas proyectadas. Conducido por Lina Patricia Flórez, el proyecto explora el cómic y la ilustración como lenguajes documentales y sensibles.",
     "leader": "Lina Patricia Flórez",
     "coverImage": "/images/vinetas-1-1200.webp",
+    "editorialHeadline": "Relatos contados en viñetas",
+    "contextualCta": "Explora las viñetas",
+    "thematicGroup": "territorio",
     "media": [
       {
         "id": "vinetas-1",
@@ -378,10 +399,13 @@
     "name": "Se busca una Raíz",
     "category": "Artes visuales y plásticas",
     "categoryNote": null,
-    "shortDescription": null,
-    "fullDescription": null,
+    "shortDescription": "Laboratorio de indagación visual y corporal que convoca la búsqueda del origen, las raíces familiares y la pertenencia a través del arte.",
+    "fullDescription": "Laboratorio de indagación visual y corporal que convoca la búsqueda del origen, las raíces familiares y la pertenencia a través del arte. Una propuesta que explora la memoria íntima y colectiva desde el gesto y la materia visual.",
     "leader": null,
     "coverImage": "/images/raiz-1-1200.webp",
+    "editorialHeadline": "La búsqueda visual del origen",
+    "contextualCta": "Conoce la propuesta",
+    "thematicGroup": "territorio",
     "media": [
       {
         "id": "raiz-1",

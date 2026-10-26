@@ -21,22 +21,22 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
     <div
       role="status"
       aria-live="polite"
-      className="rounded-xl bg-[#211820] p-8 sm:p-12 text-center max-w-xl mx-auto my-6 shadow-[0_12px_32px_rgba(0,0,0,0.4)]"
+      className="rounded-xl bg-[#222222] border border-[#2E2E2E] p-8 sm:p-12 text-center max-w-xl mx-auto my-6 shadow-[0_12px_32px_rgba(0,0,0,0.4)]"
     >
       <span
-        className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#161317] text-[#A8B69C] mb-4"
+        className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-[#151515] border border-[#2E2E2E] text-[#FF5C38] mb-4"
         aria-hidden="true"
       >
         <SearchX className="w-6 h-6" />
       </span>
 
-      <span className="font-display font-medium text-sm text-[#A8B69C] block">
+      <span className="font-mono-meta text-xs uppercase tracking-widest text-[#FF5C38] font-semibold block">
         Negativo aún sin revelar
       </span>
-      <h3 className="font-display font-bold text-2xl sm:text-3xl text-[#F5F0E7] mt-2">
+      <h3 className="font-display font-bold text-2xl sm:text-3xl text-[#F2EFE8] mt-2">
         No encontramos iniciativas con ese criterio
       </h3>
-      <p className="mt-4 text-base sm:text-lg font-normal text-[#D8CDC8] mx-auto">
+      <p className="mt-4 text-base sm:text-lg font-normal text-[#A7A39D] mx-auto">
         {query && category
           ? `No hay proyectos en «${category}» que coincidan con «${query}».`
           : query
@@ -46,7 +46,7 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
 
       {onSuggestQuery && (
         <div className="mt-6 flex flex-wrap items-center justify-center gap-2">
-          <span className="font-mono-meta text-xs text-[#D8CDC8]">
+          <span className="font-mono-meta text-xs text-[#A7A39D]">
             Prueba buscar:
           </span>
           {SUGGESTIONS.map((term) => (
@@ -54,7 +54,7 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
               key={term}
               type="button"
               onClick={() => onSuggestQuery(term)}
-              className="btn-press inline-flex items-center min-h-11 px-4 py-2 rounded-full bg-[#161317] hover:bg-[#482332] text-xs font-medium text-[#A8B69C] hover:text-[#F5F0E7] cursor-pointer"
+              className="btn-press inline-flex items-center min-h-10 px-3.5 py-1.5 rounded-full bg-[#151515] border border-[#2E2E2E] hover:border-[#FF5C38] text-xs font-mono-meta text-[#F2EFE8] cursor-pointer transition-colors"
             >
               {term}
             </button>
@@ -66,7 +66,7 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
         <button
           type="button"
           onClick={onReset}
-          className="btn-press inline-flex items-center gap-2 min-h-12 px-6 py-3 rounded-full bg-[#742940] hover:bg-[#8c324e] text-[#F5F0E7] text-base font-medium cursor-pointer"
+          className="btn-press inline-flex items-center gap-2 min-h-12 px-6 py-3 rounded-full bg-[#C9321B]text-white text-base font-semibold shadow-lg transition-colors cursor-pointer"
         >
           <RotateCcw className="w-4 h-4" aria-hidden="true" />
           <span>Limpiar filtros</span>
@@ -74,9 +74,9 @@ export const EmptyState: React.FC<EmptyStateProps> = ({
 
         <Link
           to="/proyectos/ferales"
-          className="btn-press inline-flex items-center gap-2 min-h-12 px-5 py-3 rounded-full bg-[#161317] hover:bg-[#2c202a] text-[#F5F0E7] text-base font-medium"
+          className="btn-press inline-flex items-center gap-2 min-h-12 px-5 py-3 rounded-full bg-[#151515] border border-[#2E2E2E] hover:border-[#FF5C38] text-[#F2EFE8] text-base font-medium transition-colors"
         >
-          <Sparkles className="w-4 h-4 text-[#A8B69C]" aria-hidden="true" />
+          <Sparkles className="w-4 h-4 text-[#FF5C38]" aria-hidden="true" />
           <span>Sorpréndeme con una historia</span>
         </Link>
       </div>

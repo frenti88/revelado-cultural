@@ -96,12 +96,18 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
   return (
     <div className="space-y-4">
       {/* Main Featured Gallery Stage */}
-      <div className="rounded-xl bg-[#211820] p-4 sm:p-6 shadow-[0_12px_32px_rgba(0,0,0,0.45)]">
+      <div className="rounded-xl bg-[#222222] border border-[#2E2E2E] p-4 sm:p-6 shadow-[0_12px_32px_rgba(0,0,0,0.45)]">
         <div
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
-          className="relative aspect-[16/10] w-full rounded-lg overflow-hidden bg-[#161317] touch-pan-y"
+          className="relative aspect-[16/10] w-full rounded-lg overflow-hidden bg-[#151515] touch-pan-y viewfinder-frame"
         >
+          {/* Esquinas de encuadre en rojo bermellón */}
+          <span className="viewfinder-corner viewfinder-corner-tl border-t-2 border-l-2 border-[#FF5C38] w-3.5 h-3.5" aria-hidden="true" />
+          <span className="viewfinder-corner viewfinder-corner-tr border-t-2 border-r-2 border-[#FF5C38] w-3.5 h-3.5" aria-hidden="true" />
+          <span className="viewfinder-corner viewfinder-corner-bl border-b-2 border-l-2 border-[#FF5C38] w-3.5 h-3.5" aria-hidden="true" />
+          <span className="viewfinder-corner viewfinder-corner-br border-b-2 border-r-2 border-[#FF5C38] w-3.5 h-3.5" aria-hidden="true" />
+
           <img
             key={currentImage.id}
             src={currentImage.publicUrl}
@@ -124,9 +130,9 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
             aria-label={`Abrir en pantalla completa: ${
               currentImage.alt ?? projectName
             }`}
-            className="btn-press absolute top-3 right-3 sm:top-4 sm:right-4 inline-flex items-center gap-2 min-h-11 px-4 py-2 rounded-full bg-[#161317]/90 hover:bg-[#742940] text-[#F5F0E7] text-xs font-medium cursor-pointer"
+            className="btn-press absolute top-3 right-3 sm:top-4 sm:right-4 inline-flex items-center gap-2 min-h-10 px-3.5 py-1.5 rounded-full bg-[#151515]/90 border border-[#2E2E2E] hover:border-[#FF5C38] text-[#F2EFE8] text-xs font-mono-meta cursor-pointer transition-colors"
           >
-            <Expand className="w-4 h-4 text-[#A8B69C]" aria-hidden="true" />
+            <Expand className="w-3.5 h-3.5 text-[#FF5C38]" aria-hidden="true" />
             <span>Ampliar</span>
           </button>
 
@@ -136,7 +142,7 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
                 type="button"
                 onClick={goPrev}
                 aria-label="Fotografía anterior"
-                className="btn-press w-11 h-11 inline-flex items-center justify-center rounded-full bg-[#161317]/90 hover:bg-[#742940] text-[#F5F0E7] cursor-pointer"
+                className="btn-press w-10 h-10 inline-flex items-center justify-center rounded-full bg-[#151515]/90 border border-[#2E2E2E] hover:border-[#FF5C38] text-[#F2EFE8] cursor-pointer transition-colors"
               >
                 <ChevronLeft className="w-4 h-4" aria-hidden="true" />
               </button>
@@ -144,7 +150,7 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
                 type="button"
                 onClick={goNext}
                 aria-label="Fotografía siguiente"
-                className="btn-press w-11 h-11 inline-flex items-center justify-center rounded-full bg-[#161317]/90 hover:bg-[#742940] text-[#F5F0E7] cursor-pointer"
+                className="btn-press w-10 h-10 inline-flex items-center justify-center rounded-full bg-[#151515]/90 border border-[#2E2E2E] hover:border-[#FF5C38] text-[#F2EFE8] cursor-pointer transition-colors"
               >
                 <ChevronRight className="w-4 h-4" aria-hidden="true" />
               </button>
@@ -160,7 +166,7 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
           transition={{ duration: 0.22, ease: [0.25, 1, 0.5, 1] }}
           className="mt-4 flex items-center justify-between gap-2"
         >
-          <span className="font-mono-meta text-xs text-[#A8B69C]">
+          <span className="font-mono-meta text-xs text-[#FF5C38] font-semibold">
             Fotografía 0{safeIndex + 1} / 0{images.length}
           </span>
         </motion.div>
@@ -168,7 +174,7 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
         {/* Interactive Thumbnails Strip */}
         {images.length > 1 && (
           <div
-            className="mt-4 pt-4 border-t border-[#433840]/60 grid grid-cols-4 gap-2 sm:gap-4"
+            className="mt-4 pt-4 border-t border-[#2E2E2E] grid grid-cols-4 gap-2 sm:gap-4"
             role="group"
             aria-label={`Miniaturas de la galería de ${projectName}`}
           >
@@ -192,8 +198,8 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
                   }`}
                   className={`group relative aspect-[4/3] rounded-md overflow-hidden transition-all duration-200 cursor-pointer ${
                     isSelected
-                      ? "opacity-100 scale-[1.02] shadow-lg"
-                      : "opacity-55 hover:opacity-100"
+                      ? "opacity-100 ring-2 ring-[#C9321B] scale-[1.02] shadow-lg"
+                      : "opacity-50 hover:opacity-100"
                   }`}
                 >
                   <img
@@ -205,19 +211,11 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
                     decoding="async"
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  {isSelected && !shouldReduceMotion && (
-                    <motion.span
-                      layoutId="gallery-thumb-loupe"
-                      transition={{ duration: 0.24, ease: [0.22, 1, 0.36, 1] }}
-                      className="absolute inset-0 rounded-md ring-2 ring-inset ring-[#A8B69C] pointer-events-none"
-                      aria-hidden="true"
-                    />
-                  )}
                   <span
                     className={`absolute bottom-1 right-1 px-2 py-0.5 rounded font-mono-meta text-[10px] font-semibold ${
                       isSelected
-                        ? "bg-[#742940] text-[#F5F0E7]"
-                        : "bg-[#161317]/85 text-[#F5F0E7]"
+                        ? "bg-[#C9321B]text-white"
+                        : "bg-[#151515]/90 text-[#F2EFE8]"
                     }`}
                   >
                     0{idx + 1}
@@ -254,7 +252,7 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
             closeLightbox();
           }
         }}
-        className="editorial-lightbox fixed inset-0 z-50 m-auto w-[95vw] max-w-5xl max-h-[92dvh] overflow-y-auto rounded-2xl bg-[#161317] text-[#F5F0E7] p-4 sm:p-6 shadow-2xl"
+        className="editorial-lightbox fixed inset-0 z-50 m-auto w-[95vw] max-w-5xl max-h-[92dvh] overflow-y-auto rounded-2xl bg-[#151515] border border-[#2E2E2E] text-[#F2EFE8] p-4 sm:p-6 shadow-2xl"
       >
         {lightboxOpen && (
           <div
@@ -262,12 +260,12 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
             onTouchEnd={handleTouchEnd}
             className="flex flex-col gap-4"
           >
-            <div className="flex items-center justify-between gap-4 pb-4 border-b border-[#433840]/60">
+            <div className="flex items-center justify-between gap-4 pb-4 border-b border-[#2E2E2E]">
               <div>
-                <span className="font-mono-meta text-xs text-[#A8B69C]">
+                <span className="font-mono-meta text-xs text-[#FF5C38] font-semibold">
                   0{safeIndex + 1} / 0{images.length}
                 </span>
-                <h4 className="font-display font-bold text-lg text-[#F5F0E7]">
+                <h4 className="font-display font-bold text-lg text-[#F2EFE8]">
                   {projectName}
                 </h4>
               </div>
@@ -276,14 +274,14 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
                 autoFocus
                 onClick={closeLightbox}
                 aria-label="Cerrar visor de galería"
-                className="btn-press inline-flex items-center gap-2 min-h-11 px-4 py-2 rounded-full bg-[#211820] hover:bg-[#742940] text-[#F5F0E7] text-sm font-medium cursor-pointer"
+                className="btn-press inline-flex items-center gap-2 min-h-10 px-4 py-2 rounded-full bg-[#222222] border border-[#2E2E2E] hover:border-[#FF5C38] text-[#F2EFE8] text-sm font-semibold cursor-pointer transition-colors"
               >
                 <span>Cerrar</span>
-                <X className="w-4 h-4" aria-hidden="true" />
+                <X className="w-4 h-4 text-[#FF5C38]" aria-hidden="true" />
               </button>
             </div>
 
-            <div className="relative flex items-center justify-center bg-[#0e0c0f] rounded-xl overflow-hidden min-h-[160px] sm:min-h-[264px] max-h-[58dvh] sm:max-h-[72dvh]">
+            <div className="relative flex items-center justify-center bg-[#0d0d0d] rounded-xl overflow-hidden min-h-[160px] sm:min-h-[264px] max-h-[58dvh] sm:max-h-[72dvh] border border-[#2E2E2E]">
               <img
                 src={currentImage.publicUrl}
                 alt={currentImage.alt ?? projectName}
@@ -297,19 +295,19 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
                   type="button"
                   onClick={goPrev}
                   aria-label="Fotografía anterior"
-                  className="btn-press inline-flex items-center gap-1 min-h-11 px-4 py-2 rounded-full bg-[#211820] hover:bg-[#742940] text-sm font-medium cursor-pointer"
+                  className="btn-press inline-flex items-center gap-1.5 min-h-10 px-4 py-2 rounded-full bg-[#222222] border border-[#2E2E2E] hover:border-[#FF5C38] text-sm font-semibold text-[#F2EFE8] cursor-pointer transition-colors"
                 >
-                  <ChevronLeft className="w-4 h-4" aria-hidden="true" />
+                  <ChevronLeft className="w-4 h-4 text-[#FF5C38]" aria-hidden="true" />
                   <span>Anterior</span>
                 </button>
                 <button
                   type="button"
                   onClick={goNext}
                   aria-label="Fotografía siguiente"
-                  className="btn-press inline-flex items-center gap-1 min-h-11 px-4 py-2 rounded-full bg-[#211820] hover:bg-[#742940] text-sm font-medium cursor-pointer"
+                  className="btn-press inline-flex items-center gap-1.5 min-h-10 px-4 py-2 rounded-full bg-[#222222] border border-[#2E2E2E] hover:border-[#FF5C38] text-sm font-semibold text-[#F2EFE8] cursor-pointer transition-colors"
                 >
                   <span>Siguiente</span>
-                  <ChevronRight className="w-4 h-4" aria-hidden="true" />
+                  <ChevronRight className="w-4 h-4 text-[#FF5C38]" aria-hidden="true" />
                 </button>
               </div>
             )}

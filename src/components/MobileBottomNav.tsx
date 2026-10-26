@@ -14,7 +14,7 @@ export const MobileBottomNav: React.FC = () => {
   return (
     <nav
       aria-label="Navegación móvil inferior"
-      className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#161317]/95 backdrop-blur-lg border-t border-[#433840]/60 bottom-safe-bar"
+      className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#151515]/95 backdrop-blur-lg border-t border-[#2E2E2E] bottom-safe-bar"
     >
       <ul className="grid grid-cols-3 max-w-md mx-auto px-4 h-16 items-center gap-2">
         {destinations.map((item) => {
@@ -27,8 +27,8 @@ export const MobileBottomNav: React.FC = () => {
                 className={({ isActive }) =>
                   `relative flex flex-col items-center justify-center w-full min-h-12 py-1 rounded-xl transition-colors active:scale-95 ${
                     isActive
-                      ? "text-[#F5F0E7] font-bold"
-                      : "text-[#D8CDC8] hover:text-[#F5F0E7] font-medium"
+                      ? "text-[#F2EFE8] font-bold"
+                      : "text-[#A7A39D] hover:text-[#F2EFE8] font-medium"
                   }`
                 }
               >
@@ -44,7 +44,7 @@ export const MobileBottomNav: React.FC = () => {
                             duration: 0.25,
                             ease: [0.22, 1, 0.36, 1],
                           }}
-                          className="absolute inset-0 rounded-full bg-[#742940]"
+                          className="absolute inset-0 rounded-full bg-[#C9321B]/20 border border-[#FF5C38]/40"
                           aria-hidden="true"
                         />
                       )}
@@ -53,11 +53,11 @@ export const MobileBottomNav: React.FC = () => {
                         aria-hidden="true"
                       />
                     </span>
-                    <span className="text-xs tracking-wide mt-1 leading-tight flex items-center gap-1">
+                    <span className="text-xs tracking-wide mt-1 leading-tight flex items-center gap-1 font-mono-meta">
                       <span>{item.label}</span>
                       {isActive && (
                         <span
-                          className="w-1 h-1 rounded-full bg-[#A8B69C]"
+                          className="w-1 h-1 rounded-full bg-[#C9321B]"
                           aria-hidden="true"
                         />
                       )}

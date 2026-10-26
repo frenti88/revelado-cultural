@@ -1,42 +1,39 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Aperture } from "lucide-react";
+import { BrandLogo } from "./BrandLogo";
 import { CONFIRMED_CATEGORIES } from "../data/catalog";
 
 export const SiteFooter: React.FC = () => {
   return (
-    <footer className="w-full bg-[#161317] border-t border-[#433840]/60 pt-12 pb-24 md:pb-12">
+    <footer className="w-full bg-[#151515] border-t border-[#2E2E2E] pt-14 pb-24 md:pb-14">
       <div className="layout-container">
-        <div className="layout-grid-12 pb-8 border-b border-[#433840]/60">
+        <div className="layout-grid-12 pb-10 border-b border-[#2E2E2E]">
           {/* Brand Column */}
-          <div className="col-span-4 md:col-span-8 lg:col-span-5">
-            <div className="flex items-center gap-4">
-              <span
-                className="flex items-center justify-center w-8 h-8 rounded-lg bg-[#211820]"
-                aria-hidden="true"
-              >
-                <Aperture className="w-4 h-4 text-[#A8B69C]" />
-              </span>
-              <span className="font-display font-bold text-lg text-[#F5F0E7]">
-                Revelado Cultural
-              </span>
+          <div className="col-span-4 md:col-span-8 lg:col-span-5 flex flex-col justify-between">
+            <div>
+              <BrandLogo />
+              <p className="mt-5 text-base font-normal text-[#A7A39D] max-w-sm leading-relaxed">
+                Plataforma editorial que visibiliza ocho iniciativas culturales de
+                la Comuna 11, Laureles–Estadio, ganadoras de la convocatoria de
+                Presupuesto Participativo de Medellín.
+              </p>
             </div>
-            <p className="mt-4 text-base font-normal text-[#D8CDC8] max-w-sm leading-relaxed">
-              Iniciativas culturales generadas en la Comuna 11 ganadoras de la
-              convocatoria de Presupuesto Participativo en Laureles - Estadio.
-            </p>
+            <div className="mt-6 flex items-center gap-2 font-mono-meta text-xs text-[#A7A39D]">
+              <span className="w-2 h-2 rounded-full bg-[#C9321B]" aria-hidden="true" />
+              <span>La cultura del barrio, al descubierto</span>
+            </div>
           </div>
 
           {/* Navigation Column */}
           <div className="col-span-4 md:col-span-4 lg:col-span-3">
-            <h3 className="font-display font-semibold text-base text-[#A8B69C] mb-4">
-              Secciones
+            <h3 className="font-display font-semibold text-base text-[#F2EFE8] mb-4">
+              Navegación
             </h3>
-            <ul className="space-y-2 text-base">
+            <ul className="space-y-2.5 text-base">
               <li>
                 <Link
                   to="/"
-                  className="text-[#D8CDC8] hover:text-[#F5F0E7] transition-colors"
+                  className="text-[#A7A39D] hover:text-[#FF5C38] transition-colors"
                 >
                   Inicio
                 </Link>
@@ -44,33 +41,33 @@ export const SiteFooter: React.FC = () => {
               <li>
                 <Link
                   to="/explorar"
-                  className="text-[#D8CDC8] hover:text-[#F5F0E7] transition-colors"
+                  className="text-[#A7A39D] hover:text-[#FF5C38] transition-colors"
                 >
-                  Explorar proyectos
+                  Explorar iniciativas
                 </Link>
               </li>
               <li>
                 <Link
                   to="/acerca-de"
-                  className="text-[#D8CDC8] hover:text-[#F5F0E7] transition-colors"
+                  className="text-[#A7A39D] hover:text-[#FF5C38] transition-colors"
                 >
-                  Acerca de
+                  Acerca de Revelado Cultural
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Areas Column */}
+          {/* Disciplines Column */}
           <div className="col-span-4 md:col-span-4 lg:col-span-4">
-            <h3 className="font-display font-semibold text-base text-[#A8B69C] mb-4">
-              Áreas
+            <h3 className="font-display font-semibold text-base text-[#F2EFE8] mb-4">
+              Disciplinas
             </h3>
             <div className="flex flex-wrap gap-2">
               {CONFIRMED_CATEGORIES.map((category) => (
                 <Link
                   key={category}
                   to={`/explorar?categoria=${encodeURIComponent(category)}`}
-                  className="btn-press inline-flex items-center min-h-10 px-4 py-2 rounded-full bg-[#211820] hover:bg-[#482332] text-sm font-medium text-[#F5F0E7]"
+                  className="btn-press inline-flex items-center min-h-9 px-3.5 py-1.5 rounded-full bg-[#222222] hover:bg-[#2E2E2E] text-xs font-mono-meta text-[#F2EFE8] border border-[#2E2E2E] hover:border-[#FF5C38] transition-colors"
                 >
                   {category}
                 </Link>
@@ -79,9 +76,12 @@ export const SiteFooter: React.FC = () => {
           </div>
         </div>
 
-        <div className="pt-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-base text-[#D8CDC8]">
-          <p className="text-base font-normal text-[#D8CDC8]">
-            Revelado Cultural · Comuna 11, Laureles - Estadio
+        <div className="pt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs font-mono-meta text-[#A7A39D]">
+          <p>
+            Revelado Cultural · Comuna 11, Laureles–Estadio · Medellín, Colombia
+          </p>
+          <p>
+            Presupuesto Participativo · Cultura Ciudadana
           </p>
         </div>
       </div>
