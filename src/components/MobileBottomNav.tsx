@@ -14,7 +14,7 @@ export const MobileBottomNav: React.FC = () => {
   return (
     <nav
       aria-label="Navegación móvil inferior"
-      className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#151515]/95 backdrop-blur-lg border-t border-[#2E2E2E] bottom-safe-bar"
+      className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#170B25]/96 backdrop-blur-lg border-t border-[#3D2254] bottom-safe-bar"
     >
       <ul className="grid grid-cols-3 max-w-md mx-auto px-4 h-16 items-center gap-2">
         {destinations.map((item) => {
@@ -27,8 +27,8 @@ export const MobileBottomNav: React.FC = () => {
                 className={({ isActive }) =>
                   `relative flex flex-col items-center justify-center w-full min-h-12 py-1 rounded-xl transition-colors active:scale-95 ${
                     isActive
-                      ? "text-[#F2EFE8] font-bold"
-                      : "text-[#A7A39D] hover:text-[#F2EFE8] font-medium"
+                      ? "text-[#FAF6FB] font-bold"
+                      : "text-[#D1C6DA] hover:text-[#FAF6FB] font-medium"
                   }`
                 }
               >
@@ -44,12 +44,14 @@ export const MobileBottomNav: React.FC = () => {
                             duration: 0.25,
                             ease: [0.22, 1, 0.36, 1],
                           }}
-                          className="absolute inset-0 rounded-full bg-[#C9321B]/20 border border-[#FF5C38]/40"
+                          className="absolute inset-0 rounded-full bg-[#37105F] border border-[#F9C63C]/60"
                           aria-hidden="true"
                         />
                       )}
                       <Icon
-                        className="relative z-10 w-4 h-4 stroke-[2.2]"
+                        className={`relative z-10 w-4 h-4 stroke-[2.2] ${
+                          isActive ? "text-[#F9C63C]" : "text-[#D1C6DA]"
+                        }`}
                         aria-hidden="true"
                       />
                     </span>
@@ -57,7 +59,7 @@ export const MobileBottomNav: React.FC = () => {
                       <span>{item.label}</span>
                       {isActive && (
                         <span
-                          className="w-1 h-1 rounded-full bg-[#C9321B]"
+                          className="w-1.5 h-1.5 rounded-full bg-[#F9C63C]"
                           aria-hidden="true"
                         />
                       )}

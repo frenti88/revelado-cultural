@@ -35,17 +35,17 @@ export const RelatedProjects: React.FC<RelatedProjectsProps> = ({
   return (
     <section
       aria-labelledby="related-projects-heading"
-      className="w-full section-macro border-t border-[#2E2E2E] bg-[#151515]"
+      className="w-full section-macro border-t border-[#3D2254] bg-[#170B25]"
     >
       <div className="layout-container">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-6 mb-8 lg:mb-12 border-b border-[#2E2E2E]">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-6 mb-8 lg:mb-12 border-b border-[#3D2254]">
           <div>
-            <span className="font-mono-meta text-xs uppercase tracking-widest text-[#FF5C38] font-semibold block mb-2">
+            <span className="font-mono-meta text-xs uppercase tracking-widest text-[#F9C63C] font-bold block mb-2">
               06 — Sigue descubriendo
             </span>
             <h2
               id="related-projects-heading"
-              className="font-display font-black text-2xl sm:text-3xl md:text-4xl text-[#F2EFE8]"
+              className="font-display font-black text-2xl sm:text-3xl md:text-4xl text-[#FAF6FB]"
             >
               Historias que también transforman el barrio
             </h2>
@@ -53,10 +53,10 @@ export const RelatedProjects: React.FC<RelatedProjectsProps> = ({
 
           <Link
             to="/explorar"
-            className="inline-flex items-center gap-1.5 text-sm font-semibold text-[#FF5C38] hover:underline"
+            className="inline-flex items-center gap-1.5 text-sm font-bold text-[#F9C63C] hover:underline"
           >
             <span>Ver las 8 iniciativas</span>
-            <ArrowUpRight className="w-4 h-4 stroke-[2.2]" aria-hidden="true" />
+            <ArrowUpRight className="w-4 h-4 stroke-[2.4]" aria-hidden="true" />
           </Link>
         </div>
 

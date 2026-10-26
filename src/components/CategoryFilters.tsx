@@ -1,6 +1,6 @@
 import React from "react";
 import { Check, Layers } from "lucide-react";
-import { CONFIRMED_CATEGORIES, DISCIPLINE_META } from "../data/catalog";
+import { CONFIRMED_CATEGORIES } from "../data/catalog";
 
 interface CategoryFiltersProps {
   selectedCategory: string | null;
@@ -28,23 +28,23 @@ export const CategoryFilters: React.FC<CategoryFiltersProps> = ({
         type="button"
         onClick={() => onSelectCategory(null)}
         aria-pressed={isAllActive}
-        className={`btn-press shrink-0 inline-flex items-center gap-2 min-h-11 px-4 py-2 rounded-full text-sm sm:text-base font-medium cursor-pointer transition-colors ${
+        className={`btn-press shrink-0 inline-flex items-center gap-2 min-h-11 px-4 py-2 rounded-full text-sm sm:text-base font-semibold cursor-pointer transition-colors ${
           isAllActive
-            ? "bg-[#C9321B]text-white shadow-[0_4px_14px_rgba(235,68,42,0.35)]"
-            : "bg-[#222222] hover:bg-[#2E2E2E] border border-[#2E2E2E] text-[#A7A39D] hover:text-[#F2EFE8]"
+            ? "bg-[#F9C63C] text-[#170B25] shadow-[0_4px_14px_rgba(249,198,60,0.3)]"
+            : "bg-[#29143B] hover:bg-[#37105F] border border-[#3D2254] text-[#D1C6DA] hover:text-[#FAF6FB]"
         }`}
       >
         {isAllActive ? (
-          <Check className="w-4 h-4 text-[#F2EFE8] stroke-[2.5]" aria-hidden="true" />
+          <Check className="w-4 h-4 text-[#170B25] stroke-[2.8]" aria-hidden="true" />
         ) : (
-          <Layers className="w-4 h-4 text-[#FF5C38]" aria-hidden="true" />
+          <Layers className="w-4 h-4 text-[#F9C63C]" aria-hidden="true" />
         )}
         <span>Todas las disciplinas</span>
         <span
           className={`px-2 py-0.5 rounded-full font-mono-meta text-xs leading-none ${
             isAllActive
-              ? "bg-[#151515]/40 text-[#F2EFE8]"
-              : "bg-[#151515] text-[#A7A39D]"
+              ? "bg-[#170B25] text-[#F9C63C] font-bold"
+              : "bg-[#170B25] text-[#D1C6DA]"
           }`}
         >
           {totalCount}
@@ -62,28 +62,31 @@ export const CategoryFilters: React.FC<CategoryFiltersProps> = ({
             type="button"
             onClick={() => onSelectCategory(isActive ? null : category)}
             aria-pressed={isActive}
-            className={`btn-press shrink-0 inline-flex items-center gap-2 min-h-11 px-4 py-2 rounded-full text-sm sm:text-base font-medium cursor-pointer transition-colors ${
+            className={`btn-press shrink-0 inline-flex items-center gap-2 min-h-11 px-4 py-2 rounded-full text-sm sm:text-base font-semibold cursor-pointer transition-colors ${
               isActive
-                ? "bg-[#C9321B]text-white shadow-[0_4px_14px_rgba(235,68,42,0.35)]"
-                : "bg-[#222222] hover:bg-[#2E2E2E] border border-[#2E2E2E] text-[#A7A39D] hover:text-[#F2EFE8]"
+                ? "bg-[#F9C63C] text-[#170B25] shadow-[0_4px_14px_rgba(249,198,60,0.3)]"
+                : "bg-[#29143B] hover:bg-[#37105F] border border-[#3D2254] text-[#D1C6DA] hover:text-[#FAF6FB]"
             }`}
           >
             {isActive ? (
               <Check
-                className="w-4 h-4 stroke-[2.5] text-[#F2EFE8]"
+                className="w-4 h-4 stroke-[2.8] text-[#170B25]"
                 aria-hidden="true"
               />
             ) : (
               <span
-                className="w-2 h-2 rounded-full shrink-0 bg-[#C9321B]"
+                className="w-2 h-2 rounded-full shrink-0 bg-[#B184D5]"
                 aria-hidden="true"
               />
             )}
             <span>{category}</span>
             {typeof count === "number" && (
               <span
-                className="px-2 py-0.5 rounded-full font-mono-meta text-xs leading-none bg-[#151515]"
-                style={{ color: isActive ? "#F2EFE8" : "#A7A39D" }}
+                className={`px-2 py-0.5 rounded-full font-mono-meta text-xs leading-none ${
+                  isActive
+                    ? "bg-[#170B25] text-[#F9C63C] font-bold"
+                    : "bg-[#170B25] text-[#D1C6DA]"
+                }`}
               >
                 {count}
               </span>

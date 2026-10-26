@@ -19,11 +19,11 @@ export const SiteHeader: React.FC = () => {
   ];
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-[#151515]/92 backdrop-blur-md border-b border-[#2E2E2E]">
+    <header className="sticky top-0 z-40 w-full bg-[#170B25]/94 backdrop-blur-md border-b border-[#3D2254]">
       {/* Skip link for keyboard accessibility */}
       <a
         href="#contenido-principal"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:rounded-lg focus:bg-[#C9321B]text-white focus:font-bold"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:rounded-lg focus:bg-[#F9C63C] focus:text-[#170B25] focus:font-bold shadow-lg"
       >
         Saltar al contenido principal
       </a>
@@ -45,8 +45,8 @@ export const SiteHeader: React.FC = () => {
               className={({ isActive }) =>
                 `relative py-2 text-base transition-colors ${
                   isActive
-                    ? "text-[#F2EFE8] font-semibold"
-                    : "text-[#A7A39D] hover:text-[#F2EFE8] font-normal"
+                    ? "text-[#FAF6FB] font-bold"
+                    : "text-[#D1C6DA] hover:text-[#FAF6FB] font-medium"
                 }`
               }
             >
@@ -54,7 +54,7 @@ export const SiteHeader: React.FC = () => {
                 <span className="flex items-center gap-2">
                   {isActive && (
                     <span
-                      className="w-1.5 h-1.5 rounded-full bg-[#C9321B]"
+                      className="w-1.5 h-1.5 rounded-full bg-[#F9C63C]"
                       aria-hidden="true"
                     />
                   )}
@@ -68,7 +68,7 @@ export const SiteHeader: React.FC = () => {
                         duration: 0.26,
                         ease: [0.22, 1, 0.36, 1],
                       }}
-                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#C9321B] rounded-full"
+                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#F9C63C] rounded-full"
                       aria-hidden="true"
                     />
                   )}
@@ -82,12 +82,12 @@ export const SiteHeader: React.FC = () => {
         <div className="flex items-center gap-1.5 sm:gap-3 shrink-0">
           <Link
             to={catalogReturnState}
-            className="btn-press inline-flex items-center gap-1.5 sm:gap-2 min-h-10 sm:min-h-11 px-3.5 sm:px-5 py-2 rounded-full bg-[#C9321B]text-white text-sm font-semibold shadow-[0_4px_16px_rgba(235,68,42,0.3)] transition-colors"
+            className="btn-press inline-flex items-center gap-1.5 sm:gap-2 min-h-10 sm:min-h-11 px-4 sm:px-5 py-2 rounded-full bg-[#F9C63C] text-[#170B25] text-sm font-bold shadow-[0_4px_16px_rgba(249,198,60,0.25)] hover:bg-[#EAB428] transition-colors"
           >
-            <span className="hidden sm:inline">Explorar proyectos</span>
+            <span className="hidden sm:inline">Explorar iniciativas</span>
             <span className="sm:hidden">Explorar</span>
             <ArrowUpRight
-              className="w-4 h-4 stroke-[2.2] icon-glide"
+              className="w-4 h-4 stroke-[2.4] icon-glide"
               aria-hidden="true"
             />
           </Link>

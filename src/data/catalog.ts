@@ -51,38 +51,38 @@ export const DISCIPLINE_META: Record<
   "Gestión cultural": {
     code: "Disciplina 01",
     subtitle: "Festivales de movimiento y sesiones abiertas de creación en vivo entre artistas del sector.",
-    accentColor: "#A8B69C",
-    posterGradient: "from-[#161317] via-[#1d221c] to-[#482332]/85",
+    accentColor: "#BCE3AB",
+    posterGradient: "from-[#170B25] via-[#201d36] to-[#37105F]",
   },
   "Artes escénicas": {
     code: "Disciplina 02",
     subtitle: "Obras en tablas donde el público toma la palabra y cambia lo que pasa en escena.",
-    accentColor: "#E49B7E",
-    posterGradient: "from-[#161317] via-[#281b19] to-[#5e2730]/85",
+    accentColor: "#F4BA9D",
+    posterGradient: "from-[#170B25] via-[#2b1836] to-[#37105F]",
   },
   Música: {
     code: "Disciplina 03",
     subtitle: "Canciones grabadas en el barrio que nacieron de dibujos llevados al estudio.",
-    accentColor: "#E598B0",
-    posterGradient: "from-[#161317] via-[#261822] to-[#63243b]/85",
+    accentColor: "#F5B0C8",
+    posterGradient: "from-[#170B25] via-[#2e153b] to-[#5a1b55]",
   },
   Investigación: {
     code: "Disciplina 04",
     subtitle: "Caminatas para observar cómo han cambiado las casas y las calles con el paso de los años.",
-    accentColor: "#E2C286",
-    posterGradient: "from-[#161317] via-[#241f18] to-[#523428]/85",
+    accentColor: "#F9E2A8",
+    posterGradient: "from-[#170B25] via-[#291e36] to-[#37105F]",
   },
   Literatura: {
     code: "Disciplina 05",
     subtitle: "Dibujo sobre mesa de luz y relatos contados en viñetas.",
-    accentColor: "#E8B486",
-    posterGradient: "from-[#161317] via-[#261d17] to-[#592d25]/85",
+    accentColor: "#F7C69E",
+    posterGradient: "from-[#170B25] via-[#2a1a36] to-[#37105F]",
   },
   "Artes visuales y plásticas": {
     code: "Disciplina 06",
     subtitle: "Trabajo con la imagen y el cuerpo en busca de lo propio.",
-    accentColor: "#C8B5DC",
-    posterGradient: "from-[#161317] via-[#201b27] to-[#482332]/85",
+    accentColor: "#D9C2F5",
+    posterGradient: "from-[#170B25] via-[#26153d] to-[#4c1c6e]",
   },
 };
 
@@ -98,7 +98,7 @@ export function getDisciplineColor(category: string | null | undefined): {
     };
   }
   return {
-    accentColor: "#DDB09A",
-    posterGradient: "from-[#161317] via-[#251b1d] to-[#482332]/80",
+    accentColor: "#F9C63C",
+    posterGradient: "from-[#170B25] via-[#29143B] to-[#37105F]",
   };
 }

@@ -20,35 +20,46 @@
 }
 
 :root {
-  /* 03. Paleta Cromática — Dirección de Arte Oficial: REVELADO */
-  --bg-primary: #151515;
-  --bg-secondary: #222222;
-  --bg-tertiary: #1C1C1C;
-  --surface-light: #F2EFE8;
-  --accent: #C9321B;
-  --accent-text: #FF5C38;             /* Bermellón de revelado analógico */
-  --accent-hover: #F0553E;
-  --accent-subtle: rgba(235, 68, 42, 0.14);
-  --text-primary: #F2EFE8;
-  --text-secondary: #D4D0C7;
-  --text-muted: #A7A39D;
-  --text-on-light: #151515;
-  --border-subtle: #2D2D2D;
-  --border-frame: #3D3D3D;
+  /* 03. Paleta Cromática — Dirección de Arte Oficial: Dark Cultural Motion */
+  --background-primary: #170B25;     /* Fondo violeta casi negro (65%) */
+  --background-secondary: #29143B;   /* Superficies, tarjetas y secciones */
+  --background-tertiary: #1F0D33;    /* Superficies intermedias de profundidad */
+  --purple-deep: #37105F;            /* Fondos gráficos y composiciones (20%) */
+  --purple-brand: #902B90;           /* Acentos gráficos de marca */
+  --lavender: #B184D5;               /* Pinceladas, títulos decorativos y elementos activos (5%) */
+  --yellow-primary: #F9C63C;         /* Acento protagonista y llamados a la acción (10%) */
+  --text-primary: #FAF6FB;           /* Textos principales de lectura */
+  --text-secondary: #D1C6DA;         /* Textos secundarios */
+  --text-muted: #A697B3;             /* Metadatos y textos terciarios */
+  --text-on-yellow: #170B25;         /* Texto oscuro de alto contraste (>10:1) sobre amarillo */
+  --border-subtle: #3D2254;          /* Bordes de contenedor y separadores */
+  --border-frame: #583178;           /* Bordes interactivos activos */
 
-  /* Acentos semánticos por disciplina cultural (Contraste WCAG AA > 4.5:1 sobre #151515 y #222222) */
-  --color-gestion: #A3B899;      /* Salvia botánica — Gestión cultural */
-  --color-escenicas: #E5A88B;    /* Terracota escénico — Artes escénicas */
-  --color-musica: #E598B0;       /* Malva sonoro — Música */
-  --color-investigacion: #E5C98E;/* Ocre documental — Investigación */
-  --color-literatura: #E8B486;   /* Ámbar viñeta — Literatura */
-  --color-visuales: #C8B5DC;     /* Lavanda plástico — Artes visuales y plásticas */
+  /* Alias semánticos */
+  --bg-primary: var(--background-primary);
+  --bg-secondary: var(--background-secondary);
+  --bg-tertiary: var(--background-tertiary);
+  --surface-light: #FAF6FB;
+  --accent: var(--yellow-primary);
+  --accent-text: var(--yellow-primary);
+  --accent-hover: #EAB428;
+  --accent-subtle: rgba(249, 198, 60, 0.16);
 
-  /* 04. Sistema Tipográfico Oficial:
-     - Archivo Black para titulares de gran impacto editorial
+  /* Acentos semánticos por disciplina cultural (Contraste WCAG AA > 4.5:1 sobre fondos oscuros) */
+  --color-gestion: #BCE3AB;      /* Verde menta suave — Gestión cultural */
+  --color-escenicas: #F4BA9D;    /* Melocotón escénico — Artes escénicas */
+  --color-musica: #F5B0C8;       /* Rosa rítmico — Música */
+  --color-investigacion: #F9E2A8;/* Amarillo documental — Investigación */
+  --color-literatura: #F7C69E;   /* Ámbar viñeta — Literatura */
+  --color-visuales: #D9C2F5;     /* Lavanda brillante — Artes visuales y plásticas */
+
+  /* 04. Sistema Tipográfico Oficial: Dark Cultural Motion
+     - Barlow Condensed ExtraBold para titulares y display de alto impacto
+     - Water Brush para caligrafía gestual y detalles expresivos
      - Inter para interfaz, lectura y navegación
      - IBM Plex Mono para numeración, categorías y metadatos */
-  --font-display: "Archivo Black", system-ui, -apple-system, sans-serif;
+  --font-display: "Barlow Condensed", system-ui, -apple-system, sans-serif;
+  --font-script: "Water Brush", cursive, Georgia, serif;
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 
@@ -171,25 +182,31 @@ kbd {
   font-variant-ligatures: none;
 }
 
-/* Subtle photographic darkroom grain overlay */
+/* Dark Cultural Motion atmospheric lighting */
+.bg-motion-atmospheric {
+  background-image:
+    radial-gradient(circle at 14% 18%, rgba(144, 43, 144, 0.22) 0%, transparent 45%),
+    radial-gradient(circle at 86% 25%, rgba(177, 132, 213, 0.18) 0%, transparent 48%),
+    radial-gradient(circle at 50% 88%, rgba(249, 198, 60, 0.08) 0%, transparent 52%);
+}
+
 .bg-darkroom-grain {
-  background-image: radial-gradient(
-      circle at 18% 12%,
-      rgba(116, 41, 64, 0.14) 0%,
-      transparent 48%
-    ),
-    radial-gradient(
-      circle at 84% 78%,
-      rgba(168, 182, 156, 0.06) 0%,
-      transparent 45%
-    );
+  background-image:
+    radial-gradient(circle at 18% 12%, rgba(144, 43, 144, 0.2) 0%, transparent 48%),
+    radial-gradient(circle at 84% 78%, rgba(177, 132, 213, 0.14) 0%, transparent 45%);
 }
 
 .font-display {
   font-family: var(--font-display);
-  letter-spacing: -0.02em;
-  line-height: 1.16;
+  letter-spacing: -0.015em;
+  line-height: 1.14;
   text-wrap: balance;
+}
+
+.font-script {
+  font-family: var(--font-script);
+  font-weight: 400;
+  line-height: 1;
 }
 
 .font-sans-editorial {
@@ -301,8 +318,8 @@ kbd {
 
 /* Selection */
 ::selection {
-  background-color: var(--accent);
-  color: var(--text-primary);
+  background-color: var(--yellow-primary);
+  color: var(--text-on-yellow);
 }
 
 /* Accessible focus ring (WCAG 2.2 AA) */

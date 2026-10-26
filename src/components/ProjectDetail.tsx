@@ -4,9 +4,7 @@ import { motion, useReducedMotion } from "motion/react";
 import {
   ArrowLeft,
   ArrowRight,
-  ArrowUpRight,
   HeartHandshake,
-  Image as ImageIcon,
   MapPin,
   Sparkles,
   User,
@@ -22,6 +20,7 @@ import MediaGallery from "./MediaGallery";
 import VideoPlayer from "./VideoPlayer";
 import AudioPlayer from "./AudioPlayer";
 import RelatedProjects from "./RelatedProjects";
+import { BrushStroke } from "./BrushMotifs";
 
 interface ProjectDetailProps {
   project: CulturalProject;
@@ -69,28 +68,28 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
   const headline = project.editorialHeadline || "¿Qué historia guarda este proyecto?";
 
   return (
-    <article className="w-full bg-[#151515] text-[#F2EFE8] pb-16">
+    <article className="w-full bg-[#170B25] text-[#FAF6FB] pb-16">
       {/* 01 — Portada & Barra Superior */}
-      <div className="border-b border-[#2E2E2E] bg-[#151515] py-6 sm:py-8">
+      <div className="border-b border-[#3D2254] bg-[#170B25] py-6 sm:py-8">
         <div className="layout-container">
           {/* Breadcrumb y Volver */}
-          <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-[#2E2E2E]">
+          <div className="flex flex-wrap items-center justify-between gap-4 pb-6 mb-8 border-b border-[#3D2254]">
             <Link
               to={fromCatalog}
-              className="btn-press inline-flex items-center gap-2 min-h-10 px-4 py-2 rounded-full bg-[#222222] hover:bg-[#2E2E2E] border border-[#2E2E2E] hover:border-[#FF5C38] text-[#F2EFE8] text-xs font-mono-meta transition-colors"
+              className="btn-press inline-flex items-center gap-2 min-h-10 px-4 py-2 rounded-full bg-[#29143B] hover:bg-[#37105F] border border-[#3D2254] hover:border-[#F9C63C] text-[#FAF6FB] text-xs font-mono-meta transition-colors shadow-sm"
             >
-              <ArrowLeft className="w-3.5 h-3.5 text-[#FF5C38]" aria-hidden="true" />
+              <ArrowLeft className="w-3.5 h-3.5 text-[#F9C63C]" aria-hidden="true" />
               <span>Volver a explorar</span>
             </Link>
 
             <div className="flex items-center gap-2 font-mono-meta text-xs">
-              <span className="px-3 py-1 rounded bg-[#222222] border border-[#2E2E2E] text-[#FF5C38] font-bold">
+              <span className="px-3 py-1 rounded-full bg-[#29143B] border border-[#583178] text-[#F9C63C] font-bold">
                 0{project.id} / 08
               </span>
               {project.category && (
                 <Link
                   to={`/explorar?categoria=${encodeURIComponent(project.category)}`}
-                  className="px-3 py-1 rounded bg-[#222222] border border-[#2E2E2E] text-[#A7A39D] hover:text-[#F2EFE8] hover:border-[#FF5C38] transition-colors"
+                  className="px-3 py-1 rounded-full bg-[#29143B] border border-[#3D2254] text-[#D1C6DA] hover:text-[#FAF6FB] hover:border-[#F9C63C] transition-colors"
                 >
                   {project.category}
                 </Link>
@@ -100,29 +99,33 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
 
           {/* Header Editorial Hero */}
           <div className="max-w-4xl">
-            <span className="font-mono-meta text-xs uppercase tracking-widest text-[#FF5C38] font-semibold block mb-2">
+            <span className="font-mono-meta text-xs uppercase tracking-widest text-[#F9C63C] font-bold block mb-2">
               01 — Portada
             </span>
             <motion.h1
               initial={shouldReduceMotion ? false : { y: 12 }}
               animate={{ y: 0 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#F2EFE8] leading-tight"
+              className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#FAF6FB] leading-tight"
             >
               {project.name}
             </motion.h1>
 
-            <p className="mt-4 text-xl sm:text-2xl text-[#FF5C38] font-display font-medium leading-snug">
+            <p className="mt-4 text-xl sm:text-2xl text-[#F9C63C] font-display font-bold leading-snug">
               «{headline}»
             </p>
 
-            <div className="mt-6 flex flex-wrap items-center gap-3 font-mono-meta text-xs text-[#A7A39D]">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#222222] border border-[#2E2E2E]">
-                <MapPin className="w-3.5 h-3.5 text-[#FF5C38]" aria-hidden="true" />
+            <div className="mt-3 -ml-2" aria-hidden="true">
+              <BrushStroke className="w-48 h-6 sm:w-64 sm:h-8 opacity-60" color="#B184D5" accentColor="#F9C63C" />
+            </div>
+
+            <div className="mt-6 flex flex-wrap items-center gap-3 font-mono-meta text-xs text-[#D1C6DA]">
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#29143B] border border-[#3D2254]">
+                <MapPin className="w-3.5 h-3.5 text-[#F9C63C]" aria-hidden="true" />
                 <span>Comuna 11 · Laureles–Estadio</span>
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#222222] border border-[#2E2E2E]">
-                <Sparkles className="w-3.5 h-3.5 text-[#FF5C38]" aria-hidden="true" />
+              <span className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#29143B] border border-[#3D2254]">
+                <Sparkles className="w-3.5 h-3.5 text-[#F9C63C]" aria-hidden="true" />
                 <span>Presupuesto Participativo</span>
               </span>
             </div>
@@ -130,31 +133,31 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
         </div>
       </div>
 
-      {/* 02 — La historia & 04 — La experiencia (Audiovisual en paralelo para máxima inmersión) */}
+      {/* 02 — La historia & 04 — La experiencia */}
       <div className="layout-container py-12 lg:py-16">
         <div className="layout-grid-12 items-start gap-8 lg:gap-12">
           {/* Columna Izquierda: 02 — La historia */}
           <div className="col-span-4 md:col-span-8 lg:col-span-7 space-y-10">
             <section aria-labelledby="historia-heading">
-              <span className="font-mono-meta text-xs uppercase tracking-widest text-[#FF5C38] font-semibold block mb-2">
+              <span className="font-mono-meta text-xs uppercase tracking-widest text-[#F9C63C] font-bold block mb-2">
                 02 — La historia
               </span>
               <h2
                 id="historia-heading"
-                className="font-display font-bold text-2xl sm:text-3xl text-[#F2EFE8] mb-6"
+                className="font-display font-black text-2xl sm:text-3xl text-[#FAF6FB] mb-6"
               >
                 Qué propone esta iniciativa
               </h2>
 
               {paragraphs.length > 0 ? (
-                <div className="space-y-6 text-base sm:text-lg font-normal text-[#D4D0C7] leading-relaxed">
+                <div className="space-y-6 text-base sm:text-lg font-normal text-[#D1C6DA] leading-relaxed">
                   {paragraphs.map((para, idx) => (
                     <p
                       key={idx}
                       className={
                         idx === 0
-                          ? "text-lead-fluid text-[#F2EFE8] font-medium border-l-2 border-[#FF5C38] pl-4 sm:pl-6 py-1"
-                          : "text-[#A7A39D]"
+                          ? "text-lead-fluid text-[#FAF6FB] font-medium border-l-2 border-[#F9C63C] pl-4 sm:pl-6 py-1"
+                          : "text-[#D1C6DA]"
                       }
                     >
                       {para}
@@ -162,78 +165,78 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
                   ))}
                 </div>
               ) : (
-                <p className="text-base text-[#A7A39D] leading-relaxed">
+                <p className="text-base text-[#D1C6DA] leading-relaxed">
                   Esta iniciativa cultural forma parte de las ocho ganadoras de la convocatoria de Presupuesto Participativo en la Comuna 11, aportando a la vida cultural y comunitaria de Medellín.
                 </p>
               )}
             </section>
 
             {/* 03 — Las personas detrás */}
-            <section aria-labelledby="personas-heading" className="pt-8 border-t border-[#2E2E2E]">
-              <span className="font-mono-meta text-xs uppercase tracking-widest text-[#FF5C38] font-semibold block mb-2">
+            <section aria-labelledby="personas-heading" className="pt-8 border-t border-[#3D2254]">
+              <span className="font-mono-meta text-xs uppercase tracking-widest text-[#F9C63C] font-bold block mb-2">
                 03 — Las personas detrás
               </span>
               <h2
                 id="personas-heading"
-                className="font-display font-bold text-xl sm:text-2xl text-[#F2EFE8] mb-4"
+                className="font-display font-black text-xl sm:text-2xl text-[#FAF6FB] mb-4"
               >
                 Quiénes impulsan el proyecto
               </h2>
 
-              <div className="rounded-xl bg-[#222222] border border-[#2E2E2E] p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="rounded-2xl bg-[#29143B] border border-[#3D2254] p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-[#151515] border border-[#2E2E2E] flex items-center justify-center text-[#FF5C38] shrink-0">
-                    <User className="w-6 h-6" aria-hidden="true" />
+                  <div className="w-12 h-12 rounded-xl bg-[#170B25] border border-[#583178] flex items-center justify-center text-[#F9C63C] shrink-0">
+                    <User className="w-6 h-6 stroke-[2.2]" aria-hidden="true" />
                   </div>
                   <div>
-                    <h3 className="font-display font-bold text-lg text-[#F2EFE8]">
+                    <h3 className="font-display font-black text-lg text-[#FAF6FB]">
                       {project.leader ? project.leader : `Equipo de ${project.name}`}
                     </h3>
-                    <p className="font-mono-meta text-xs text-[#A7A39D] mt-0.5">
+                    <p className="font-mono-meta text-xs text-[#D1C6DA] mt-0.5">
                       {project.leader ? "Liderazgo y gestión del proyecto" : "Colectivo creador · Comuna 11"}
                     </p>
                   </div>
                 </div>
 
-                <div className="text-xs font-mono-meta text-[#FF5C38] bg-[#151515] border border-[#2E2E2E] px-3 py-1.5 rounded-full shrink-0">
+                <div className="text-xs font-mono-meta text-[#F9C63C] bg-[#170B25] border border-[#3D2254] px-3.5 py-1.5 rounded-full shrink-0 font-bold">
                   Laureles–Estadio
                 </div>
               </div>
             </section>
 
             {/* 05 — Su aporte cultural */}
-            <section aria-labelledby="aporte-heading" className="pt-8 border-t border-[#2E2E2E]">
-              <span className="font-mono-meta text-xs uppercase tracking-widest text-[#FF5C38] font-semibold block mb-2">
+            <section aria-labelledby="aporte-heading" className="pt-8 border-t border-[#3D2254]">
+              <span className="font-mono-meta text-xs uppercase tracking-widest text-[#F9C63C] font-bold block mb-2">
                 05 — Su aporte cultural
               </span>
               <h2
                 id="aporte-heading"
-                className="font-display font-bold text-xl sm:text-2xl text-[#F2EFE8] mb-4"
+                className="font-display font-black text-xl sm:text-2xl text-[#FAF6FB] mb-4"
               >
                 Impacto en la comunidad y el territorio
               </h2>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="rounded-xl bg-[#222222] border border-[#2E2E2E] p-5">
-                  <div className="text-[#FF5C38] mb-2">
-                    <HeartHandshake className="w-5 h-5" aria-hidden="true" />
+                <div className="rounded-2xl bg-[#29143B] border border-[#3D2254] p-5 shadow-sm">
+                  <div className="text-[#F9C63C] mb-2">
+                    <HeartHandshake className="w-5 h-5 stroke-[2.2]" aria-hidden="true" />
                   </div>
-                  <h4 className="font-display font-semibold text-base text-[#F2EFE8]">
+                  <h3 className="font-display font-bold text-base text-[#FAF6FB]">
                     Apropiación social
-                  </h4>
-                  <p className="mt-2 text-xs sm:text-sm text-[#A7A39D] leading-relaxed">
+                  </h3>
+                  <p className="mt-2 text-xs sm:text-sm text-[#D1C6DA] leading-relaxed">
                     Fomenta el encuentro ciudadano en espacios públicos y salas culturales del barrio, fortaleciendo el tejido comunitario.
                   </p>
                 </div>
 
-                <div className="rounded-xl bg-[#222222] border border-[#2E2E2E] p-5">
-                  <div className="text-[#FF5C38] mb-2">
-                    <Sparkles className="w-5 h-5" aria-hidden="true" />
+                <div className="rounded-2xl bg-[#29143B] border border-[#3D2254] p-5 shadow-sm">
+                  <div className="text-[#F9C63C] mb-2">
+                    <Sparkles className="w-5 h-5 stroke-[2.2]" aria-hidden="true" />
                   </div>
-                  <h4 className="font-display font-semibold text-base text-[#F2EFE8]">
+                  <h3 className="font-display font-bold text-base text-[#FAF6FB]">
                     Creación viva
-                  </h4>
-                  <p className="mt-2 text-xs sm:text-sm text-[#A7A39D] leading-relaxed">
+                  </h3>
+                  <p className="mt-2 text-xs sm:text-sm text-[#D1C6DA] leading-relaxed">
                     Aporta obra artística original, registros documentales y metodologías participativas a la memoria de Medellín.
                   </p>
                 </div>
@@ -244,7 +247,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
           {/* Columna Derecha: 04 — La experiencia (Video principal / Reel) */}
           <div className="col-span-4 md:col-span-8 lg:col-span-5">
             <div className="lg:sticky lg:top-24 space-y-6">
-              <span className="font-mono-meta text-xs uppercase tracking-widest text-[#FF5C38] font-semibold block">
+              <span className="font-mono-meta text-xs uppercase tracking-widest text-[#F9C63C] font-bold block">
                 04 — La experiencia audiovisual
               </span>
 
@@ -260,12 +263,12 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
                   />
                 ))
               ) : project.coverImage ? (
-                <div className="rounded-xl bg-[#222222] border border-[#2E2E2E] p-4 sm:p-5 shadow-lg">
+                <div className="rounded-2xl bg-[#29143B] border border-[#3D2254] p-4 sm:p-5 shadow-lg">
                   <PhotoFrame
                     aspectRatio="aspect-[4/3]"
                     showCorners={true}
                     cornerSize="md"
-                    className="w-full bg-[#151515]"
+                    className="w-full bg-[#170B25]"
                   >
                     <img
                       src={project.coverImage}
@@ -275,13 +278,13 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
                       className="w-full h-full object-cover photo-reveal"
                     />
                   </PhotoFrame>
-                  <p className="font-mono-meta text-xs text-[#A7A39D] mt-3">
+                  <p className="font-mono-meta text-xs text-[#D1C6DA] mt-3">
                     Registro fotográfico oficial · Comuna 11
                   </p>
                 </div>
               ) : (
-                <div className="rounded-xl bg-[#222222] border border-[#2E2E2E] p-8 text-center">
-                  <span className="font-mono-meta text-xs text-[#A7A39D]">
+                <div className="rounded-2xl bg-[#29143B] border border-[#3D2254] p-8 text-center">
+                  <span className="font-mono-meta text-xs text-[#D1C6DA]">
                     Iniciativa de Presupuesto Participativo · Rollo {project.id}
                   </span>
                 </div>
@@ -290,26 +293,26 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
           </div>
         </div>
 
-        {/* Galería Documental Completa (si tiene fotografías) */}
+        {/* Galería Documental Completa */}
         {readyImages.length > 0 && (
           <section
             id="galeria-fotografica"
             aria-labelledby="galeria-heading"
-            className="mt-16 pt-12 border-t border-[#2E2E2E] scroll-mt-24"
+            className="mt-16 pt-12 border-t border-[#3D2254] scroll-mt-24"
           >
             <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 mb-6">
               <div>
-                <span className="font-mono-meta text-xs uppercase tracking-widest text-[#FF5C38] font-semibold block mb-1">
+                <span className="font-mono-meta text-xs uppercase tracking-widest text-[#F9C63C] font-bold block mb-1">
                   Registros documentales
                 </span>
                 <h2
                   id="galeria-heading"
-                  className="font-display font-bold text-2xl sm:text-3xl text-[#F2EFE8]"
+                  className="font-display font-black text-2xl sm:text-3xl text-[#FAF6FB]"
                 >
                   Galería fotográfica
                 </h2>
               </div>
-              <span className="font-mono-meta text-xs text-[#FF5C38] font-semibold">
+              <span className="font-mono-meta text-xs text-[#F9C63C] font-bold">
                 {readyImages.length} {readyImages.length === 1 ? "fotografía" : "fotografías"}
               </span>
             </div>
@@ -323,15 +326,15 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
           <section
             id="audio-documental"
             aria-labelledby="audio-heading"
-            className="mt-16 pt-12 border-t border-[#2E2E2E] scroll-mt-24"
+            className="mt-16 pt-12 border-t border-[#3D2254] scroll-mt-24"
           >
             <div className="mb-6">
-              <span className="font-mono-meta text-xs uppercase tracking-widest text-[#FF5C38] font-semibold block mb-1">
+              <span className="font-mono-meta text-xs uppercase tracking-widest text-[#F9C63C] font-bold block mb-1">
                 Registro sonoro
               </span>
               <h2
                 id="audio-heading"
-                className="font-display font-bold text-2xl sm:text-3xl text-[#F2EFE8]"
+                className="font-display font-black text-2xl sm:text-3xl text-[#FAF6FB]"
               >
                 Pódcast y voces del proyecto
               </h2>
@@ -358,23 +361,23 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
         {/* Navegación entre proyectos: Anterior / Siguiente */}
         <nav
           aria-label="Navegación entre historias culturales"
-          className="mt-16 pt-8 border-t border-[#2E2E2E] grid grid-cols-1 sm:grid-cols-2 gap-4"
+          className="mt-16 pt-8 border-t border-[#3D2254] grid grid-cols-1 sm:grid-cols-2 gap-4"
         >
           {prevProject && (
             <Link
               to={`/proyectos/${prevProject.slug}`}
               state={{ fromCatalog }}
-              className="group rounded-xl bg-[#222222] hover:bg-[#2A2A2A] border border-[#2E2E2E] hover:border-[#FF5C38] p-4 sm:p-5 flex items-center gap-4 transition-all"
+              className="group rounded-2xl bg-[#29143B] hover:bg-[#37105F] border border-[#3D2254] hover:border-[#F9C63C] p-4 sm:p-5 flex items-center gap-4 transition-all shadow-sm"
             >
               <ArrowLeft
-                className="w-5 h-5 text-[#FF5C38] shrink-0 transition-transform group-hover:-translate-x-1"
+                className="w-5 h-5 text-[#F9C63C] shrink-0 transition-transform group-hover:-translate-x-1"
                 aria-hidden="true"
               />
               <div className="min-w-0">
-                <span className="font-mono-meta text-xs text-[#A7A39D] block">
+                <span className="font-mono-meta text-xs text-[#D1C6DA] block">
                   Historia anterior · 0{prevProject.id} / 08
                 </span>
-                <span className="font-display font-bold text-base text-[#F2EFE8] truncate block mt-1 group-hover:text-[#FF5C38] transition-colors">
+                <span className="font-display font-bold text-base text-[#FAF6FB] truncate block mt-1 group-hover:text-[#F9C63C] transition-colors">
                   {prevProject.name}
                 </span>
               </div>
@@ -385,18 +388,18 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
             <Link
               to={`/proyectos/${nextProject.slug}`}
               state={{ fromCatalog }}
-              className="group rounded-xl bg-[#222222] hover:bg-[#2A2A2A] border border-[#2E2E2E] hover:border-[#FF5C38] p-4 sm:p-5 flex items-center justify-end gap-4 text-right transition-all"
+              className="group rounded-2xl bg-[#29143B] hover:bg-[#37105F] border border-[#3D2254] hover:border-[#F9C63C] p-4 sm:p-5 flex items-center justify-end gap-4 text-right transition-all shadow-sm"
             >
               <div className="min-w-0">
-                <span className="font-mono-meta text-xs text-[#A7A39D] block">
+                <span className="font-mono-meta text-xs text-[#D1C6DA] block">
                   Siguiente historia · 0{nextProject.id} / 08
                 </span>
-                <span className="font-display font-bold text-base text-[#F2EFE8] truncate block mt-1 group-hover:text-[#FF5C38] transition-colors">
+                <span className="font-display font-bold text-base text-[#FAF6FB] truncate block mt-1 group-hover:text-[#F9C63C] transition-colors">
                   {nextProject.name}
                 </span>
               </div>
               <ArrowRight
-                className="w-5 h-5 text-[#FF5C38] shrink-0 transition-transform group-hover:translate-x-1"
+                className="w-5 h-5 text-[#F9C63C] shrink-0 transition-transform group-hover:translate-x-1"
                 aria-hidden="true"
               />
             </Link>

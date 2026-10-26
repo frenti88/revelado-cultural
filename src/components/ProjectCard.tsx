@@ -56,7 +56,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({
         delay: Math.min(index * 0.04, 0.2),
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="group relative flex flex-col justify-between rounded-xl bg-[#222222] border border-[#2E2E2E] hover:border-[#FF5C38] hover:-translate-y-1 transition-[background-color,border-color,transform] duration-250 overflow-hidden shadow-[0_12px_32px_rgba(0,0,0,0.45)]"
+      className="group relative flex flex-col justify-between rounded-2xl bg-[#29143B] border border-[#3D2254] hover:border-[#F9C63C] hover:-translate-y-1 transition-[background-color,border-color,transform] duration-250 overflow-hidden shadow-[0_12px_32px_rgba(14,6,23,0.5)]"
     >
       <Link
         to={`/proyectos/${project.slug}`}
@@ -72,14 +72,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({
           {/* Top Metadata Header with Editorial Numbering & Category */}
           <div className="flex items-center justify-between gap-2 mb-3.5">
             <div className="flex items-center gap-2 font-mono-meta text-xs min-w-0">
-              <span className="text-[#FF5C38] font-bold shrink-0 whitespace-nowrap">
+              <span className="text-[#F9C63C] font-black shrink-0 whitespace-nowrap">
                 {project.id} / 08
               </span>
               {project.category && (
                 <>
-                  <span className="text-[#2E2E2E]" aria-hidden="true">·</span>
+                  <span className="text-[#583178]" aria-hidden="true">·</span>
                   <span
-                    className="font-medium truncate text-[#A7A39D] uppercase tracking-wider text-[11px]"
+                    className="font-semibold truncate text-[#B184D5] uppercase tracking-wider text-[11px]"
                   >
                     {project.category}
                   </span>
@@ -88,7 +88,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({
             </div>
 
             <span
-              className="shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#151515] border border-[#2E2E2E] text-whitebg-[#C9321B] group-hover:border-[#FF5C38] transition-all"
+              className="shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#170B25] border border-[#3D2254] text-[#FAF6FB] group-hover:bg-[#F9C63C] group-hover:text-[#170B25] group-hover:border-[#F9C63C] transition-all shadow-sm"
               aria-hidden="true"
             >
               <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -101,7 +101,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({
               aspectRatio={aspectClass}
               showCorners={true}
               cornerSize="sm"
-              className="w-full bg-[#151515]"
+              className="w-full bg-[#170B25]"
             >
               {project.coverImage ? (
                 <>
@@ -119,10 +119,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({
                     decoding="async"
                     className="w-full h-full object-cover photo-reveal transition-transform duration-500 group-hover:scale-[1.04]"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#151515]/85 via-transparent to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#170B25]/90 via-transparent to-transparent pointer-events-none" />
                 </>
               ) : (
-                /* Darkroom Negative Contact Graphic for audio/documentary projects without photo */
+                /* Poster for initiatives without image */
                 <div
                   className={`w-full h-full flex flex-col justify-between p-4 sm:p-5 pb-14 bg-gradient-to-br ${posterGradient} relative overflow-hidden`}
                 >
@@ -136,7 +136,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({
 
                   <div className="my-auto text-center">
                     <span
-                      className="font-display font-black text-5xl sm:text-6xl block leading-none select-none opacity-30 text-[#F2EFE8]"
+                      className="font-display font-black text-5xl sm:text-6xl block leading-none select-none opacity-30 text-[#FAF6FB]"
                       aria-hidden="true"
                     >
                       {project.id}
@@ -148,20 +148,20 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({
               {/* Format Badges inside Cover Bottom-Left */}
               <div className="absolute bottom-2.5 left-2.5 right-2.5 flex flex-wrap items-center gap-1.5 pointer-events-none">
                 {readyImages.length > 0 && (
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#151515]/90 border border-[#2E2E2E] font-mono-meta text-[11px] text-[#F2EFE8]">
-                    <ImageIcon className="w-3 h-3 text-[#FF5C38]" aria-hidden="true" />
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#170B25]/90 border border-[#3D2254] font-mono-meta text-[11px] text-[#FAF6FB]">
+                    <ImageIcon className="w-3 h-3 text-[#F9C63C]" aria-hidden="true" />
                     <span>Fotos ({readyImages.length})</span>
                   </span>
                 )}
                 {readyVideos.length > 0 && (
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#C9321B]text-white font-semibold">
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#902B90] text-[#FAF6FB] font-semibold">
                     <Film className="w-3 h-3" aria-hidden="true" />
                     <span>Reel</span>
                   </span>
                 )}
                 {readyAudios.length > 0 && (
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#151515]/90 border border-[#2E2E2E] font-mono-meta text-[11px] text-[#A7A39D]">
-                    <Headphones className="w-3 h-3" aria-hidden="true" />
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#170B25]/90 border border-[#3D2254] font-mono-meta text-[11px] text-[#D1C6DA]">
+                    <Headphones className="w-3 h-3 text-[#B184D5]" aria-hidden="true" />
                     <span>Audio</span>
                   </span>
                 )}
@@ -172,24 +172,24 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({
           {/* Project Title & Editorial Content */}
           <div>
             {project.editorialHeadline && (
-              <span className="font-mono-meta text-xs text-[#FF5C38] font-semibold block mb-1.5 tracking-wide">
+              <span className="font-mono-meta text-xs text-[#F9C63C] font-bold block mb-1.5 tracking-wide">
                 {project.editorialHeadline}
               </span>
             )}
 
-            <h3 className="font-display font-black text-xl sm:text-2xl text-[#F2EFE8] leading-tight group-hover:text-[#FF5C38] transition-colors">
+            <h3 className="font-display font-black text-xl sm:text-2xl text-[#FAF6FB] leading-tight group-hover:text-[#F9C63C] transition-colors">
               {project.name}
             </h3>
 
             {project.leader && (
-              <p className="mt-2 flex items-center gap-1.5 text-xs font-mono-meta text-[#A7A39D]">
-                <User className="w-3.5 h-3.5 text-[#FF5C38] shrink-0" aria-hidden="true" />
+              <p className="mt-2 flex items-center gap-1.5 text-xs font-mono-meta text-[#D1C6DA]">
+                <User className="w-3.5 h-3.5 text-[#B184D5] shrink-0" aria-hidden="true" />
                 <span>{project.leader}</span>
               </p>
             )}
 
             {project.shortDescription && (
-              <p className="mt-3 text-sm font-normal text-[#A7A39D] line-clamp-3 leading-relaxed">
+              <p className="mt-3 text-sm font-normal text-[#D1C6DA] line-clamp-3 leading-relaxed">
                 {project.shortDescription}
               </p>
             )}
@@ -197,9 +197,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({
         </div>
 
         {/* Card Footer Action: Contextual unique CTA */}
-        <div className="mt-5 pt-3.5 border-t border-[#2E2E2E] flex items-center justify-between gap-2 text-sm font-semibold text-[#F2EFE8] group-hover:text-[#FF5C38] transition-colors">
+        <div className="mt-5 pt-3.5 border-t border-[#3D2254] flex items-center justify-between gap-2 text-sm font-semibold text-[#FAF6FB] group-hover:text-[#F9C63C] transition-colors">
           <span>{ctaText}</span>
-          <ArrowUpRight className="w-4 h-4 text-[#FF5C38] shrink-0" aria-hidden="true" />
+          <ArrowUpRight className="w-4 h-4 text-[#F9C63C] shrink-0" aria-hidden="true" />
         </div>
       </Link>
     </motion.article>

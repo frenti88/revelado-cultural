@@ -7,6 +7,7 @@ import SearchField from "../components/SearchField";
 import CategoryFilters from "../components/CategoryFilters";
 import ProjectGrid from "../components/ProjectGrid";
 import EmptyState from "../components/EmptyState";
+import { BrushStroke } from "../components/BrushMotifs";
 
 function normalizeText(value: string | null | undefined): string {
   if (!value) return "";
@@ -116,24 +117,31 @@ export const ExplorePage: React.FC = () => {
   const hasActiveFilters = Boolean(selectedCategory || selectedGroup || query.trim());
 
   return (
-    <div className="w-full min-h-[75vh] bg-[#151515] section-macro">
+    <div className="w-full min-h-[75vh] bg-[#170B25] text-[#FAF6FB] section-macro">
       <div className="layout-container">
         {/* Header Editorial */}
-        <div className="pb-6 mb-8 border-b border-[#2E2E2E]">
-          <span className="font-mono-meta text-xs uppercase tracking-widest text-[#FF5C38] font-semibold block mb-2">
+        <div className="pb-6 mb-8 border-b border-[#3D2254]">
+          <span className="font-mono-meta text-xs uppercase tracking-widest text-[#F9C63C] font-bold block mb-2">
             Catálogo Editorial · Comuna 11
           </span>
-          <h1 className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-[#F2EFE8] leading-tight">
-            Encuentra lo que te mueve
-          </h1>
-          <p className="mt-4 text-base sm:text-lg font-normal text-[#A7A39D] max-w-2xl">
-            Filtra por disciplina, agrupación narrativa o busca por palabras clave para descubrir la cultura viva de Laureles–Estadio.
-          </p>
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+            <div>
+              <h1 className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-[#FAF6FB] leading-tight">
+                Encuentra lo que te mueve
+              </h1>
+              <p className="mt-4 text-base sm:text-lg font-normal text-[#D1C6DA] max-w-2xl">
+                Filtra por disciplina, agrupación narrativa o busca por palabras clave para descubrir la cultura viva de Laureles–Estadio.
+              </p>
+            </div>
+            <div className="hidden lg:block pb-2" aria-hidden="true">
+              <BrushStroke className="w-48 h-8 opacity-60" color="#B184D5" accentColor="#F9C63C" />
+            </div>
+          </div>
         </div>
 
-        {/* Agrupaciones editoriales solicitadas en el prompt maestro */}
+        {/* Agrupaciones editoriales */}
         <div className="mb-8">
-          <span className="font-mono-meta text-xs uppercase tracking-wider text-[#A7A39D] block mb-3 font-medium">
+          <span className="font-mono-meta text-xs uppercase tracking-wider text-[#D1C6DA] block mb-3 font-semibold">
             Agrupaciones temáticas
           </span>
           <div className="flex flex-wrap items-center gap-2.5" role="group" aria-label="Agrupaciones editoriales">
@@ -159,15 +167,15 @@ export const ExplorePage: React.FC = () => {
                   aria-pressed={isActive}
                   className={`btn-press inline-flex items-center gap-2 min-h-11 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-colors cursor-pointer ${
                     isActive
-                      ? "bg-[#C9321B]text-white shadow-[0_4px_14px_rgba(235,68,42,0.35)]"
-                      : "bg-[#222222] hover:bg-[#2E2E2E] border border-[#2E2E2E] text-[#A7A39D] hover:text-[#F2EFE8]"
+                      ? "bg-[#F9C63C] text-[#170B25] shadow-[0_4px_14px_rgba(249,198,60,0.3)]"
+                      : "bg-[#29143B] hover:bg-[#37105F] border border-[#3D2254] text-[#D1C6DA] hover:text-[#FAF6FB]"
                   }`}
                 >
                   <Icon className="w-4 h-4 stroke-[2.2]" aria-hidden="true" />
                   <span>{group.label}</span>
                   <span
                     className={`px-2 py-0.5 rounded-full font-mono-meta text-[11px] leading-none ${
-                      isActive ? "bg-[#151515]/40 text-[#F2EFE8]" : "bg-[#151515] text-[#A7A39D]"
+                      isActive ? "bg-[#170B25] text-[#F9C63C] font-bold" : "bg-[#170B25] text-[#D1C6DA]"
                     }`}
                   >
                     {count}
@@ -195,7 +203,7 @@ export const ExplorePage: React.FC = () => {
               <p
                 role="status"
                 aria-live="polite"
-                className="font-mono-meta text-xs sm:text-sm font-semibold text-[#FF5C38]"
+                className="font-mono-meta text-xs sm:text-sm font-bold text-[#F9C63C]"
               >
                 Mostrando {filteredProjects.length} de {publishedProjects.length}{" "}
                 {filteredProjects.length === 1 ? "iniciativa" : "iniciativas"}
@@ -205,9 +213,9 @@ export const ExplorePage: React.FC = () => {
                 <button
                   type="button"
                   onClick={resetAllFilters}
-                  className="inline-flex items-center gap-1.5 min-h-10 px-3.5 py-1.5 rounded-full bg-[#222222] hover:bg-[#2E2E2E] border border-[#2E2E2E] hover:border-[#FF5C38] text-[#F2EFE8] text-xs font-mono-meta transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1.5 min-h-10 px-3.5 py-1.5 rounded-full bg-[#29143B] hover:bg-[#37105F] border border-[#3D2254] hover:border-[#F9C63C] text-[#FAF6FB] text-xs font-mono-meta transition-colors cursor-pointer shadow-sm"
                 >
-                  <RotateCcw className="w-3.5 h-3.5 text-[#FF5C38]" aria-hidden="true" />
+                  <RotateCcw className="w-3.5 h-3.5 text-[#F9C63C]" aria-hidden="true" />
                   <span>Limpiar filtros</span>
                 </button>
               )}

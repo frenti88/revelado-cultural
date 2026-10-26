@@ -1,7 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "motion/react";
 import {
-  ArrowUpRight,
   ChevronLeft,
   ChevronRight,
   Expand,
@@ -96,17 +95,17 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
   return (
     <div className="space-y-4">
       {/* Main Featured Gallery Stage */}
-      <div className="rounded-xl bg-[#222222] border border-[#2E2E2E] p-4 sm:p-6 shadow-[0_12px_32px_rgba(0,0,0,0.45)]">
+      <div className="rounded-2xl bg-[#29143B] border border-[#3D2254] p-4 sm:p-6 shadow-[0_12px_32px_rgba(14,6,23,0.5)]">
         <div
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
-          className="relative aspect-[16/10] w-full rounded-lg overflow-hidden bg-[#151515] touch-pan-y viewfinder-frame"
+          className="relative aspect-[16/10] w-full rounded-xl overflow-hidden bg-[#170B25] touch-pan-y viewfinder-frame"
         >
-          {/* Esquinas de encuadre en rojo bermellón */}
-          <span className="viewfinder-corner viewfinder-corner-tl border-t-2 border-l-2 border-[#FF5C38] w-3.5 h-3.5" aria-hidden="true" />
-          <span className="viewfinder-corner viewfinder-corner-tr border-t-2 border-r-2 border-[#FF5C38] w-3.5 h-3.5" aria-hidden="true" />
-          <span className="viewfinder-corner viewfinder-corner-bl border-b-2 border-l-2 border-[#FF5C38] w-3.5 h-3.5" aria-hidden="true" />
-          <span className="viewfinder-corner viewfinder-corner-br border-b-2 border-r-2 border-[#FF5C38] w-3.5 h-3.5" aria-hidden="true" />
+          {/* Esquinas de encuadre en amarillo y lavanda */}
+          <span className="viewfinder-corner viewfinder-corner-tl border-t-2 border-l-2 border-[#F9C63C] w-3.5 h-3.5" aria-hidden="true" />
+          <span className="viewfinder-corner viewfinder-corner-tr border-t-2 border-r-2 border-[#B184D5] w-3.5 h-3.5" aria-hidden="true" />
+          <span className="viewfinder-corner viewfinder-corner-bl border-b-2 border-l-2 border-[#B184D5] w-3.5 h-3.5" aria-hidden="true" />
+          <span className="viewfinder-corner viewfinder-corner-br border-b-2 border-r-2 border-[#F9C63C] w-3.5 h-3.5" aria-hidden="true" />
 
           <img
             key={currentImage.id}
@@ -130,9 +129,9 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
             aria-label={`Abrir en pantalla completa: ${
               currentImage.alt ?? projectName
             }`}
-            className="btn-press absolute top-3 right-3 sm:top-4 sm:right-4 inline-flex items-center gap-2 min-h-10 px-3.5 py-1.5 rounded-full bg-[#151515]/90 border border-[#2E2E2E] hover:border-[#FF5C38] text-[#F2EFE8] text-xs font-mono-meta cursor-pointer transition-colors"
+            className="btn-press absolute top-3 right-3 sm:top-4 sm:right-4 inline-flex items-center gap-2 min-h-10 px-3.5 py-1.5 rounded-full bg-[#170B25]/90 border border-[#3D2254] hover:border-[#F9C63C] text-[#FAF6FB] text-xs font-mono-meta cursor-pointer transition-colors shadow-sm"
           >
-            <Expand className="w-3.5 h-3.5 text-[#FF5C38]" aria-hidden="true" />
+            <Expand className="w-3.5 h-3.5 text-[#F9C63C]" aria-hidden="true" />
             <span>Ampliar</span>
           </button>
 
@@ -142,7 +141,7 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
                 type="button"
                 onClick={goPrev}
                 aria-label="Fotografía anterior"
-                className="btn-press w-10 h-10 inline-flex items-center justify-center rounded-full bg-[#151515]/90 border border-[#2E2E2E] hover:border-[#FF5C38] text-[#F2EFE8] cursor-pointer transition-colors"
+                className="btn-press w-10 h-10 inline-flex items-center justify-center rounded-full bg-[#170B25]/90 border border-[#3D2254] hover:border-[#F9C63C] text-[#FAF6FB] cursor-pointer transition-colors shadow-sm"
               >
                 <ChevronLeft className="w-4 h-4" aria-hidden="true" />
               </button>
@@ -150,7 +149,7 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
                 type="button"
                 onClick={goNext}
                 aria-label="Fotografía siguiente"
-                className="btn-press w-10 h-10 inline-flex items-center justify-center rounded-full bg-[#151515]/90 border border-[#2E2E2E] hover:border-[#FF5C38] text-[#F2EFE8] cursor-pointer transition-colors"
+                className="btn-press w-10 h-10 inline-flex items-center justify-center rounded-full bg-[#170B25]/90 border border-[#3D2254] hover:border-[#F9C63C] text-[#FAF6FB] cursor-pointer transition-colors shadow-sm"
               >
                 <ChevronRight className="w-4 h-4" aria-hidden="true" />
               </button>
@@ -166,7 +165,7 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
           transition={{ duration: 0.22, ease: [0.25, 1, 0.5, 1] }}
           className="mt-4 flex items-center justify-between gap-2"
         >
-          <span className="font-mono-meta text-xs text-[#FF5C38] font-semibold">
+          <span className="font-mono-meta text-xs text-[#F9C63C] font-bold">
             Fotografía 0{safeIndex + 1} / 0{images.length}
           </span>
         </motion.div>
@@ -174,7 +173,7 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
         {/* Interactive Thumbnails Strip */}
         {images.length > 1 && (
           <div
-            className="mt-4 pt-4 border-t border-[#2E2E2E] grid grid-cols-4 gap-2 sm:gap-4"
+            className="mt-4 pt-4 border-t border-[#3D2254] grid grid-cols-4 gap-2 sm:gap-4"
             role="group"
             aria-label={`Miniaturas de la galería de ${projectName}`}
           >
@@ -196,9 +195,9 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
                   aria-label={`Seleccionar fotografía ${idx + 1}: ${
                     img.alt ?? projectName
                   }`}
-                  className={`group relative aspect-[4/3] rounded-md overflow-hidden transition-all duration-200 cursor-pointer ${
+                  className={`group relative aspect-[4/3] rounded-lg overflow-hidden transition-all duration-200 cursor-pointer ${
                     isSelected
-                      ? "opacity-100 ring-2 ring-[#C9321B] scale-[1.02] shadow-lg"
+                      ? "opacity-100 ring-2 ring-[#F9C63C] scale-[1.02] shadow-lg"
                       : "opacity-50 hover:opacity-100"
                   }`}
                 >
@@ -212,10 +211,10 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <span
-                    className={`absolute bottom-1 right-1 px-2 py-0.5 rounded font-mono-meta text-[10px] font-semibold ${
+                    className={`absolute bottom-1 right-1 px-2 py-0.5 rounded font-mono-meta text-[11px] font-bold ${
                       isSelected
-                        ? "bg-[#C9321B]text-white"
-                        : "bg-[#151515]/90 text-[#F2EFE8]"
+                        ? "bg-[#170B25] text-[#F9C63C] ring-1 ring-[#F9C63C]"
+                        : "bg-[#170B25]/90 text-[#D1C6DA]"
                     }`}
                   >
                     0{idx + 1}
@@ -252,7 +251,7 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
             closeLightbox();
           }
         }}
-        className="editorial-lightbox fixed inset-0 z-50 m-auto w-[95vw] max-w-5xl max-h-[92dvh] overflow-y-auto rounded-2xl bg-[#151515] border border-[#2E2E2E] text-[#F2EFE8] p-4 sm:p-6 shadow-2xl"
+        className="editorial-lightbox fixed inset-0 z-50 m-auto w-[95vw] max-w-5xl max-h-[92dvh] overflow-y-auto rounded-2xl bg-[#170B25] border border-[#3D2254] text-[#FAF6FB] p-4 sm:p-6 shadow-2xl"
       >
         {lightboxOpen && (
           <div
@@ -260,12 +259,12 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
             onTouchEnd={handleTouchEnd}
             className="flex flex-col gap-4"
           >
-            <div className="flex items-center justify-between gap-4 pb-4 border-b border-[#2E2E2E]">
+            <div className="flex items-center justify-between gap-4 pb-4 border-b border-[#3D2254]">
               <div>
-                <span className="font-mono-meta text-xs text-[#FF5C38] font-semibold">
+                <span className="font-mono-meta text-xs text-[#F9C63C] font-bold">
                   0{safeIndex + 1} / 0{images.length}
                 </span>
-                <h4 className="font-display font-bold text-lg text-[#F2EFE8]">
+                <h4 className="font-display font-black text-xl text-[#FAF6FB]">
                   {projectName}
                 </h4>
               </div>
@@ -274,14 +273,14 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
                 autoFocus
                 onClick={closeLightbox}
                 aria-label="Cerrar visor de galería"
-                className="btn-press inline-flex items-center gap-2 min-h-10 px-4 py-2 rounded-full bg-[#222222] border border-[#2E2E2E] hover:border-[#FF5C38] text-[#F2EFE8] text-sm font-semibold cursor-pointer transition-colors"
+                className="btn-press inline-flex items-center gap-2 min-h-10 px-4 py-2 rounded-full bg-[#29143B] border border-[#3D2254] hover:border-[#F9C63C] text-[#FAF6FB] text-sm font-semibold cursor-pointer transition-colors"
               >
                 <span>Cerrar</span>
-                <X className="w-4 h-4 text-[#FF5C38]" aria-hidden="true" />
+                <X className="w-4 h-4 text-[#F9C63C]" aria-hidden="true" />
               </button>
             </div>
 
-            <div className="relative flex items-center justify-center bg-[#0d0d0d] rounded-xl overflow-hidden min-h-[160px] sm:min-h-[264px] max-h-[58dvh] sm:max-h-[72dvh] border border-[#2E2E2E]">
+            <div className="relative flex items-center justify-center bg-[#11071c] rounded-xl overflow-hidden min-h-[160px] sm:min-h-[264px] max-h-[58dvh] sm:max-h-[72dvh] border border-[#3D2254]">
               <img
                 src={currentImage.publicUrl}
                 alt={currentImage.alt ?? projectName}
@@ -295,19 +294,19 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
                   type="button"
                   onClick={goPrev}
                   aria-label="Fotografía anterior"
-                  className="btn-press inline-flex items-center gap-1.5 min-h-10 px-4 py-2 rounded-full bg-[#222222] border border-[#2E2E2E] hover:border-[#FF5C38] text-sm font-semibold text-[#F2EFE8] cursor-pointer transition-colors"
+                  className="btn-press inline-flex items-center gap-1.5 min-h-10 px-4 py-2 rounded-full bg-[#29143B] border border-[#3D2254] hover:border-[#F9C63C] text-sm font-semibold text-[#FAF6FB] cursor-pointer transition-colors"
                 >
-                  <ChevronLeft className="w-4 h-4 text-[#FF5C38]" aria-hidden="true" />
+                  <ChevronLeft className="w-4 h-4 text-[#F9C63C]" aria-hidden="true" />
                   <span>Anterior</span>
                 </button>
                 <button
                   type="button"
                   onClick={goNext}
                   aria-label="Fotografía siguiente"
-                  className="btn-press inline-flex items-center gap-1.5 min-h-10 px-4 py-2 rounded-full bg-[#222222] border border-[#2E2E2E] hover:border-[#FF5C38] text-sm font-semibold text-[#F2EFE8] cursor-pointer transition-colors"
+                  className="btn-press inline-flex items-center gap-1.5 min-h-10 px-4 py-2 rounded-full bg-[#29143B] border border-[#3D2254] hover:border-[#F9C63C] text-sm font-semibold text-[#FAF6FB] cursor-pointer transition-colors"
                 >
                   <span>Siguiente</span>
-                  <ChevronRight className="w-4 h-4 text-[#FF5C38]" aria-hidden="true" />
+                  <ChevronRight className="w-4 h-4 text-[#F9C63C]" aria-hidden="true" />
                 </button>
               </div>
             )}
