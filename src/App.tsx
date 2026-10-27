@@ -67,6 +67,7 @@ export const App: React.FC = () => {
                   element={<ProjectDetailPage />}
                 />
                 <Route path="/acerca-de" element={<AboutPage />} />
+                <Route path="/revelado-cultural" element={<AboutPage />} />
                 <Route path="/admin" element={<AdminPage />} />
                 <Route
                   path="*"

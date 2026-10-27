@@ -197,8 +197,8 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
                   }`}
                   className={`group relative aspect-[4/3] rounded-lg overflow-hidden transition-all duration-200 cursor-pointer ${
                     isSelected
-                      ? "opacity-100 ring-2 ring-[#F9C63C] scale-[1.02] shadow-lg"
-                      : "opacity-50 hover:opacity-100"
+                      ? "ring-2 ring-[#F9C63C] scale-[1.02] shadow-lg"
+                      : "ring-1 ring-[#3D2254] hover:ring-[#B184D5]"
                   }`}
                 >
                   <img
@@ -208,13 +208,15 @@ export const MediaGallery: React.FC<MediaGalleryProps> = ({
                     height={240}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className={`w-full h-full object-cover transition-all duration-300 group-hover:scale-105 ${
+                      isSelected ? "opacity-100" : "opacity-60 group-hover:opacity-100"
+                    }`}
                   />
                   <span
                     className={`absolute bottom-1 right-1 px-2 py-0.5 rounded font-mono-meta text-[11px] font-bold ${
                       isSelected
                         ? "bg-[#170B25] text-[#F9C63C] ring-1 ring-[#F9C63C]"
-                        : "bg-[#170B25]/90 text-[#D1C6DA]"
+                        : "bg-[#170B25] text-[#FAF6FB] ring-1 ring-[#3D2254]"
                     }`}
                   >
                     0{idx + 1}

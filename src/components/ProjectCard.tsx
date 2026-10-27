@@ -21,13 +21,17 @@ import PhotoFrame from "./PhotoFrame";
 interface ProjectCardProps {
   project: CulturalProject;
   index?: number;
-  aspect?: "square" | "editorial";
+  aspect?: "square" | "editorial" | "wide";
+  featured?: boolean;
+  className?: string;
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({
   project,
   index = 0,
   aspect = "square",
+  featured = false,
+  className = "",
 }) => {
   const shouldReduceMotion = useReducedMotion();
   const location = useLocation();
@@ -40,8 +44,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({
   const readyAudios = getProjectReadyAudios(project);
   const { accentColor, posterGradient } = getDisciplineColor(project.category);
 
-  const aspectClass =
-    aspect === "square" ? "aspect-square" : "aspect-[4/3]";
+  const aspectClass = featured
+    ? "aspect-[16/9] sm:aspect-[16/9]"
+    : aspect === "square"
+    ? "aspect-square"
+    : aspect === "wide"
+    ? "aspect-[16/9]"
+    : "aspect-[4/3]";
 
   const headline = project.editorialHeadline || project.name;
   const ctaText = project.contextualCta || `Descubre a ${project.name}`;
@@ -56,7 +65,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({
         delay: Math.min(index * 0.04, 0.2),
         ease: [0.22, 1, 0.36, 1],
       }}
-      className="group relative flex flex-col justify-between rounded-2xl bg-[#29143B] border border-[#3D2254] hover:border-[#F9C63C] hover:-translate-y-1 transition-[background-color,border-color,transform] duration-250 overflow-hidden shadow-[0_12px_32px_rgba(14,6,23,0.5)]"
+      className={`group relative flex flex-col justify-between rounded-2xl bg-[#29143B] border border-[#3D2254] hover:border-[#F9C63C] hover:-translate-y-1 transition-[background-color,border-color,transform] duration-250 overflow-hidden shadow-[0_12px_32px_rgba(14,6,23,0.5)] ${className}`}
     >
       <Link
         to={`/proyectos/${project.slug}`}
@@ -86,13 +95,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({
                 </>
               )}
             </div>
-
-            <span
-              className="shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-full bg-[#170B25] border border-[#3D2254] text-[#FAF6FB] group-hover:bg-[#F9C63C] group-hover:text-[#170B25] group-hover:border-[#F9C63C] transition-all shadow-sm"
-              aria-hidden="true"
-            >
-              <ArrowUpRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </span>
           </div>
 
           {/* Visual Cover with Optical Framing Corners */}
@@ -171,18 +173,18 @@ export const ProjectCard: React.FC<ProjectCardProps> = React.memo(({
 
           {/* Project Title & Editorial Content */}
           <div>
-            {project.editorialHeadline && (
-              <span className="font-mono-meta text-xs text-[#F9C63C] font-bold block mb-1.5 tracking-wide">
-                {project.editorialHeadline}
-              </span>
-            )}
-
             <h3 className="font-display font-black text-xl sm:text-2xl text-[#FAF6FB] leading-tight group-hover:text-[#F9C63C] transition-colors">
               {project.name}
             </h3>
 
+            {project.editorialHeadline && (
+              <p className="mt-1.5 font-mono-meta text-xs sm:text-[13px] text-[#F9C63C] font-semibold leading-snug">
+                «{project.editorialHeadline}»
+              </p>
+            )}
+
             {project.leader && (
-              <p className="mt-2 flex items-center gap-1.5 text-xs font-mono-meta text-[#D1C6DA]">
+              <p className="mt-2.5 flex items-center gap-1.5 text-xs font-mono-meta text-[#D1C6DA]">
                 <User className="w-3.5 h-3.5 text-[#B184D5] shrink-0" aria-hidden="true" />
                 <span>{project.leader}</span>
               </p>

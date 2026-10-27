@@ -4,7 +4,8 @@ import { motion, useReducedMotion } from "motion/react";
 import {
   ArrowLeft,
   ArrowRight,
-  HeartHandshake,
+  ArrowUpRight,
+  Headphones,
   MapPin,
   Sparkles,
   User,
@@ -99,9 +100,6 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
 
           {/* Header Editorial Hero */}
           <div className="max-w-4xl">
-            <span className="font-mono-meta text-xs uppercase tracking-widest text-[#F9C63C] font-bold block mb-2">
-              01 — Portada
-            </span>
             <motion.h1
               initial={shouldReduceMotion ? false : { y: 12 }}
               animate={{ y: 0 }}
@@ -139,9 +137,6 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
           {/* Columna Izquierda: 02 — La historia */}
           <div className="col-span-4 md:col-span-8 lg:col-span-7 space-y-10">
             <section aria-labelledby="historia-heading">
-              <span className="font-mono-meta text-xs uppercase tracking-widest text-[#F9C63C] font-bold block mb-2">
-                02 — La historia
-              </span>
               <h2
                 id="historia-heading"
                 className="font-display font-black text-2xl sm:text-3xl text-[#FAF6FB] mb-6"
@@ -171,11 +166,8 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
               )}
             </section>
 
-            {/* 03 — Las personas detrás */}
+            {/* Las personas detrás */}
             <section aria-labelledby="personas-heading" className="pt-8 border-t border-[#3D2254]">
-              <span className="font-mono-meta text-xs uppercase tracking-widest text-[#F9C63C] font-bold block mb-2">
-                03 — Las personas detrás
-              </span>
               <h2
                 id="personas-heading"
                 className="font-display font-black text-xl sm:text-2xl text-[#FAF6FB] mb-4"
@@ -204,11 +196,8 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
               </div>
             </section>
 
-            {/* 05 — Su aporte cultural */}
+            {/* Su aporte cultural */}
             <section aria-labelledby="aporte-heading" className="pt-8 border-t border-[#3D2254]">
-              <span className="font-mono-meta text-xs uppercase tracking-widest text-[#F9C63C] font-bold block mb-2">
-                05 — Su aporte cultural
-              </span>
               <h2
                 id="aporte-heading"
                 className="font-display font-black text-xl sm:text-2xl text-[#FAF6FB] mb-4"
@@ -216,27 +205,21 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
                 Impacto en la comunidad y el territorio
               </h2>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="rounded-2xl bg-[#29143B] border border-[#3D2254] p-5 shadow-sm">
-                  <div className="text-[#F9C63C] mb-2">
-                    <HeartHandshake className="w-5 h-5 stroke-[2.2]" aria-hidden="true" />
-                  </div>
-                  <h3 className="font-display font-bold text-base text-[#FAF6FB]">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
+                <div className="border-l-2 border-[#F9C63C] pl-4">
+                  <h3 className="font-display font-bold text-base sm:text-lg text-[#FAF6FB]">
                     Apropiación social
                   </h3>
-                  <p className="mt-2 text-xs sm:text-sm text-[#D1C6DA] leading-relaxed">
+                  <p className="mt-1.5 text-sm text-[#D1C6DA] leading-relaxed">
                     Fomenta el encuentro ciudadano en espacios públicos y salas culturales del barrio, fortaleciendo el tejido comunitario.
                   </p>
                 </div>
 
-                <div className="rounded-2xl bg-[#29143B] border border-[#3D2254] p-5 shadow-sm">
-                  <div className="text-[#F9C63C] mb-2">
-                    <Sparkles className="w-5 h-5 stroke-[2.2]" aria-hidden="true" />
-                  </div>
-                  <h3 className="font-display font-bold text-base text-[#FAF6FB]">
+                <div className="border-l-2 border-[#B184D5] pl-4">
+                  <h3 className="font-display font-bold text-base sm:text-lg text-[#FAF6FB]">
                     Creación viva
                   </h3>
-                  <p className="mt-2 text-xs sm:text-sm text-[#D1C6DA] leading-relaxed">
+                  <p className="mt-1.5 text-sm text-[#D1C6DA] leading-relaxed">
                     Aporta obra artística original, registros documentales y metodologías participativas a la memoria de Medellín.
                   </p>
                 </div>
@@ -247,10 +230,6 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
           {/* Columna Derecha: 04 — La experiencia (Video principal / Reel) */}
           <div className="col-span-4 md:col-span-8 lg:col-span-5">
             <div className="lg:sticky lg:top-24 space-y-6">
-              <span className="font-mono-meta text-xs uppercase tracking-widest text-[#F9C63C] font-bold block">
-                04 — La experiencia audiovisual
-              </span>
-
               {readyVideos.length > 0 ? (
                 readyVideos.map((videoAsset) => (
                   <VideoPlayer
@@ -302,9 +281,6 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
           >
             <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 mb-6">
               <div>
-                <span className="font-mono-meta text-xs uppercase tracking-widest text-[#F9C63C] font-bold block mb-1">
-                  Registros documentales
-                </span>
                 <h2
                   id="galeria-heading"
                   className="font-display font-black text-2xl sm:text-3xl text-[#FAF6FB]"
@@ -329,9 +305,6 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
             className="mt-16 pt-12 border-t border-[#3D2254] scroll-mt-24"
           >
             <div className="mb-6">
-              <span className="font-mono-meta text-xs uppercase tracking-widest text-[#F9C63C] font-bold block mb-1">
-                Registro sonoro
-              </span>
               <h2
                 id="audio-heading"
                 className="font-display font-black text-2xl sm:text-3xl text-[#FAF6FB]"
@@ -349,6 +322,58 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
                   leader={project.leader}
                 />
               ))}
+            </div>
+          </section>
+        )}
+
+        {/* Entrevista en formato falso podcast (del Documento Oficial) */}
+        {project.podcastUrl && (
+          <section
+            id="podcast-documental"
+            aria-labelledby="podcast-heading"
+            className="mt-16 pt-12 border-t border-[#3D2254] scroll-mt-24"
+          >
+            <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 mb-6">
+              <div>
+                <h2
+                  id="podcast-heading"
+                  className="font-display font-black text-2xl sm:text-3xl text-[#FAF6FB]"
+                >
+                  Entrevista en formato falso podcast
+                </h2>
+              </div>
+              <span className="font-mono-meta text-xs text-[#B184D5] font-semibold">
+                Grabación oficial en video · 5 a 8 minutos
+              </span>
+            </div>
+
+            <div className="rounded-2xl bg-[#29143B] border border-[#3D2254] p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 shadow-md">
+              <div className="flex items-center gap-4">
+                <div className="w-14 h-14 rounded-2xl bg-[#170B25] border border-[#583178] flex items-center justify-center text-[#F9C63C] shrink-0 shadow-sm">
+                  <Headphones className="w-7 h-7 stroke-[2.2]" aria-hidden="true" />
+                </div>
+                <div>
+                  <h3 className="font-display font-black text-xl text-[#FAF6FB]">
+                    Entrevista: {project.name}
+                  </h3>
+                  <p className="font-mono-meta text-xs text-[#F9C63C] font-semibold mt-1">
+                    Conversación con {project.leader ? project.leader : `el equipo de ${project.name}`}
+                  </p>
+                  <p className="mt-2 text-sm text-[#D1C6DA] max-w-xl">
+                    Entrevista grabada en video que documenta y narrativiza la ejecución del proyecto ganador de Presupuesto Participativo.
+                  </p>
+                </div>
+              </div>
+
+              <a
+                href={project.podcastUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-press shrink-0 inline-flex items-center gap-2 min-h-12 px-6 py-3 rounded-full bg-[#F9C63C] text-[#170B25] font-bold text-base shadow-md hover:bg-[#EAB428] transition-colors"
+              >
+                <span>Ver entrevista en YouTube</span>
+                <ArrowUpRight className="w-4 h-4 stroke-[2.5]" aria-hidden="true" />
+              </a>
             </div>
           </section>
         )}

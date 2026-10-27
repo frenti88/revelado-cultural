@@ -40,9 +40,6 @@ export const RelatedProjects: React.FC<RelatedProjectsProps> = ({
       <div className="layout-container">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-6 mb-8 lg:mb-12 border-b border-[#3D2254]">
           <div>
-            <span className="font-mono-meta text-xs uppercase tracking-widest text-[#F9C63C] font-bold block mb-2">
-              06 — Sigue descubriendo
-            </span>
             <h2
               id="related-projects-heading"
               className="font-display font-black text-2xl sm:text-3xl md:text-4xl text-[#FAF6FB]"

@@ -121,9 +121,6 @@ export const ExplorePage: React.FC = () => {
       <div className="layout-container">
         {/* Header Editorial */}
         <div className="pb-6 mb-8 border-b border-[#3D2254]">
-          <span className="font-mono-meta text-xs uppercase tracking-widest text-[#F9C63C] font-bold block mb-2">
-            Catálogo Editorial · Comuna 11
-          </span>
           <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div>
               <h1 className="font-display font-black text-3xl sm:text-4xl md:text-5xl text-[#FAF6FB] leading-tight">
@@ -139,56 +136,10 @@ export const ExplorePage: React.FC = () => {
           </div>
         </div>
 
-        {/* Agrupaciones editoriales */}
-        <div className="mb-8">
-          <span className="font-mono-meta text-xs uppercase tracking-wider text-[#D1C6DA] block mb-3 font-semibold">
-            Agrupaciones temáticas
-          </span>
-          <div className="flex flex-wrap items-center gap-2.5" role="group" aria-label="Agrupaciones editoriales">
-            {THEMATIC_GROUPS.map((group) => {
-              const Icon = group.icon;
-              const isActive = group.id === "todos" ? !selectedGroup : selectedGroup === group.id;
-              const count =
-                group.id === "todos"
-                  ? publishedProjects.length
-                  : countsByGroup[group.id as keyof typeof countsByGroup] ?? 0;
-
-              return (
-                <button
-                  key={group.id}
-                  type="button"
-                  onClick={() =>
-                    updateFilters(
-                      selectedCategory,
-                      group.id === "todos" ? null : group.id,
-                      query
-                    )
-                  }
-                  aria-pressed={isActive}
-                  className={`btn-press inline-flex items-center gap-2 min-h-11 px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-colors cursor-pointer ${
-                    isActive
-                      ? "bg-[#F9C63C] text-[#170B25] shadow-[0_4px_14px_rgba(249,198,60,0.3)]"
-                      : "bg-[#29143B] hover:bg-[#37105F] border border-[#3D2254] text-[#D1C6DA] hover:text-[#FAF6FB]"
-                  }`}
-                >
-                  <Icon className="w-4 h-4 stroke-[2.2]" aria-hidden="true" />
-                  <span>{group.label}</span>
-                  <span
-                    className={`px-2 py-0.5 rounded-full font-mono-meta text-[11px] leading-none ${
-                      isActive ? "bg-[#170B25] text-[#F9C63C] font-bold" : "bg-[#170B25] text-[#D1C6DA]"
-                    }`}
-                  >
-                    {count}
-                  </span>
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* Search & Filters Controls */}
-        <div className="space-y-6 mb-12">
-          <div className="layout-grid-12 items-center">
+        {/* Discovery Control Surface: Búsqueda unificada y filtros con ritmo espacial */}
+        <div className="rounded-2xl bg-[#29143B]/60 border border-[#3D2254] p-5 sm:p-6 mb-10 space-y-5 shadow-md">
+          {/* Fila 1: Búsqueda y estado de resultados */}
+          <div className="layout-grid-12 items-center gap-4">
             <div className="col-span-4 md:col-span-5 lg:col-span-8">
               <SearchField
                 value={query}
@@ -199,11 +150,11 @@ export const ExplorePage: React.FC = () => {
             </div>
 
             {/* Live Result Counter + Clear Filters */}
-            <div className="col-span-4 md:col-span-3 lg:col-span-4 flex items-center justify-between lg:justify-end gap-4">
+            <div className="col-span-4 md:col-span-3 lg:col-span-4 flex items-center justify-between lg:justify-end gap-3">
               <p
                 role="status"
                 aria-live="polite"
-                className="font-mono-meta text-xs sm:text-sm font-bold text-[#F9C63C]"
+                className="font-mono-meta text-xs sm:text-sm font-bold text-[#F9C63C] shrink-0"
               >
                 Mostrando {filteredProjects.length} de {publishedProjects.length}{" "}
                 {filteredProjects.length === 1 ? "iniciativa" : "iniciativas"}
@@ -213,7 +164,7 @@ export const ExplorePage: React.FC = () => {
                 <button
                   type="button"
                   onClick={resetAllFilters}
-                  className="inline-flex items-center gap-1.5 min-h-10 px-3.5 py-1.5 rounded-full bg-[#29143B] hover:bg-[#37105F] border border-[#3D2254] hover:border-[#F9C63C] text-[#FAF6FB] text-xs font-mono-meta transition-colors cursor-pointer shadow-sm"
+                  className="btn-press inline-flex items-center gap-1.5 min-h-10 px-3.5 py-1.5 rounded-full bg-[#170B25] hover:bg-[#37105F] border border-[#583178] hover:border-[#F9C63C] text-[#FAF6FB] text-xs font-mono-meta transition-colors cursor-pointer shadow-sm"
                 >
                   <RotateCcw className="w-3.5 h-3.5 text-[#F9C63C]" aria-hidden="true" />
                   <span>Limpiar filtros</span>
@@ -222,14 +173,64 @@ export const ExplorePage: React.FC = () => {
             </div>
           </div>
 
-          <CategoryFilters
-            selectedCategory={selectedCategory}
-            onSelectCategory={(nextCategory) =>
-              updateFilters(nextCategory, selectedGroup, query)
-            }
-            countsByCategory={countsByCategory}
-            totalCount={publishedProjects.length}
-          />
+          {/* Fila 2: Filtro por Disciplinas Culturales */}
+          <div className="pt-4 border-t border-[#3D2254]">
+            <CategoryFilters
+              selectedCategory={selectedCategory}
+              onSelectCategory={(nextCategory) =>
+                updateFilters(nextCategory, selectedGroup, query)
+              }
+              countsByCategory={countsByCategory}
+              totalCount={publishedProjects.length}
+            />
+          </div>
+
+          {/* Fila 3: Agrupaciones temáticas */}
+          <div className="pt-3.5 border-t border-[#3D2254]/60 flex flex-col sm:flex-row sm:items-center gap-3">
+            <span className="font-mono-meta text-[11px] uppercase tracking-wider text-[#D1C6DA] font-semibold shrink-0">
+              Vistas temáticas:
+            </span>
+            <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Agrupaciones editoriales">
+              {THEMATIC_GROUPS.map((group) => {
+                const Icon = group.icon;
+                const isActive = group.id === "todos" ? !selectedGroup : selectedGroup === group.id;
+                const count =
+                  group.id === "todos"
+                    ? publishedProjects.length
+                    : countsByGroup[group.id as keyof typeof countsByGroup] ?? 0;
+
+                return (
+                  <button
+                    key={group.id}
+                    type="button"
+                    onClick={() =>
+                      updateFilters(
+                        selectedCategory,
+                        group.id === "todos" ? null : group.id,
+                        query
+                      )
+                    }
+                    aria-pressed={isActive}
+                    className={`btn-press inline-flex items-center gap-2 min-h-9 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-colors cursor-pointer ${
+                      isActive
+                        ? "bg-[#B184D5] text-[#170B25] font-bold shadow-sm"
+                        : "bg-[#170B25] hover:bg-[#37105F] border border-[#3D2254] text-[#D1C6DA] hover:text-[#FAF6FB]"
+                    }`}
+                  >
+                    <Icon className="w-3.5 h-3.5 stroke-[2.2]" aria-hidden="true" />
+                    <span>{group.label}</span>
+                    <span
+                      className={`px-1.5 py-0.5 rounded-full font-mono-meta text-[10px] leading-none ${
+                        isActive ? "bg-[#170B25] text-[#B184D5] font-bold" : "bg-[#29143B] text-[#D1C6DA]"
+                      }`}
+                    >
+                      {count}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
         </div>
 
         {/* Results Grid or Empty State */}

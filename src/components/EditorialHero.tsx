@@ -126,7 +126,7 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({ projects }) => {
                   Hay una cultura que se mueve cerca de ti.
                 </p>
                 <p className="mt-2 text-base sm:text-lg text-[#D1C6DA] font-normal leading-relaxed">
-                  Descubre ocho iniciativas que hacen visible el talento, las historias y las expresiones culturales de Laureles–Estadio.
+                  Revelado Cultural visibiliza ocho iniciativas culturales generadas en la Comuna 11 ganadoras de la convocatoria de Presupuesto Participativo. Propuestas de danza, música, teatro, gestión cultural, literatura y patrimonio que demuestran la riqueza creadora de Laureles–Estadio.
                 </p>
               </motion.div>
             </div>
@@ -154,10 +154,10 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({ projects }) => {
               </a>
 
               <Link
-                to="/acerca-de"
+                to="/revelado-cultural"
                 className="btn-press inline-flex items-center gap-2 min-h-12 px-6 py-3 rounded-full bg-[#29143B] hover:bg-[#37105F] text-[#FAF6FB] text-base font-medium border border-[#B184D5]/40 hover:border-[#F9C63C] transition-colors shadow-sm"
               >
-                <span>Conoce Revelado</span>
+                <span>Revelado Cultural</span>
                 <ArrowUpRight
                   className="w-4 h-4 text-[#B184D5] icon-glide"
                   aria-hidden="true"
@@ -170,13 +170,8 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({ projects }) => {
           <div className="col-span-4 md:col-span-8 lg:col-span-5">
             {activeProject && (
               <div className="relative rounded-2xl bg-[#29143B] border border-[#3D2254] p-4 sm:p-6 shadow-[0_20px_50px_rgba(14,6,23,0.7)]">
-                {/* Decorative subtle brush highlight */}
-                <div className="absolute -top-6 -right-6 pointer-events-none opacity-40 hidden sm:block" aria-hidden="true">
-                  <BrushSplatter className="w-24 h-24" color="#F9C63C" accentColor="#B184D5" />
-                </div>
-
                 {/* Top Frame Bar */}
-                <div className="flex items-center justify-between gap-2 mb-4">
+                <div className="flex items-center justify-between gap-2 mb-3">
                   <div className="flex items-center gap-2 font-mono-meta text-xs min-w-0">
                     <span className="px-2.5 py-0.5 rounded-md bg-[#170B25] border border-[#583178] text-[#F9C63C] font-bold shrink-0">
                       {activeProject.id} / 08
@@ -187,9 +182,8 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({ projects }) => {
                       </span>
                     )}
                   </div>
-                  <span className="font-mono-meta text-xs text-[#D1C6DA] flex items-center gap-1.5">
-                    <Sparkles className="w-3.5 h-3.5 text-[#F9C63C]" aria-hidden="true" />
-                    <span className="text-[#B184D5] font-semibold">En movimiento</span>
+                  <span className="font-mono-meta text-[11px] text-[#A697B3] tracking-widest uppercase hidden sm:inline">
+                    EXP. 2026 // C-11
                   </span>
                 </div>
 
@@ -231,14 +225,14 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({ projects }) => {
                     className="absolute bottom-0 inset-x-0 p-4 sm:p-5 flex items-end justify-between gap-4"
                   >
                     <div>
-                      {activeProject.editorialHeadline && (
-                        <span className="font-mono-meta text-xs text-[#F9C63C] font-bold block mb-1">
-                          {activeProject.editorialHeadline}
-                        </span>
-                      )}
                       <span className="font-display font-black text-xl sm:text-2xl text-[#FAF6FB] block leading-tight">
                         {activeProject.name}
                       </span>
+                      {activeProject.editorialHeadline && (
+                        <span className="font-mono-meta text-xs text-[#F9C63C] font-semibold block mt-1">
+                          «{activeProject.editorialHeadline}»
+                        </span>
+                      )}
                     </div>
                     <span className="shrink-0 inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#F9C63C] text-[#170B25] group-hover:bg-[#EAB428] transition-colors shadow-md">
                       <ArrowUpRight className="w-5 h-5 stroke-[2.5] icon-glide" aria-hidden="true" />

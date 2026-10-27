@@ -8,7 +8,7 @@ export const MobileBottomNav: React.FC = () => {
   const destinations = [
     { to: "/", label: "Inicio", icon: Home, end: true },
     { to: "/explorar", label: "Explorar", icon: Compass, end: false },
-    { to: "/acerca-de", label: "Acerca de", icon: Info, end: false },
+    { to: "/revelado-cultural", label: "Revelado Cultural", icon: Info, end: false },
   ];
 
   return (
@@ -55,11 +55,11 @@ export const MobileBottomNav: React.FC = () => {
                         aria-hidden="true"
                       />
                     </span>
-                    <span className="text-xs tracking-wide mt-1 leading-tight flex items-center gap-1 font-mono-meta">
+                    <span className="text-[10px] sm:text-xs tracking-tight mt-0.5 leading-tight text-center font-mono-meta flex items-center justify-center gap-1 whitespace-nowrap">
                       <span>{item.label}</span>
                       {isActive && (
                         <span
-                          className="w-1.5 h-1.5 rounded-full bg-[#F9C63C]"
+                          className="w-1.5 h-1.5 rounded-full bg-[#F9C63C] shrink-0"
                           aria-hidden="true"
                         />
                       )}

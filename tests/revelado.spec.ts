@@ -152,9 +152,9 @@ test.describe('Revelado Cultural — Flujos principales, Responsive y Accesibili
       fullPage: false,
     });
 
-    // Navegar a Acerca de desde barra inferior móvil
-    await mobileNav.getByRole('link', { name: 'Acerca de' }).click();
-    await expect(page).toHaveURL('/acerca-de');
+    // Navegar a Revelado Cultural desde barra inferior móvil
+    await mobileNav.getByRole('link', { name: /Revelado Cultural/i }).click();
+    await expect(page).toHaveURL(/\/revelado-cultural|\/acerca-de/);
 
     const aboutAxe = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])

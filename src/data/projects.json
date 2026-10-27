@@ -30,7 +30,8 @@
     "order": 1,
     "publicationStatus": "published",
     "gallerySource": null,
-    "podcastStatus": "not_provided"
+    "podcastStatus": "ready",
+    "podcastUrl": "https://youtu.be/FExaQV3mdKQ"
   },
   {
     "id": "02",
@@ -38,8 +39,8 @@
     "name": "No entres Ahí",
     "category": "Artes escénicas",
     "categoryNote": null,
-    "shortDescription": "¡No entres ahí! ¿Alguna vez has querido gritarle a un personaje para evitar que tome una mala decisión?",
-    "fullDescription": "¡No entres ahí! ¿Alguna vez has querido gritarle a un personaje para evitar que tome una mala decisión?\n\nEn No entres ahí, tus gritos no se quedan en el público: ¡pueden cambiar el rumbo de la historia! Una obra de improvisación en la que tú ayudas a los personajes a decidir qué hacer, porque aquí nada está escrito y cada decisión puede cambiarlo todo.",
+    "shortDescription": "¡NO ENTRES AHÍIIII! ¿Alguna vez has querido gritarle a un personaje para evitar que tome una mala decisión? 🎭",
+    "fullDescription": "¡NO ENTRES AHÍIIII! ¿Alguna vez has querido gritarle a un personaje para evitar que tome una mala decisión? 🎭\n\nEn No entres ahí, tus gritos no se quedan en el público: ¡pueden cambiar el rumbo de la historia! Una obra de improvisación en la que tú ayudas a los personajes a decidir qué hacer, porque aquí nada está escrito y cada decisión puede cambiarlo todo.",
     "leader": null,
     "coverImage": "/images/teatro-1-1200.webp",
     "editorialHeadline": "Cuando el público decide el final",
@@ -110,7 +111,8 @@
     "order": 2,
     "publicationStatus": "published",
     "gallerySource": null,
-    "podcastStatus": "pending"
+    "podcastStatus": "pending",
+    "podcastUrl": null
   },
   {
     "id": "03",
@@ -118,8 +120,8 @@
     "name": "Ferales",
     "category": "Música",
     "categoryNote": null,
-    "shortDescription": "Ferales, banda de rock alternativo, transforma el arte visual en música con Anatomía imaginaria, un disco inspirado en dos dibujos que hoy dan vida a una propuesta sonora propia.",
-    "fullDescription": "Ferales, banda de rock alternativo, transforma el arte visual en música con Anatomía imaginaria, un disco inspirado en dos dibujos que hoy dan vida a una propuesta sonora propia.",
+    "shortDescription": "Ferales, banda de rock alternativo, transforma el arte visual en música con Anatomía imaginaria. Sonidos electrónicos y mayor profundidad en sus ritmos. Es una evolución del sonido de Ferales.",
+    "fullDescription": "Ferales, banda de rock alternativo, transforma el arte visual en música con Anatomía imaginaria. Sonidos electrónicos y mayor profundidad en sus ritmos. Es una evolución del sonido de Ferales.\n\nConoce más de Ferales y su nuevo álbum.",
     "leader": null,
     "coverImage": "/images/ferales-1-1200.webp",
     "editorialHeadline": "¿A qué suenan dos dibujos?",
@@ -189,16 +191,17 @@
     "order": 3,
     "publicationStatus": "published",
     "gallerySource": null,
-    "podcastStatus": "pending"
+    "podcastStatus": "ready",
+    "podcastUrl": "https://youtu.be/ZCBASQd3OLA"
   },
   {
     "id": "04",
     "slug": "reflejos-de-corporacion-h3",
     "name": "Reflejos de Corporación H3",
-    "category": null,
+    "category": "Artes escénicas",
     "categoryNote": null,
     "shortDescription": "¿Qué tienen en común un espejo, un cepillo y una piedra? Más de lo que imaginamos.",
-    "fullDescription": "¿Qué tienen en común un espejo, un cepillo y una piedra?\n\nMás de lo que imaginamos. A través del teatro, esta obra nos invita a mirar más allá de los objetos y descubrir cómo nos reflejamos en los demás, cómo el otro nos transforma y qué tanto de nosotros mismos encontramos en quienes nos rodean.",
+    "fullDescription": "¿Qué tienen en común un espejo, un cepillo y una piedra? Más de lo que imaginamos.\n\nA través del teatro, esta obra nos invita a mirar más allá de los objetos y descubrir cómo nos reflejamos en los demás, cómo el otro nos transforma y qué tanto de nosotros mismos encontramos en quienes nos rodean.",
     "leader": null,
     "coverImage": "/images/reflejos-1-1200.webp",
     "editorialHeadline": "Lo que un espejo revela de nosotros",
@@ -268,7 +271,8 @@
     "order": 4,
     "publicationStatus": "published",
     "gallerySource": null,
-    "podcastStatus": "pending"
+    "podcastStatus": "ready",
+    "podcastUrl": "https://youtu.be/_y4PyDWU59s"
   },
   {
     "id": "05",
@@ -277,7 +281,7 @@
     "category": "Gestión cultural",
     "categoryNote": null,
     "shortDescription": "Un proyecto de gestión cultural que nació entre amigos y hoy conecta la música, la danza, el performance y el audiovisual para generar improvisación viva.",
-    "fullDescription": "Un proyecto de gestión cultural que nació entre amigos y hoy conecta la música, la danza, el performance y el audiovisual para generar improvisación viva.\n\n¿Qué trajo esta edición?\n\n5 eventos únicos donde cada disciplina artística se fusionó en directo con la creación sonora de artistas locales.",
+    "fullDescription": "Un proyecto de gestión cultural que nació entre amigos y hoy conecta la música, la danza, el performance y el audiovisual para generar improvisación viva.\n\n¿Qué trajo esta edición? 5 eventos únicos donde cada disciplina artística se fusiono en directo con la creación sonora de artistas locales.",
     "leader": null,
     "coverImage": null,
     "editorialHeadline": "Improvisación sonora en tiempo real",
@@ -299,7 +303,8 @@
     "order": 5,
     "publicationStatus": "published",
     "gallerySource": null,
-    "podcastStatus": "not_provided"
+    "podcastStatus": "ready",
+    "podcastUrl": "https://youtu.be/YdnJ9DMH-JE"
   },
   {
     "id": "06",
@@ -307,8 +312,8 @@
     "name": "Pensar, narrar y habitar el territorio",
     "category": "Investigación",
     "categoryNote": null,
-    "shortDescription": "Habitar el barrio: las huellas de una ciudad que cambia. Cada calle, cada casa y cada rincón guardan historias que nos conectan con la memoria de nuestra ciudad.",
-    "fullDescription": "Habitar el barrio: las huellas de una ciudad que cambia.\n\nCada calle, cada casa y cada rincón guardan historias que nos conectan con la memoria de nuestra ciudad.\n\nHabitar el barrio es un proyecto ganador de Presupuesto Participativo de la Comuna 11 – Laureles-Estadio, que nos invita a recorrer sus barrios, reconocer sus transformaciones y descubrir las huellas que el paso del tiempo ha dejado en el territorio.",
+    "shortDescription": "Habitar el barrio: las huellas de una ciudad que cambia. Cada calle, cada casa y cada rincón guardan historias que nos conectan con la memoria de nuestra ciudad. 🌆",
+    "fullDescription": "Habitar el barrio: las huellas de una ciudad que cambia. Cada calle, cada casa y cada rincón guardan historias que nos conectan con la memoria de nuestra ciudad. 🌆\n\nHabitar el barrio es un proyecto ganador de Presupuesto Participativo de la Comuna 11 – Laureles-Estadio, que nos invita a recorrer sus barrios, reconocer sus transformaciones y descubrir las huellas que el paso del tiempo ha dejado en el territorio.",
     "leader": "Margarita Ortiz de Habitar el Barrio",
     "coverImage": null,
     "editorialHeadline": "Las huellas de una ciudad que cambia",
@@ -330,7 +335,8 @@
     "order": 6,
     "publicationStatus": "published",
     "gallerySource": null,
-    "podcastStatus": "not_provided"
+    "podcastStatus": "not_provided",
+    "podcastUrl": null
   },
   {
     "id": "07",
@@ -338,8 +344,8 @@
     "name": "Narrar la realidad desde las viñetas: Un intercambio",
     "category": "Literatura",
     "categoryNote": null,
-    "shortDescription": "Un espacio de creación gráfica e intercambio donde la realidad y la memoria de barrio se narran a través del dibujo y las viñetas proyectadas.",
-    "fullDescription": "Un espacio de creación gráfica e intercambio donde la realidad y la memoria de barrio se narran a través del dibujo y las viñetas proyectadas. Conducido por Lina Patricia Flórez, el proyecto explora el cómic y la ilustración como lenguajes documentales y sensibles.",
+    "shortDescription": "¿Se pueden traducir investigaciones complejas a un lenguaje fresco y juvenil? Altaist Comics demuestra que sí.",
+    "fullDescription": "¿Se pueden traducir investigaciones complejas a un lenguaje fresco y juvenil? Altaist Comics demuestra que sí.\n\nA través de su libro \"Desde las Viñetas\", esta iniciativa conecta la investigación rigurosa con la ilustración para narrar las vivencias de tres mujeres.",
     "leader": "Lina Patricia Flórez",
     "coverImage": "/images/vinetas-1-1200.webp",
     "editorialHeadline": "Relatos contados en viñetas",
@@ -391,7 +397,8 @@
     "order": 7,
     "publicationStatus": "published",
     "gallerySource": null,
-    "podcastStatus": "not_provided"
+    "podcastStatus": "ready",
+    "podcastUrl": "https://youtu.be/RA365p3xj5Y"
   },
   {
     "id": "08",
@@ -399,8 +406,8 @@
     "name": "Se busca una Raíz",
     "category": "Artes visuales y plásticas",
     "categoryNote": null,
-    "shortDescription": "Laboratorio de indagación visual y corporal que convoca la búsqueda del origen, las raíces familiares y la pertenencia a través del arte.",
-    "fullDescription": "Laboratorio de indagación visual y corporal que convoca la búsqueda del origen, las raíces familiares y la pertenencia a través del arte. Una propuesta que explora la memoria íntima y colectiva desde el gesto y la materia visual.",
+    "shortDescription": "Hay historias que cruzan fronteras y encuentran en el arte una forma de ser contadas. A través de la integración del lenguaje audiovisual y las artes escénicas, esta obra narra la migración desde la historia de vida de dos chicas.",
+    "fullDescription": "Hay historias que cruzan fronteras y encuentran en el arte una forma de ser contadas. A través de la integración del lenguaje audiovisual y las artes escénicas, esta obra narra la migración desde la historia de vida de dos chicas.\n\nSu estructura, construida a partir de 12 cartas que funcionan como correspondencia, conecta personajes, emociones y experiencias que nos acercan a las realidades de quienes migran.",
     "leader": null,
     "coverImage": "/images/raiz-1-1200.webp",
     "editorialHeadline": "La búsqueda visual del origen",
@@ -452,6 +459,7 @@
     "order": 8,
     "publicationStatus": "published",
     "gallerySource": null,
-    "podcastStatus": "not_provided"
+    "podcastStatus": "ready",
+    "podcastUrl": "https://youtu.be/YAC6uZsT5X8"
   }
 ]

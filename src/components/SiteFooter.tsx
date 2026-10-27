@@ -54,10 +54,10 @@ export const SiteFooter: React.FC = () => {
               </li>
               <li>
                 <Link
-                  to="/acerca-de"
+                  to="/revelado-cultural"
                   className="text-[#D1C6DA] hover:text-[#F9C63C] transition-colors font-medium"
                 >
-                  Acerca de Revelado Cultural
+                  Revelado Cultural
                 </Link>
               </li>
             </ul>

@@ -46,10 +46,16 @@ const staticRoutes = [
       "Busca y filtra por disciplina las ocho iniciativas culturales del Presupuesto Participativo en Laureles y Estadio, Comuna 11, Medellín.",
   },
   {
-    route: "acerca-de",
-    title: "Acerca de Revelado Cultural · Comuna 11, Medellín",
+    route: "revelado-cultural",
+    title: "Revelado Cultural 2026 · Manifiesto y Presentación Oficial",
     description:
-      "Qué es Revelado Cultural y cómo reúne las ocho propuestas ganadoras del Presupuesto Participativo en la Comuna 11 de Medellín.",
+      "Manifiesto y presentación oficial de Revelado Cultural 2026: objetivos, componentes y memorias de las ocho iniciativas ganadoras de Presupuesto Participativo de la Comuna 11, Medellín.",
+  },
+  {
+    route: "acerca-de",
+    title: "Revelado Cultural 2026 · Manifiesto y Presentación Oficial",
+    description:
+      "Manifiesto y presentación oficial de Revelado Cultural 2026: objetivos, componentes y memorias de las ocho iniciativas ganadoras de Presupuesto Participativo de la Comuna 11, Medellín.",
   },
 ];
 
