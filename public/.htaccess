@@ -1,13 +1,13 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
-  RewriteBase /
+  RewriteBase /revelado-cultural/
   
   # Si el archivo o carpeta existe físicamente, servir directamente
   RewriteCond %{REQUEST_FILENAME} -f [OR]
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
   
-  # Enrutamiento SPA hacia index.html para todas las demás rutas
+  # Enrutamiento SPA hacia el index.html de esta carpeta
   RewriteRule ^ index.html [L]
 </IfModule>
 

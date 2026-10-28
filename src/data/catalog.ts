@@ -6,9 +6,42 @@ import {
   type MediaAsset,
 } from "../types/cultural";
 
+export function resolvePublicPath(path: string | null | undefined): string {
+  if (!path) return "";
+  if (
+    path.startsWith("http://") ||
+    path.startsWith("https://") ||
+    path.startsWith("blob:") ||
+    path.startsWith("data:")
+  ) {
+    return path;
+  }
+  let base = import.meta.env.BASE_URL || "/";
+  if (
+    base === "/" &&
+    typeof window !== "undefined" &&
+    window.location.pathname.startsWith("/revelado-cultural")
+  ) {
+    base = "/revelado-cultural/";
+  }
+  const cleanPath = path.startsWith("/") ? path.slice(1) : path;
+  const cleanBase = base.endsWith("/") ? base : `${base}/`;
+  return `${cleanBase}${cleanPath}`;
+}
+
 export const initialProjects: CulturalProject[] = (
   rawProjects as CulturalProject[]
-).sort((a, b) => a.order - b.order);
+)
+  .map((p) => ({
+    ...p,
+    coverImage: p.coverImage ? resolvePublicPath(p.coverImage) : null,
+    media: p.media.map((m) => ({
+      ...m,
+      publicUrl: m.publicUrl ? resolvePublicPath(m.publicUrl) : undefined,
+      thumbnailUrl: m.thumbnailUrl ? resolvePublicPath(m.thumbnailUrl) : undefined,
+    })),
+  }))
+  .sort((a, b) => a.order - b.order);
 
 export { CONFIRMED_CATEGORIES, type ConfirmedCategory };
 

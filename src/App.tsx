@@ -44,9 +44,17 @@ export const App: React.FC = () => {
     return () => globalThis.clearTimeout(timer);
   }, []);
 
+  const basename =
+    import.meta.env.BASE_URL && import.meta.env.BASE_URL !== "/"
+      ? import.meta.env.BASE_URL.replace(/\/$/, "")
+      : typeof window !== "undefined" &&
+          window.location.pathname.startsWith("/revelado-cultural")
+        ? "/revelado-cultural"
+        : "";
+
   return (
     <CatalogProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={basename}>
         <ScrollToTop />
         <div className="min-h-screen flex flex-col bg-[#161317] text-[#F5F0E7]">
           <SiteHeader />

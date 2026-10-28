@@ -2,6 +2,17 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 const distDir = path.resolve("dist");
+const isVercel = Boolean(process.env.VERCEL);
+const base = process.env.VITE_BASE_PATH || (isVercel ? "/" : "/revelado-cultural/");
+const cleanBase = base.endsWith("/") ? base : `${base}/`;
+
+function resolvePath(p) {
+  if (!p) return "";
+  if (p.startsWith("http://") || p.startsWith("https://")) return p;
+  const clean = p.startsWith("/") ? p.slice(1) : p;
+  return `${cleanBase}${clean}`;
+}
+
 const baseHtml = await fs.readFile(path.join(distDir, "index.html"), "utf8");
 const projects = JSON.parse(
   await fs.readFile(path.resolve("src/data/projects.json"), "utf8")
@@ -95,7 +106,7 @@ for (const project of projects) {
     injectMeta(baseHtml, {
       title: `${project.name} (${project.id}/08) · Revelado Cultural`,
       description,
-      image: project.coverImage ?? "/images/ferales-1-1200.webp",
+      image: resolvePath(project.coverImage || "/images/ferales-1-1200.webp"),
       jsonLd,
     }),
     "utf8"
