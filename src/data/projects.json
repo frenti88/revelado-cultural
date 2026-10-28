@@ -31,7 +31,13 @@
     "publicationStatus": "published",
     "gallerySource": null,
     "podcastStatus": "ready",
-    "podcastUrl": "https://youtu.be/FExaQV3mdKQ"
+    "podcastUrl": "https://youtu.be/FExaQV3mdKQ",
+    "instagram": [
+      {
+        "handle": "arche_lab",
+        "url": "https://www.instagram.com/arche_lab/"
+      }
+    ]
   },
   {
     "id": "02",
@@ -111,8 +117,18 @@
     "order": 2,
     "publicationStatus": "published",
     "gallerySource": null,
-    "podcastStatus": "pending",
-    "podcastUrl": null
+    "podcastStatus": "ready",
+    "podcastUrl": "https://youtu.be/5KeLNSuAW9M",
+    "instagram": [
+      {
+        "handle": "karlacuentera",
+        "url": "https://www.instagram.com/karlacuentera/"
+      },
+      {
+        "handle": "davidhaceimpro",
+        "url": "https://www.instagram.com/davidhaceimpro/"
+      }
+    ]
   },
   {
     "id": "03",
@@ -192,7 +208,13 @@
     "publicationStatus": "published",
     "gallerySource": null,
     "podcastStatus": "ready",
-    "podcastUrl": "https://youtu.be/ZCBASQd3OLA"
+    "podcastUrl": "https://youtu.be/ZCBASQd3OLA",
+    "instagram": [
+      {
+        "handle": "feralesmusica",
+        "url": "https://www.instagram.com/feralesmusica/"
+      }
+    ]
   },
   {
     "id": "04",
@@ -272,7 +294,13 @@
     "publicationStatus": "published",
     "gallerySource": null,
     "podcastStatus": "ready",
-    "podcastUrl": "https://youtu.be/_y4PyDWU59s"
+    "podcastUrl": "https://youtu.be/_y4PyDWU59s",
+    "instagram": [
+      {
+        "handle": "compania_h3",
+        "url": "https://www.instagram.com/compania_h3/"
+      }
+    ]
   },
   {
     "id": "05",
@@ -304,7 +332,13 @@
     "publicationStatus": "published",
     "gallerySource": null,
     "podcastStatus": "ready",
-    "podcastUrl": "https://youtu.be/YdnJ9DMH-JE"
+    "podcastUrl": "https://youtu.be/YdnJ9DMH-JE",
+    "instagram": [
+      {
+        "handle": "3t_festival",
+        "url": "https://www.instagram.com/3t_festival/"
+      }
+    ]
   },
   {
     "id": "06",
@@ -336,7 +370,13 @@
     "publicationStatus": "published",
     "gallerySource": null,
     "podcastStatus": "not_provided",
-    "podcastUrl": null
+    "podcastUrl": null,
+    "instagram": [
+      {
+        "handle": "habitar.elbarrio",
+        "url": "https://www.instagram.com/habitar.elbarrio/"
+      }
+    ]
   },
   {
     "id": "07",
@@ -398,7 +438,13 @@
     "publicationStatus": "published",
     "gallerySource": null,
     "podcastStatus": "ready",
-    "podcastUrl": "https://youtu.be/RA365p3xj5Y"
+    "podcastUrl": "https://youtu.be/RA365p3xj5Y",
+    "instagram": [
+      {
+        "handle": "altais_comics",
+        "url": "https://www.instagram.com/altais_comics/"
+      }
+    ]
   },
   {
     "id": "08",
@@ -460,6 +506,12 @@
     "publicationStatus": "published",
     "gallerySource": null,
     "podcastStatus": "ready",
-    "podcastUrl": "https://youtu.be/YAC6uZsT5X8"
+    "podcastUrl": "https://youtu.be/YAC6uZsT5X8",
+    "instagram": [
+      {
+        "handle": "sebusca.unaraiz",
+        "url": "https://www.instagram.com/sebusca.unaraiz/"
+      }
+    ]
   }
 ]

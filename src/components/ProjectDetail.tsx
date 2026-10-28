@@ -6,6 +6,7 @@ import {
   ArrowRight,
   ArrowUpRight,
   Headphones,
+  Instagram,
   MapPin,
   Sparkles,
   User,
@@ -175,24 +176,52 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
                 Quiénes impulsan el proyecto
               </h2>
 
-              <div className="rounded-2xl bg-[#29143B] border border-[#3D2254] p-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-sm">
-                <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[#170B25] border border-[#583178] flex items-center justify-center text-[#F9C63C] shrink-0">
-                    <User className="w-6 h-6 stroke-[2.2]" aria-hidden="true" />
+              <div className="rounded-2xl bg-[#29143B] border border-[#3D2254] p-6 shadow-sm flex flex-col gap-5">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-xl bg-[#170B25] border border-[#583178] flex items-center justify-center text-[#F9C63C] shrink-0">
+                      <User className="w-6 h-6 stroke-[2.2]" aria-hidden="true" />
+                    </div>
+                    <div>
+                      <h3 className="font-display font-black text-lg text-[#FAF6FB]">
+                        {project.leader ? project.leader : `Equipo de ${project.name}`}
+                      </h3>
+                      <p className="font-mono-meta text-xs text-[#D1C6DA] mt-0.5">
+                        {project.leader ? "Liderazgo y gestión del proyecto" : "Colectivo creador · Comuna 11"}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-display font-black text-lg text-[#FAF6FB]">
-                      {project.leader ? project.leader : `Equipo de ${project.name}`}
-                    </h3>
-                    <p className="font-mono-meta text-xs text-[#D1C6DA] mt-0.5">
-                      {project.leader ? "Liderazgo y gestión del proyecto" : "Colectivo creador · Comuna 11"}
-                    </p>
+
+                  <div className="text-xs font-mono-meta text-[#F9C63C] bg-[#170B25] border border-[#3D2254] px-3.5 py-1.5 rounded-full shrink-0 font-bold">
+                    Laureles–Estadio
                   </div>
                 </div>
 
-                <div className="text-xs font-mono-meta text-[#F9C63C] bg-[#170B25] border border-[#3D2254] px-3.5 py-1.5 rounded-full shrink-0 font-bold">
-                  Laureles–Estadio
-                </div>
+                {project.instagram && project.instagram.length > 0 && (
+                  <div className="pt-4 border-t border-[#3D2254] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                    <span className="font-mono-meta text-xs text-[#D1C6DA] font-medium shrink-0">
+                      Instagram oficial:
+                    </span>
+                    <div className="flex flex-wrap items-center gap-2.5">
+                      {project.instagram.map((ig) => (
+                        <a
+                          key={ig.handle}
+                          href={ig.url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-press inline-flex items-center gap-2 min-h-11 px-4 py-2 rounded-full bg-[#170B25] hover:bg-[#37105F] border border-[#3D2254] hover:border-[#FAF6FB] text-sm font-mono-meta text-[#FAF6FB] transition-all shadow-sm group"
+                          aria-label={`Perfil de Instagram @${ig.handle} (se abre en nueva pestaña)`}
+                        >
+                          <Instagram className="w-4 h-4 text-[#FAF6FB] shrink-0" aria-hidden="true" />
+                          <span className="font-semibold text-xs tracking-wide">
+                            @{ig.handle}
+                          </span>
+                          <ArrowUpRight className="w-3.5 h-3.5 text-[#D1C6DA] group-hover:text-[#FAF6FB] transition-colors" aria-hidden="true" />
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </div>
             </section>
 

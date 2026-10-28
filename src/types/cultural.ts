@@ -14,6 +14,11 @@ export type MediaAsset = {
   status: "pending" | "ready" | "unavailable";
 };
 
+export type InstagramLink = {
+  handle: string;
+  url: string;
+};
+
 export type CulturalProject = {
   id: string;
   slug: string;
@@ -34,6 +39,7 @@ export type CulturalProject = {
   editorialHeadline?: string;
   contextualCta?: string;
   thematicGroup?: "sonido" | "territorio" | "movimiento";
+  instagram?: InstagramLink[];
 };
 
 export const CONFIRMED_CATEGORIES = [
