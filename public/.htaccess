@@ -1,0 +1,26 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Si el archivo o carpeta existe físicamente, servir directamente
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+  
+  # Enrutamiento SPA hacia index.html para todas las demás rutas
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Tipos MIME para fuentes, vectores y contenido multimedia
+<IfModule mod_mime.c>
+  AddType image/svg+xml .svg
+  AddType font/woff .woff
+  AddType font/woff2 .woff2
+  AddType video/mp4 .mp4
+  AddType video/webm .webm
+</IfModule>
+
+# Compresión GZIP para acelerar la carga
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json font/woff font/woff2 image/svg+xml
+</IfModule>

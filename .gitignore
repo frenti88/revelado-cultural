@@ -19,6 +19,10 @@ playwright-report/
 .DS_Store
 Thumbs.db
 
+# Archives & packages
+*.zip
+*.tar.gz
+
 # Vercel
 .vercel/
 
