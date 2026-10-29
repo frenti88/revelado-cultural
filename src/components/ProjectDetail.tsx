@@ -177,23 +177,17 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
               </h2>
 
               <div className="rounded-2xl bg-[#29143B] border border-[#3D2254] p-6 shadow-sm flex flex-col gap-5">
-                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                  <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-xl bg-[#170B25] border border-[#583178] flex items-center justify-center text-[#F9C63C] shrink-0">
-                      <User className="w-6 h-6 stroke-[2.2]" aria-hidden="true" />
-                    </div>
-                    <div>
-                      <h3 className="font-display font-black text-lg text-[#FAF6FB]">
-                        {project.leader ? project.leader : `Equipo de ${project.name}`}
-                      </h3>
-                      <p className="font-mono-meta text-xs text-[#D1C6DA] mt-0.5">
-                        {project.leader ? "Liderazgo y gestión del proyecto" : "Colectivo creador · Comuna 11"}
-                      </p>
-                    </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-[#170B25] border border-[#583178] flex items-center justify-center text-[#F9C63C] shrink-0">
+                    <User className="w-6 h-6 stroke-[2.2]" aria-hidden="true" />
                   </div>
-
-                  <div className="text-xs font-mono-meta text-[#F9C63C] bg-[#170B25] border border-[#3D2254] px-3.5 py-1.5 rounded-full shrink-0 font-bold">
-                    Laureles–Estadio
+                  <div>
+                    <h3 className="font-display font-black text-lg text-[#FAF6FB]">
+                      {project.leader ? project.leader : `Equipo de ${project.name}`}
+                    </h3>
+                    <p className="font-mono-meta text-xs text-[#D1C6DA] mt-0.5">
+                      {project.leader ? "Liderazgo y gestión del proyecto" : "Colectivo creador · Comuna 11"}
+                    </p>
                   </div>
                 </div>
 
@@ -368,11 +362,11 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
                   id="podcast-heading"
                   className="font-display font-black text-2xl sm:text-3xl text-[#FAF6FB]"
                 >
-                  Entrevista en formato falso podcast
+                  Entrevista audiovisual
                 </h2>
               </div>
-              <span className="font-mono-meta text-xs text-[#B184D5] font-semibold">
-                Grabación oficial en video · 5 a 8 minutos
+              <span className="font-mono-meta text-xs text-[#F9C63C] font-semibold">
+                Video documental · 5 a 8 minutos
               </span>
             </div>
 
@@ -383,13 +377,13 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
                 </div>
                 <div>
                   <h3 className="font-display font-black text-xl text-[#FAF6FB]">
-                    Entrevista: {project.name}
+                    {project.name}
                   </h3>
-                  <p className="font-mono-meta text-xs text-[#F9C63C] font-semibold mt-1">
+                  <p className="font-mono-meta text-xs text-[#D1C6DA] mt-1">
                     Conversación con {project.leader ? project.leader : `el equipo de ${project.name}`}
                   </p>
-                  <p className="mt-2 text-sm text-[#D1C6DA] max-w-xl">
-                    Entrevista grabada en video que documenta y narrativiza la ejecución del proyecto ganador de Presupuesto Participativo.
+                  <p className="mt-2 text-sm text-[#D1C6DA] max-w-xl leading-relaxed">
+                    Registro en video que profundiza en la creación, los retos territoriales y la vivencia comunitaria del proyecto en la Comuna 11.
                   </p>
                 </div>
               </div>

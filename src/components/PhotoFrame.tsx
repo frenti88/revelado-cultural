@@ -18,9 +18,9 @@ export const PhotoFrame: React.FC<PhotoFrameProps> = ({
   badgeText,
 }) => {
   const sizeClasses = {
-    sm: "w-2.5 h-2.5 border-[1.5px]",
-    md: "w-3.5 h-3.5 border-2",
-    lg: "w-5 h-5 border-2",
+    sm: "w-2.5 h-2.5 border-[1px]",
+    md: "w-3 h-3 border-[1.5px]",
+    lg: "w-4 h-4 border-[1.5px]",
   }[cornerSize];
 
   return (
@@ -30,7 +30,7 @@ export const PhotoFrame: React.FC<PhotoFrameProps> = ({
       {children}
 
       {showCorners && (
-        <>
+        <div className="opacity-40 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
           {/* Esquina superior izquierda ┌ en amarillo dinámico */}
           <span
             className={`viewfinder-corner viewfinder-corner-tl border-t border-l border-[#F9C63C] ${sizeClasses}`}
@@ -51,7 +51,7 @@ export const PhotoFrame: React.FC<PhotoFrameProps> = ({
             className={`viewfinder-corner viewfinder-corner-br border-b border-r border-[#F9C63C] ${sizeClasses}`}
             aria-hidden="true"
           />
-        </>
+        </div>
       )}
 
       {badgeText && (

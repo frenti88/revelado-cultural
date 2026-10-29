@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo } from "react";
 import { useSearchParams } from "react-router-dom";
-import { Compass, Film, Headphones, MapPin, RotateCcw } from "lucide-react";
+import { RotateCcw } from "lucide-react";
 import { useCatalog } from "../context/CatalogContext";
 import { CONFIRMED_CATEGORIES } from "../data/catalog";
 import SearchField from "../components/SearchField";
@@ -17,13 +17,6 @@ function normalizeText(value: string | null | undefined): string {
     .toLowerCase();
 }
 
-const THEMATIC_GROUPS = [
-  { id: "todos", label: "Todas las historias", icon: Compass },
-  { id: "movimiento", label: "Arte en movimiento", icon: Film },
-  { id: "sonido", label: "Historias para escuchar", icon: Headphones },
-  { id: "territorio", label: "Historias sobre el territorio", icon: MapPin },
-] as const;
-
 export const ExplorePage: React.FC = () => {
   const { publishedProjects } = useCatalog();
   const [searchParams, setSearchParams] = useSearchParams();
@@ -34,20 +27,13 @@ export const ExplorePage: React.FC = () => {
     (CONFIRMED_CATEGORIES as readonly string[]).includes(rawCategory)
       ? rawCategory
       : null;
-  const rawGroup = searchParams.get("grupo");
-  const selectedGroup =
-    rawGroup && ["movimiento", "sonido", "territorio"].includes(rawGroup)
-      ? rawGroup
-      : null;
   const query = searchParams.get("q") ?? "";
 
   useEffect(() => {
     document.title = selectedCategory
       ? `Explorar ${selectedCategory} · Revelado Cultural`
-      : selectedGroup
-      ? `Explorar grupo · Revelado Cultural`
       : "Explorar las 8 iniciativas · Revelado Cultural";
-  }, [selectedCategory, selectedGroup]);
+  }, [selectedCategory]);
 
   const countsByCategory = useMemo(() => {
     return CONFIRMED_CATEGORIES.reduce<Record<string, number>>((acc, cat) => {
@@ -56,21 +42,10 @@ export const ExplorePage: React.FC = () => {
     }, {});
   }, [publishedProjects]);
 
-  const countsByGroup = useMemo(() => {
-    return {
-      movimiento: publishedProjects.filter((p) => p.thematicGroup === "movimiento").length,
-      sonido: publishedProjects.filter((p) => p.thematicGroup === "sonido").length,
-      territorio: publishedProjects.filter((p) => p.thematicGroup === "territorio").length,
-    };
-  }, [publishedProjects]);
-
   const filteredProjects = useMemo(() => {
     const normalizedQuery = normalizeText(query.trim());
     return publishedProjects.filter((project) => {
       if (selectedCategory && project.category !== selectedCategory) {
-        return false;
-      }
-      if (selectedGroup && project.thematicGroup !== selectedGroup) {
         return false;
       }
       if (!normalizedQuery) {
@@ -90,19 +65,12 @@ export const ExplorePage: React.FC = () => {
 
       return haystack.includes(normalizedQuery);
     });
-  }, [publishedProjects, selectedCategory, selectedGroup, query]);
+  }, [publishedProjects, selectedCategory, query]);
 
-  const updateFilters = (
-    nextCategory: string | null,
-    nextGroup: string | null,
-    nextQuery: string
-  ) => {
+  const updateFilters = (nextCategory: string | null, nextQuery: string) => {
     const next = new URLSearchParams();
     if (nextCategory) {
       next.set("categoria", nextCategory);
-    }
-    if (nextGroup) {
-      next.set("grupo", nextGroup);
     }
     if (nextQuery.trim()) {
       next.set("q", nextQuery);
@@ -114,7 +82,7 @@ export const ExplorePage: React.FC = () => {
     setSearchParams(new URLSearchParams(), { replace: true });
   };
 
-  const hasActiveFilters = Boolean(selectedCategory || selectedGroup || query.trim());
+  const hasActiveFilters = Boolean(selectedCategory || query.trim());
 
   return (
     <div className="w-full min-h-[75vh] bg-[#170B25] text-[#FAF6FB] section-macro">
@@ -127,7 +95,7 @@ export const ExplorePage: React.FC = () => {
                 Encuentra lo que te mueve
               </h1>
               <p className="mt-4 text-base sm:text-lg font-normal text-[#D1C6DA] max-w-2xl">
-                Filtra por disciplina, agrupación narrativa o busca por palabras clave para descubrir la cultura viva de Laureles–Estadio.
+                Filtra por disciplina cultural o busca por palabras clave para descubrir las ocho iniciativas de Laureles–Estadio.
               </p>
             </div>
             <div className="hidden lg:block pb-2" aria-hidden="true">
@@ -136,16 +104,14 @@ export const ExplorePage: React.FC = () => {
           </div>
         </div>
 
-        {/* Discovery Control Surface: Búsqueda unificada y filtros con ritmo espacial */}
-        <div className="rounded-2xl bg-[#29143B]/60 border border-[#3D2254] p-5 sm:p-6 mb-10 space-y-5 shadow-md">
+        {/* Discovery Control Surface: Búsqueda unificada y disciplinas */}
+        <div className="rounded-2xl bg-[#29143B]/60 border border-[#3D2254] p-5 sm:p-6 mb-10 space-y-4 shadow-md">
           {/* Fila 1: Búsqueda y estado de resultados */}
           <div className="layout-grid-12 items-center gap-4">
             <div className="col-span-4 md:col-span-5 lg:col-span-8">
               <SearchField
                 value={query}
-                onChange={(nextQuery) =>
-                  updateFilters(selectedCategory, selectedGroup, nextQuery)
-                }
+                onChange={(nextQuery) => updateFilters(selectedCategory, nextQuery)}
               />
             </div>
 
@@ -167,69 +133,20 @@ export const ExplorePage: React.FC = () => {
                   className="btn-press inline-flex items-center gap-1.5 min-h-10 px-3.5 py-1.5 rounded-full bg-[#170B25] hover:bg-[#37105F] border border-[#583178] hover:border-[#F9C63C] text-[#FAF6FB] text-xs font-mono-meta transition-colors cursor-pointer shadow-sm"
                 >
                   <RotateCcw className="w-3.5 h-3.5 text-[#F9C63C]" aria-hidden="true" />
-                  <span>Limpiar filtros</span>
+                  <span>Limpiar</span>
                 </button>
               )}
             </div>
           </div>
 
           {/* Fila 2: Filtro por Disciplinas Culturales */}
-          <div className="pt-4 border-t border-[#3D2254]">
+          <div className="pt-3 border-t border-[#3D2254]">
             <CategoryFilters
               selectedCategory={selectedCategory}
-              onSelectCategory={(nextCategory) =>
-                updateFilters(nextCategory, selectedGroup, query)
-              }
+              onSelectCategory={(nextCategory) => updateFilters(nextCategory, query)}
               countsByCategory={countsByCategory}
               totalCount={publishedProjects.length}
             />
-          </div>
-
-          {/* Fila 3: Agrupaciones temáticas */}
-          <div className="pt-3.5 border-t border-[#3D2254]/60 flex flex-col sm:flex-row sm:items-center gap-3">
-            <span className="font-mono-meta text-[11px] uppercase tracking-wider text-[#D1C6DA] font-semibold shrink-0">
-              Vistas temáticas:
-            </span>
-            <div className="flex flex-wrap items-center gap-2" role="group" aria-label="Agrupaciones editoriales">
-              {THEMATIC_GROUPS.map((group) => {
-                const Icon = group.icon;
-                const isActive = group.id === "todos" ? !selectedGroup : selectedGroup === group.id;
-                const count =
-                  group.id === "todos"
-                    ? publishedProjects.length
-                    : countsByGroup[group.id as keyof typeof countsByGroup] ?? 0;
-
-                return (
-                  <button
-                    key={group.id}
-                    type="button"
-                    onClick={() =>
-                      updateFilters(
-                        selectedCategory,
-                        group.id === "todos" ? null : group.id,
-                        query
-                      )
-                    }
-                    aria-pressed={isActive}
-                    className={`btn-press inline-flex items-center gap-2 min-h-9 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-colors cursor-pointer ${
-                      isActive
-                        ? "bg-[#B184D5] text-[#170B25] font-bold shadow-sm"
-                        : "bg-[#170B25] hover:bg-[#37105F] border border-[#3D2254] text-[#D1C6DA] hover:text-[#FAF6FB]"
-                    }`}
-                  >
-                    <Icon className="w-3.5 h-3.5 stroke-[2.2]" aria-hidden="true" />
-                    <span>{group.label}</span>
-                    <span
-                      className={`px-1.5 py-0.5 rounded-full font-mono-meta text-[10px] leading-none ${
-                        isActive ? "bg-[#170B25] text-[#B184D5] font-bold" : "bg-[#29143B] text-[#D1C6DA]"
-                      }`}
-                    >
-                      {count}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
           </div>
         </div>
 
@@ -245,7 +162,7 @@ export const ExplorePage: React.FC = () => {
             query={query}
             category={selectedCategory}
             onReset={resetAllFilters}
-            onSuggestQuery={(suggestion) => updateFilters(null, null, suggestion)}
+            onSuggestQuery={(suggestion) => updateFilters(null, suggestion)}
           />
         )}
       </div>

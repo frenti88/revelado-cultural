@@ -2,13 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowUpRight,
-  Camera,
-  Film,
-  Globe,
-  Headphones,
   Play,
-  Share2,
-  Users,
 } from "lucide-react";
 import { useCatalog } from "../context/CatalogContext";
 import {
@@ -93,119 +87,13 @@ export const HomePage: React.FC = () => {
         />
       </EditorialSection>
 
-      {/* Sección 4 — Los cuatro componentes de Revelado Cultural (Documento Oficial) */}
-      <EditorialSection
-        id="componentes"
-        title="Los cuatro componentes del proyecto"
-        subtitle="Estrategia multiformato de producción y circulación para visibilizar el talento y las historias de la Comuna 11."
-        variant="secondary"
-      >
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
-          {/* Componente 1: Reels */}
-          <div className="relative rounded-2xl bg-[#170B25] border border-[#3D2254] p-7 sm:p-8 flex flex-col justify-between shadow-md hover:border-[#F9C63C]/60 transition-colors">
-            <div>
-              <div className="flex items-baseline justify-between gap-4 mb-4 pb-3 border-b border-[#3D2254]">
-                <span className="font-display font-black text-4xl sm:text-5xl text-[#F9C63C] tracking-tight uppercase">
-                  08 Reels
-                </span>
-                <span className="font-mono-meta text-xs text-[#B184D5] uppercase tracking-wider font-bold">
-                  60 a 90 segundos
-                </span>
-              </div>
-              <h3 className="font-display font-black text-2xl text-[#FAF6FB] mb-3">
-                Micro narrativa formato Reels
-              </h3>
-              <p className="text-base text-[#D1C6DA] leading-relaxed">
-                Para cada proyecto cubierto se produce un reel de entre 60 y 90 segundos que sintetice su propuesta, impacto y ejecución.
-              </p>
-            </div>
-            <div className="mt-6 pt-4 border-t border-[#3D2254] flex items-center justify-between text-xs font-mono-meta text-[#D1C6DA]">
-              <span>Formato vertical audiovisual</span>
-              <span className="text-[#F9C63C] font-semibold">1 por proceso</span>
-            </div>
-          </div>
-
-          {/* Componente 2: Fotografía */}
-          <div className="relative rounded-2xl bg-[#170B25] border border-[#3D2254] p-7 sm:p-8 flex flex-col justify-between shadow-md hover:border-[#F9C63C]/60 transition-colors">
-            <div>
-              <div className="flex items-baseline justify-between gap-4 mb-4 pb-3 border-b border-[#3D2254]">
-                <span className="font-display font-black text-4xl sm:text-5xl text-[#F9C63C] tracking-tight uppercase">
-                  08 Series
-                </span>
-                <span className="font-mono-meta text-xs text-[#B184D5] uppercase tracking-wider font-bold">
-                  ≥ 8 fotos por proceso
-                </span>
-              </div>
-              <h3 className="font-display font-black text-2xl text-[#FAF6FB] mb-3">
-                Serie fotográfica documental
-              </h3>
-              <p className="text-base text-[#D1C6DA] leading-relaxed">
-                Registro fotográfico de la ejecución de cada proyecto, con al menos 8 imágenes por proceso, trabajadas editorialmente para construir una narrativa visual coherente.
-              </p>
-            </div>
-            <div className="mt-6 pt-4 border-t border-[#3D2254] flex items-center justify-between text-xs font-mono-meta text-[#D1C6DA]">
-              <span>Narrativa visual de autor</span>
-              <span className="text-[#F9C63C] font-semibold">Mínimo 64 fotografías</span>
-            </div>
-          </div>
-
-          {/* Componente 3: Podcasts */}
-          <div className="relative rounded-2xl bg-[#170B25] border border-[#3D2254] p-7 sm:p-8 flex flex-col justify-between shadow-md hover:border-[#F9C63C]/60 transition-colors">
-            <div>
-              <div className="flex items-baseline justify-between gap-4 mb-4 pb-3 border-b border-[#3D2254]">
-                <span className="font-display font-black text-4xl sm:text-5xl text-[#B184D5] tracking-tight uppercase">
-                  08 Episodios
-                </span>
-                <span className="font-mono-meta text-xs text-[#F9C63C] uppercase tracking-wider font-bold">
-                  5 a 8 minutos
-                </span>
-              </div>
-              <h3 className="font-display font-black text-2xl text-[#FAF6FB] mb-3">
-                Entrevistas en formato falso podcast
-              </h3>
-              <p className="text-base text-[#D1C6DA] leading-relaxed">
-                Una entrevista por proyecto grabada en video de entre 5 y 8 minutos con el o los responsables del proceso.
-              </p>
-            </div>
-            <div className="mt-6 pt-4 border-t border-[#3D2254] flex items-center justify-between text-xs font-mono-meta text-[#D1C6DA]">
-              <span>Grabación oficial en video</span>
-              <span className="text-[#B184D5] font-semibold">Conversaciones a fondo</span>
-            </div>
-          </div>
-
-          {/* Componente 4: Web */}
-          <div className="relative rounded-2xl bg-[#170B25] border border-[#3D2254] p-7 sm:p-8 flex flex-col justify-between shadow-md hover:border-[#F9C63C]/60 transition-colors">
-            <div>
-              <div className="flex items-baseline justify-between gap-4 mb-4 pb-3 border-b border-[#3D2254]">
-                <span className="font-display font-black text-4xl sm:text-5xl text-[#FAF6FB] tracking-tight uppercase">
-                  01 Portal Web
-                </span>
-                <span className="font-mono-meta text-xs text-[#F9C63C] uppercase tracking-wider font-bold">
-                  Acceso libre
-                </span>
-              </div>
-              <h3 className="font-display font-black text-2xl text-[#FAF6FB] mb-3">
-                Portal web tipo Blog
-              </h3>
-              <p className="text-base text-[#D1C6DA] leading-relaxed">
-                Web tipo blog que permite recopilar todos los contenidos, registros y memorias culturales en un solo lugar accesible.
-              </p>
-            </div>
-            <div className="mt-6 pt-4 border-t border-[#3D2254] flex items-center justify-between text-xs font-mono-meta text-[#D1C6DA]">
-              <span>Plataforma digital abierta</span>
-              <span className="text-[#FAF6FB] font-semibold">Memoria permanente</span>
-            </div>
-          </div>
-        </div>
-      </EditorialSection>
-
-      {/* Sección 5 — Mira, escucha y descubre */}
+      {/* Sección 4 — Registros audiovisuales y reels */}
       {reelEntries.length > 0 && (
         <EditorialSection
           id="audiovisuales"
           title="Mira, escucha y descubre"
           subtitle="Registros documentales, ensayos y puestas en escena capturadas en video y reels por las iniciativas."
-          variant="dark"
+          variant="secondary"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {reelEntries.map(({ project, video }) => (
@@ -223,13 +111,13 @@ export const HomePage: React.FC = () => {
         </EditorialSection>
       )}
 
-      {/* Sección 5.1 — Entrevistas en video y podcasts oficiales (YouTube) */}
+      {/* Sección 5 — Entrevistas y conversaciones (YouTube) */}
       {podcastEntries.length > 0 && (
         <EditorialSection
           id="entrevistas-podcast"
-          title="Entrevistas en formato falso podcast"
-          subtitle="Conversaciones en video de entre 5 y 8 minutos con los responsables de las iniciativas ganadoras de Presupuesto Participativo."
-          variant="secondary"
+          title="Entrevistas y conversaciones"
+          subtitle="Conversaciones en video con los responsables de las iniciativas ganadoras de Presupuesto Participativo de la Comuna 11."
+          variant="dark"
           action={
             <a
               href="https://www.youtube.com/playlist?list=PLNSEJl5L7Jwc"
@@ -348,13 +236,13 @@ export const HomePage: React.FC = () => {
         </EditorialSection>
       )}
 
-      {/* Sección 5.2 — Voces del territorio (únicamente si existen audios locales) */}
+      {/* Sección 5.2 — Voces del territorio (únicamente si existen audios) */}
       {audioEntries.length > 0 && (
         <EditorialSection
           id="voces-del-territorio"
           title="Voces del territorio"
           subtitle="Testimonios sonoros y conversaciones con los protagonistas de las iniciativas culturales."
-          variant="dark"
+          variant="secondary"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
             {audioEntries.map(({ project, audio }) => (
@@ -369,88 +257,70 @@ export const HomePage: React.FC = () => {
         </EditorialSection>
       )}
 
-      {/* Sección 6 — Objetivos y propósito de Revelado Cultural (Documento Oficial) */}
-      <EditorialSection
-        id="objetivos"
-        title="Objetivos del proyecto"
-        subtitle="Propósito institucional y metas específicas de Revelado Cultural en la Comuna 11, Laureles–Estadio."
-        variant="dark"
-      >
-        {/* Typographic Manifesto Wall: 3 High-Impact Editorial Rows */}
-        <div className="divide-y divide-[#3D2254] border-y border-[#3D2254]">
-          {/* Objetivo 1 */}
-          <div className="py-8 sm:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-            <div className="lg:col-span-2 flex items-baseline gap-3">
-              <span className="font-display font-black text-6xl sm:text-7xl text-[#F9C63C] leading-none select-none">
-                01
-              </span>
-              <span className="font-mono-meta text-xs text-[#B184D5] uppercase tracking-wider font-bold lg:hidden">
-                Producción documental
-              </span>
-            </div>
-            <div className="lg:col-span-10">
-              <h3 className="font-display font-black text-2xl sm:text-3xl text-[#FAF6FB] mb-3">
-                Producción de contenidos audiovisuales y fotográficos
-              </h3>
-              <p className="text-base sm:text-lg text-[#D1C6DA] leading-relaxed max-w-4xl">
-                Producir contenidos audiovisuales y fotográficos —reels, entrevistas en formato falso podcast y series fotográficas— que documenten y narrativicen la ejecución de ocho (8) proyectos ganadores de PP 2026 de la Comuna 11.
-              </p>
-              <div className="mt-4 flex items-center gap-3 font-mono-meta text-xs text-[#F9C63C]">
-                <span>Cobertura: 8 iniciativas de Presupuesto Participativo</span>
-              </div>
-            </div>
-          </div>
+      {/* Sección 6 — Puente Editorial: Sobre Revelado Cultural 2026 */}
+      <section id="manifiesto-resumen" className="relative w-full bg-[#170B25] border-t border-[#3D2254] py-16 sm:py-20 lg:py-24">
+        <div className="layout-container">
+          <div className="max-w-4xl mx-auto rounded-3xl bg-[#29143B] border border-[#3D2254] p-8 sm:p-12 lg:p-14 shadow-[0_16px_48px_rgba(14,6,23,0.7)] relative overflow-hidden">
+            {/* Subtle background glow */}
+            <div className="absolute top-0 right-0 w-72 h-72 bg-[#583178]/20 rounded-full blur-3xl pointer-events-none" aria-hidden="true" />
 
-          {/* Objetivo 2 */}
-          <div className="py-8 sm:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-            <div className="lg:col-span-2 flex items-baseline gap-3">
-              <span className="font-display font-black text-6xl sm:text-7xl text-[#F9C63C] leading-none select-none">
-                02
-              </span>
-              <span className="font-mono-meta text-xs text-[#B184D5] uppercase tracking-wider font-bold lg:hidden">
-                Circulación comunitaria
-              </span>
-            </div>
-            <div className="lg:col-span-10">
-              <h3 className="font-display font-black text-2xl sm:text-3xl text-[#FAF6FB] mb-3">
-                Circulación digital y acceso ciudadano abierto
-              </h3>
-              <p className="text-base sm:text-lg text-[#D1C6DA] leading-relaxed max-w-4xl">
-                Circular los contenidos producidos a través de canales digitales propios y de los proyectos beneficiados, garantizando el acceso ciudadano a la oferta cultural del territorio.
-              </p>
-              <div className="mt-4 flex items-center gap-3 font-mono-meta text-xs text-[#F9C63C]">
-                <span>Canales propios y comunitarios · Acceso libre permanente</span>
+            <div className="relative z-10">
+              <div className="flex items-center justify-between gap-4 pb-5 mb-6 border-b border-[#3D2254]">
+                <span className="font-mono-meta text-xs uppercase tracking-wider text-[#F9C63C] font-bold">
+                  Sobre Revelado Cultural 2026
+                </span>
+                <span className="font-mono-meta text-xs text-[#D1C6DA]">
+                  Comuna 11 · Laureles–Estadio
+                </span>
               </div>
-            </div>
-          </div>
 
-          {/* Objetivo 3 */}
-          <div className="py-8 sm:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-            <div className="lg:col-span-2 flex items-baseline gap-3">
-              <span className="font-display font-black text-6xl sm:text-7xl text-[#F9C63C] leading-none select-none">
-                03
-              </span>
-              <span className="font-mono-meta text-xs text-[#B184D5] uppercase tracking-wider font-bold lg:hidden">
-                Encuentro comunitario
-              </span>
-            </div>
-            <div className="lg:col-span-10">
-              <h3 className="font-display font-black text-2xl sm:text-3xl text-[#FAF6FB] mb-3">
-                Encuentro comunitario de cierre y alianzas
-              </h3>
-              <p className="text-base sm:text-lg text-[#D1C6DA] leading-relaxed max-w-4xl">
-                Propiciar un encuentro comunitario de cierre que reúna a los agentes culturales de la comuna, los equipos de los proyectos cubiertos y la ciudadanía, socializando de forma colectiva los proyectos realizados y generando lazos y potenciales alianzas entre los diferentes actores culturales de la comuna 11.
+              <h2 className="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-[#FAF6FB] leading-tight">
+                Una estrategia multiformato de memoria, producción y circulación ciudadana
+              </h2>
+
+              <p className="mt-4 text-base sm:text-lg text-[#D1C6DA] leading-relaxed">
+                Revelado Cultural documenta y visibiliza las ocho iniciativas culturales ganadoras del Presupuesto Participativo de la Comuna 11, articulando registros audiovisuales, series fotográficas de autor, entrevistas a fondo y esta plataforma web libre.
               </p>
-              <div className="mt-4 flex items-center gap-3 font-mono-meta text-xs text-[#F9C63C]">
-                <span>Articulación territorial · Lazos y trabajo en red</span>
+
+              {/* 4 Pillars Summary */}
+              <div className="mt-8 pt-6 border-t border-[#3D2254] grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+                <div className="p-4 rounded-xl bg-[#170B25] border border-[#3D2254]">
+                  <span className="font-display font-black text-2xl sm:text-3xl text-[#F9C63C] block">08</span>
+                  <span className="font-mono-meta text-xs text-[#D1C6DA] block mt-1">Reels documentales</span>
+                </div>
+                <div className="p-4 rounded-xl bg-[#170B25] border border-[#3D2254]">
+                  <span className="font-display font-black text-2xl sm:text-3xl text-[#F9C63C] block">≥ 64</span>
+                  <span className="font-mono-meta text-xs text-[#D1C6DA] block mt-1">Fotos de autor</span>
+                </div>
+                <div className="p-4 rounded-xl bg-[#170B25] border border-[#3D2254]">
+                  <span className="font-display font-black text-2xl sm:text-3xl text-[#F9C63C] block">08</span>
+                  <span className="font-mono-meta text-xs text-[#D1C6DA] block mt-1">Entrevistas en video</span>
+                </div>
+                <div className="p-4 rounded-xl bg-[#170B25] border border-[#3D2254]">
+                  <span className="font-display font-black text-2xl sm:text-3xl text-[#F9C63C] block">01</span>
+                  <span className="font-mono-meta text-xs text-[#D1C6DA] block mt-1">Plataforma web libre</span>
+                </div>
+              </div>
+
+              <div className="mt-8 pt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                <p className="text-xs font-mono-meta text-[#D1C6DA]">
+                  Documento oficial: Objetivos, componentes y memorias de la Comuna 11.
+                </p>
+                <Link
+                  to="/revelado-cultural"
+                  className="btn-press inline-flex items-center gap-2 min-h-12 px-6 py-3 rounded-full bg-[#F9C63C] text-[#170B25] text-base font-bold shadow-md hover:bg-[#EAB428] transition-colors shrink-0"
+                >
+                  <span>Conocer el manifiesto y presentación oficial</span>
+                  <ArrowUpRight className="w-4 h-4 stroke-[2.5]" aria-hidden="true" />
+                </Link>
               </div>
             </div>
           </div>
         </div>
-      </EditorialSection>
+      </section>
 
       {/* Sección 7 — La cultura continúa */}
-      <section className="relative w-full bg-[#170B25] border-b border-[#3D2254] py-16 sm:py-24 overflow-hidden">
+      <section className="relative w-full bg-[#170B25] border-t border-[#3D2254] py-16 sm:py-24 overflow-hidden">
         {/* Decorative brush splatter */}
         <div className="absolute top-10 left-1/2 -translate-x-1/2 pointer-events-none opacity-20" aria-hidden="true">
           <BrushSplatter className="w-64 h-64" color="#B184D5" accentColor="#F9C63C" />
