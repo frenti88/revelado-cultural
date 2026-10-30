@@ -16,7 +16,7 @@
       {
         "id": "arche-1",
         "type": "image",
-        "title": "3er Festival Artes del Movimiento Arché: Registro fotográfico 1",
+        "title": "3er Festival Artes del Movimiento Arché: Expresión corporal",
         "sourceUrl": "https://drive.google.com/file/d/1QhckDqmjJgFhmMbBg4qBsRxJDdrEsKmZ/view?usp=drive_link",
         "publicUrl": "/images/arche-1-1200.webp",
         "thumbnailUrl": "/images/arche-1-480.webp",
@@ -26,7 +26,7 @@
       {
         "id": "arche-2",
         "type": "image",
-        "title": "3er Festival Artes del Movimiento Arché: Registro fotográfico 2",
+        "title": "3er Festival Artes del Movimiento Arché: Danza y acrobacia",
         "sourceUrl": "https://drive.google.com/file/d/1ZphBl4mZ2noOgt4CxmMeUj4R88LEu45K/view?usp=drive_link",
         "publicUrl": "/images/arche-2-1200.webp",
         "thumbnailUrl": "/images/arche-2-480.webp",
@@ -36,21 +36,61 @@
       {
         "id": "arche-3",
         "type": "image",
-        "title": "3er Festival Artes del Movimiento Arché: Registro fotográfico 3",
+        "title": "3er Festival Artes del Movimiento Arché: Danza aérea en telas",
         "sourceUrl": "https://drive.google.com/file/d/1XAurMf-PfFazMpF-foXpoCdMIOBB4eSC/view?usp=drive_link",
         "publicUrl": "/images/arche-3-1200.webp",
         "thumbnailUrl": "/images/arche-3-480.webp",
-        "alt": "Intervención escénica y teatral en el festival Arché en Comuna 11.",
+        "alt": "Intervención escénica y teatral en telas en el festival Arché en Comuna 11.",
         "status": "ready"
       },
       {
         "id": "arche-4",
         "type": "image",
-        "title": "3er Festival Artes del Movimiento Arché: Registro fotográfico 4",
+        "title": "3er Festival Artes del Movimiento Arché: Ensamble escénico",
         "sourceUrl": "https://drive.google.com/file/d/1mhD3ijxHNgMeUtIyD1VcHW3Nowh5KkR_/view?usp=drive_link",
         "publicUrl": "/images/arche-4-1200.webp",
         "thumbnailUrl": "/images/arche-4-480.webp",
         "alt": "Encuentro artístico del movimiento y circo en el festival Arché.",
+        "status": "ready"
+      },
+      {
+        "id": "arche-5",
+        "type": "image",
+        "title": "Equipo directivo de Arché Laboratorio Escénico",
+        "sourceUrl": "https://drive.google.com/file/d/1oG5uAO6RPp9Bc0b2i9VVY_ML7x7zxSxA/view?usp=drive_link",
+        "publicUrl": "/images/arche-5-1200.webp",
+        "thumbnailUrl": "/images/arche-5-480.webp",
+        "alt": "Retrato del equipo creador y directores de Arché Laboratorio Escénico.",
+        "status": "ready"
+      },
+      {
+        "id": "arche-6",
+        "type": "image",
+        "title": "Artes escénicas y máscara teatral",
+        "sourceUrl": "https://drive.google.com/file/d/1fnil9u785f13Zlrm5werMzaABbfqzdib/view?usp=drive_link",
+        "publicUrl": "/images/arche-6-1200.webp",
+        "thumbnailUrl": "/images/arche-6-480.webp",
+        "alt": "Artista de Arché con máscara teatral policromada bajo iluminación escénica.",
+        "status": "ready"
+      },
+      {
+        "id": "arche-7",
+        "type": "image",
+        "title": "Danza contemporánea y elevación corporal",
+        "sourceUrl": "https://drive.google.com/file/d/1ccRta-h_4Y4za3rhKCoM_THrqsDmKTvR/view?usp=drive_link",
+        "publicUrl": "/images/arche-7-1200.webp",
+        "thumbnailUrl": "/images/arche-7-480.webp",
+        "alt": "Dúo de danza contemporánea en figura de elevación corporal bajo luces de estudio.",
+        "status": "ready"
+      },
+      {
+        "id": "arche-8",
+        "type": "image",
+        "title": "Danza tradicional y movimiento festivo",
+        "sourceUrl": "https://drive.google.com/file/d/1H6MYvnwLZczojg4uWhBGbnSolG9jiwvK/view?usp=drive_link",
+        "publicUrl": "/images/arche-8-1200.webp",
+        "thumbnailUrl": "/images/arche-8-480.webp",
+        "alt": "Dúo de danza folclórica y festiva con sombrero y abanico en el estudio de Arché.",
         "status": "ready"
       },
       {
@@ -69,7 +109,7 @@
     "featured": false,
     "order": 1,
     "publicationStatus": "published",
-    "gallerySource": "https://drive.google.com/drive/folders/1idJjavOnerVO2G8t_CP2b3-xSgwqS5MJ?usp=drive_link",
+    "gallerySource": "https://drive.google.com/drive/folders/1idJjavOnerVO2G8t_CP2b3-xSgwqS5MJ",
     "podcastStatus": "ready",
     "podcastUrl": "https://youtu.be/FExaQV3mdKQ",
     "instagram": [
