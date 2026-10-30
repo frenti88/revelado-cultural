@@ -417,41 +417,191 @@
       {
         "id": "habitar-1",
         "type": "image",
-        "title": "Pensar, narrar y habitar el territorio: Recorrido barrial 1",
-        "sourceUrl": "https://drive.google.com/file/d/1B9yhaub0Mus3Rr27_pEyy385isMGckpA/view?usp=drive_link",
+        "title": "Três Horizontes: Publicación oficial y herramientas de dibujo",
+        "sourceUrl": "https://drive.google.com/file/d/1Qs65LGbSSNNlxBlIcGCIo08hhGCmIR9R/view?usp=drive_link",
         "publicUrl": "/images/habitar-1-1200.webp",
         "thumbnailUrl": "/images/habitar-1-480.webp",
-        "alt": "Recorrido barrial de memoria e investigación territorial en Laureles-Estadio.",
+        "alt": "Libro cómic Três Horizontes sobre mesa de madera con plumas y pinceles de dibujo en estudio Sabbath.",
         "status": "ready"
       },
       {
         "id": "habitar-2",
         "type": "image",
-        "title": "Pensar, narrar y habitar el territorio: Encuentro con vecinos 2",
-        "sourceUrl": "https://drive.google.com/file/d/1mkj349MqIa-HyVOIZaf1BNt-3i4qYBqR/view?usp=drive_link",
+        "title": "Habitar el barrio: Margarita Ortiz y equipo creativo en estudio",
+        "sourceUrl": "https://drive.google.com/file/d/1xRsTP70PD1P7ehwOgbDam1GTuZg02d1I/view?usp=drive_link",
         "publicUrl": "/images/habitar-2-1200.webp",
         "thumbnailUrl": "/images/habitar-2-480.webp",
-        "alt": "Vecinos y participantes compartiendo relatos de transformación del barrio.",
+        "alt": "Margarita Ortiz y creador del cómic en el set de Sabbath junto a los ejemplares de Três Horizontes.",
         "status": "ready"
       },
       {
         "id": "habitar-3",
         "type": "image",
-        "title": "Pensar, narrar y habitar el territorio: Archivo y memoria 3",
-        "sourceUrl": "https://drive.google.com/file/d/19JFa9UvosrqawUQqk6y55s5Il_hwZFgQ/view?usp=drive_link",
+        "title": "Presentación y diálogo sobre la creación de Três Horizontes",
+        "sourceUrl": "https://drive.google.com/file/d/1jUIcZgTMrakL5FxYjCi4xbpiIjRYfPF5/view?usp=drive_link",
         "publicUrl": "/images/habitar-3-1200.webp",
         "thumbnailUrl": "/images/habitar-3-480.webp",
-        "alt": "Documentación de las huellas y transformaciones urbanas de la Comuna 11.",
+        "alt": "Conversación en estudio sobre el proceso de investigación territorial y narrativa gráfica de la Comuna 11.",
         "status": "ready"
       },
       {
         "id": "habitar-4",
         "type": "image",
-        "title": "Pensar, narrar y habitar el territorio: Taller participativo 4",
-        "sourceUrl": "https://drive.google.com/file/d/1lCfsd46JlC7oMa1BU0PrfFuwQEgdOON7/view?usp=drive_link",
+        "title": "Autor e ilustrador del cómic Três Horizontes",
+        "sourceUrl": "https://drive.google.com/file/d/1OvQiwxp7Fg1Fmin2PFsnZjYca-iRkEGu/view?usp=drive_link",
         "publicUrl": "/images/habitar-4-1200.webp",
         "thumbnailUrl": "/images/habitar-4-480.webp",
-        "alt": "Margarita Ortiz y participantes en cartografía social del territorio.",
+        "alt": "Retrato del ilustrador de Três Horizontes con los libros en la mesa del estudio.",
+        "status": "ready"
+      },
+      {
+        "id": "habitar-5",
+        "type": "image",
+        "title": "Equipo creativo de Habitar el barrio en set documental",
+        "sourceUrl": "https://drive.google.com/file/d/1hYeXOGVlU0hyo-_a1W9F1tu9SarK9bXS/view?usp=drive_link",
+        "publicUrl": "/images/habitar-5-1200.webp",
+        "thumbnailUrl": "/images/habitar-5-480.webp",
+        "alt": "Retrato del equipo de investigación y creación artística de Habitar el barrio.",
+        "status": "ready"
+      },
+      {
+        "id": "habitar-6",
+        "type": "image",
+        "title": "Margarita Ortiz con la publicación Três Horizontes",
+        "sourceUrl": "https://drive.google.com/file/d/1AhMODYkk6-_rklgi9sICF4izuiwP0Oov/view?usp=drive_link",
+        "publicUrl": "/images/habitar-6-1200.webp",
+        "thumbnailUrl": "/images/habitar-6-480.webp",
+        "alt": "Margarita Ortiz en el set de grabación con los ejemplares del proyecto cultural.",
+        "status": "ready"
+      },
+      {
+        "id": "habitar-7",
+        "type": "image",
+        "title": "Margarita Ortiz presentando el cómic Três Horizontes",
+        "sourceUrl": "https://drive.google.com/file/d/1r0V8EM_6OexWAbhgaB7uFkcmLUqQmoqH/view?usp=drive_link",
+        "publicUrl": "/images/habitar-7-1200.webp",
+        "thumbnailUrl": "/images/habitar-7-480.webp",
+        "alt": "Margarita Ortiz sosteniendo la portada del cómic Três Horizontes ante cámara.",
+        "status": "ready"
+      },
+      {
+        "id": "habitar-8",
+        "type": "image",
+        "title": "Retrato editorial de Margarita Ortiz",
+        "sourceUrl": "https://drive.google.com/file/d/1miAKDyjrzSiEFXAdQIcMR8jowRr3V69m/view?usp=drive_link",
+        "publicUrl": "/images/habitar-8-1200.webp",
+        "thumbnailUrl": "/images/habitar-8-480.webp",
+        "alt": "Retrato de Margarita Ortiz con el libro de memoria barrial Três Horizontes.",
+        "status": "ready"
+      },
+      {
+        "id": "habitar-9",
+        "type": "image",
+        "title": "Fotografía de estudio: Cómic Três Horizontes",
+        "sourceUrl": "https://drive.google.com/file/d/1t4PLG-VvD1YeYnxt_-cthm7t7BmavOkw/view?usp=drive_link",
+        "publicUrl": "/images/habitar-9-1200.webp",
+        "thumbnailUrl": "/images/habitar-9-480.webp",
+        "alt": "Toma editorial de portada del cómic Três Horizontes sobre fondo de estudio.",
+        "status": "ready"
+      },
+      {
+        "id": "habitar-10",
+        "type": "image",
+        "title": "Detalle editorial: Portada y contraportada",
+        "sourceUrl": "https://drive.google.com/file/d/1LGCdDjwwBYI-Xs8Jc_Wj78tmq0GNvdAn/view?usp=drive_link",
+        "publicUrl": "/images/habitar-10-1200.webp",
+        "thumbnailUrl": "/images/habitar-10-480.webp",
+        "alt": "Detalle de los libros de cómic e investigación territorial.",
+        "status": "ready"
+      },
+      {
+        "id": "habitar-11",
+        "type": "image",
+        "title": "Retrato del ilustrador presentando el cómic",
+        "sourceUrl": "https://drive.google.com/file/d/1-uymlHlU0ZEcJ0KQkDJtVoc3nl5jAQqZ/view?usp=drive_link",
+        "publicUrl": "/images/habitar-11-1200.webp",
+        "thumbnailUrl": "/images/habitar-11-480.webp",
+        "alt": "Ilustrador de Três Horizontes sosteniendo el libro publicado ante la cámara.",
+        "status": "ready"
+      },
+      {
+        "id": "habitar-12",
+        "type": "image",
+        "title": "Retrato del ilustrador y narrador gráfico",
+        "sourceUrl": "https://drive.google.com/file/d/1EW0MsU2f0z3iVgKZxMTrhfb9Xai_X0Vy/view?usp=drive_link",
+        "publicUrl": "/images/habitar-12-1200.webp",
+        "thumbnailUrl": "/images/habitar-12-480.webp",
+        "alt": "Retrato fotográfico en estudio del dibujante y coautor del proyecto.",
+        "status": "ready"
+      },
+      {
+        "id": "habitar-13",
+        "type": "image",
+        "title": "Detalle del libro y publicaciones del proceso",
+        "sourceUrl": "https://drive.google.com/file/d/1Ro8UJoekX67dXeS6ayjTIGFIuJGVTwsZ/view?usp=drive_link",
+        "publicUrl": "/images/habitar-13-1200.webp",
+        "thumbnailUrl": "/images/habitar-13-480.webp",
+        "alt": "Libro Três Horizontes y materiales impresos de memoria en mesa de estudio.",
+        "status": "ready"
+      },
+      {
+        "id": "habitar-14",
+        "type": "image",
+        "title": "Páginas interiores: Viñetas y cartografía de la Comuna 11",
+        "sourceUrl": "https://drive.google.com/file/d/10du88vMXIfoKIkVsUXUS9Vh3UUUS65rS/view?usp=drive_link",
+        "publicUrl": "/images/habitar-14-1200.webp",
+        "thumbnailUrl": "/images/habitar-14-480.webp",
+        "alt": "Páginas abiertas del cómic mostrando secuencias ilustradas y el mapa territorial de Laureles.",
+        "status": "ready"
+      },
+      {
+        "id": "habitar-15",
+        "type": "image",
+        "title": "Vista cenital: Cómic Três Horizontes y libros de memoria",
+        "sourceUrl": "https://drive.google.com/file/d/1yPLVWyE_k1kPEpIsrWBbUHLbPM34dlcH/view?usp=drive_link",
+        "publicUrl": "/images/habitar-15-1200.webp",
+        "thumbnailUrl": "/images/habitar-15-480.webp",
+        "alt": "Plano cenital con el cómic abierto mostrando ilustraciones y publicaciones barriales.",
+        "status": "ready"
+      },
+      {
+        "id": "habitar-16",
+        "type": "image",
+        "title": "Detalle de viñetas y trazos en la mesa de dibujo",
+        "sourceUrl": "https://drive.google.com/file/d/1npWTuigJ7APwGZaBFrDr0VLdH7X_6HiI/view?usp=drive_link",
+        "publicUrl": "/images/habitar-16-1200.webp",
+        "thumbnailUrl": "/images/habitar-16-480.webp",
+        "alt": "Detalle de viñetas originales del cómic y estilógrafo de dibujo sobre la mesa.",
+        "status": "ready"
+      },
+      {
+        "id": "habitar-17",
+        "type": "image",
+        "title": "Bocetos originales de arquitectura y calles de Laureles",
+        "sourceUrl": "https://drive.google.com/file/d/1AuODJe6cGgX012Rrm81OrQAqmu9WyZ0v/view?usp=drive_link",
+        "publicUrl": "/images/habitar-17-1200.webp",
+        "thumbnailUrl": "/images/habitar-17-480.webp",
+        "alt": "Lápices, rotuladores y viñetas originales con la arquitectura tradicional del barrio.",
+        "status": "ready"
+      },
+      {
+        "id": "habitar-18",
+        "type": "image",
+        "title": "Proceso de entintado y rotulación del cómic",
+        "sourceUrl": "https://drive.google.com/file/d/1FPWb8TEEJK-nGGzDZFCzt9KGN0dFsnmv/view?usp=drive_link",
+        "publicUrl": "/images/habitar-18-1200.webp",
+        "thumbnailUrl": "/images/habitar-18-480.webp",
+        "alt": "Páginas del cómic en proceso sobre el escritorio de trabajo del artista.",
+        "status": "ready"
+      },
+      {
+        "id": "habitar-19",
+        "type": "image",
+        "title": "Plano general de la mesa de dibujo y creación artística",
+        "sourceUrl": "https://drive.google.com/file/d/19pslSVYaq-3KsOoy1kOV7otfK9DmcHQ6/view?usp=drive_link",
+        "publicUrl": "/images/habitar-19-1200.webp",
+        "thumbnailUrl": "/images/habitar-19-480.webp",
+        "alt": "Vista general de la mesa de ilustración con materiales de dibujo y páginas de Três Horizontes.",
         "status": "ready"
       },
       {
@@ -469,7 +619,7 @@
     "featured": false,
     "order": 6,
     "publicationStatus": "published",
-    "gallerySource": "https://drive.google.com/drive/folders/1RL1q7Pl6kyqvPFffQQF467P71F4gRKOl?usp=drive_link",
+    "gallerySource": "https://drive.google.com/drive/folders/14hgRqG5ECxIhaeC7fAMRklo-wolRX0V6",
     "podcastStatus": "ready",
     "podcastUrl": "https://youtu.be/VHvtvRx6WqU?si=v-npjm-41nf4hTK9",
     "instagram": [
