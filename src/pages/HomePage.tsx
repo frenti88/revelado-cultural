@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowUpRight,
+  Download,
+  MapPin,
   Play,
 } from "lucide-react";
 import { useCatalog } from "../context/CatalogContext";
@@ -9,6 +11,10 @@ import {
   getProjectReadyAudios,
   getProjectReadyVideos,
 } from "../data/catalog";
+import {
+  CULTURAL_MAP_METADATA,
+  CULTURAL_MAP_CATEGORIES,
+} from "../data/culturalMap";
 import EditorialHero from "../components/EditorialHero";
 import FeaturedProject from "../components/FeaturedProject";
 import EditorialSection from "../components/EditorialSection";
@@ -256,6 +262,146 @@ export const HomePage: React.FC = () => {
           </div>
         </EditorialSection>
       )}
+
+      {/* Sección 5.5 — Otros proyectos culturales: Cartografía Cultural Comuna 11 */}
+      <EditorialSection
+        id="otros-proyectos"
+        title="Otros proyectos culturales"
+        subtitle="Taller de Cartografía Cultural de la Comuna 11: un mapa colaborativo con 57 puntos georreferenciados entre colectivos, teatros, librerías, parques y espacios de encuentro."
+        variant="secondary"
+        action={
+          <Link
+            to="/otros-proyectos"
+            className="btn-press inline-flex items-center gap-2 min-h-12 px-6 py-3 rounded-full bg-[#F9C63C] text-[#170B25] text-sm font-bold shadow-[0_4px_16px_rgba(249,198,60,0.25)] hover:bg-[#EAB428] transition-colors"
+          >
+            <span>Ver mapa y directorio</span>
+            <ArrowUpRight className="w-4 h-4 stroke-[2.5]" aria-hidden="true" />
+          </Link>
+        }
+      >
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          {/* Visual Poster & Map Preview Card */}
+          <div className="lg:col-span-7 flex flex-col justify-between rounded-3xl bg-[#170B25] border border-[#3D2254] overflow-hidden shadow-xl">
+            <div className="relative aspect-[16/10] sm:aspect-[16/9] w-full bg-[#29143B] overflow-hidden group">
+              <img
+                src={CULTURAL_MAP_METADATA.posterImage1200}
+                alt="Vista previa del mapa de Cartografía Cultural de la Comuna 11"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#170B25] via-transparent to-transparent opacity-80" />
+
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-3">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#170B25]/90 backdrop-blur-md text-[#F9C63C] text-xs font-mono-meta font-bold border border-[#F9C63C]/30 shadow-md">
+                  <MapPin className="w-3.5 h-3.5" aria-hidden="true" />
+                  <span>57 Lugares georreferenciados</span>
+                </span>
+                <span className="hidden sm:inline-flex items-center px-3 py-1 rounded-full bg-[#29143B]/90 backdrop-blur-md text-[#FAF6FB] text-xs font-mono-meta border border-[#3D2254]">
+                  PDF de alta resolución · 300 DPI
+                </span>
+              </div>
+            </div>
+
+            <div className="p-6 sm:p-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-t border-[#3D2254]">
+              <div>
+                <h3 className="font-display font-black text-xl sm:text-2xl text-[#FAF6FB]">
+                  Cartografía Cultural Comuna 11
+                </h3>
+                <p className="mt-1 text-sm text-[#D1C6DA]">
+                  Visualización dual: mapa interactivo en Google Maps y afiche ilustrado para descarga.
+                </p>
+              </div>
+
+              <div className="flex flex-wrap sm:flex-nowrap items-center gap-2.5 shrink-0 w-full sm:w-auto">
+                <Link
+                  to="/otros-proyectos"
+                  className="btn-press flex-1 sm:flex-none inline-flex items-center justify-center gap-2 min-h-11 px-5 py-2.5 rounded-full bg-[#F9C63C] text-[#170B25] text-xs font-bold hover:bg-[#EAB428] transition-colors"
+                >
+                  <MapPin className="w-4 h-4 stroke-[2.2]" aria-hidden="true" />
+                  <span>Abrir mapa interactivo</span>
+                </Link>
+                <a
+                  href={CULTURAL_MAP_METADATA.pdfDownloadUrl}
+                  download="mapa-cartografia-cultural-comuna-11.pdf"
+                  className="btn-press flex-1 sm:flex-none inline-flex items-center justify-center gap-2 min-h-11 px-4 py-2.5 rounded-full bg-[#29143B] hover:bg-[#37105F] text-[#FAF6FB] text-xs font-medium border border-[#3D2254] hover:border-[#F9C63C] transition-colors"
+                  title="Descargar versión original en PDF (2.4 MB)"
+                >
+                  <Download className="w-4 h-4" aria-hidden="true" />
+                  <span>Descargar PDF</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Context, Categories & Relation with Project 06 */}
+          <div className="lg:col-span-5 flex flex-col justify-between rounded-3xl bg-[#170B25] border border-[#3D2254] p-6 sm:p-8 shadow-xl">
+            <div>
+              <div className="flex items-center justify-between gap-2 mb-4">
+                <span className="font-mono-meta text-xs font-bold text-[#F9C63C] px-2.5 py-0.5 rounded-full bg-[#29143B] border border-[#583178]">
+                  Proyectos del Territorio
+                </span>
+                <span className="font-mono-meta text-xs text-[#D1C6DA]">
+                  10 Categorías temáticas
+                </span>
+              </div>
+
+              <h3 className="font-display font-bold text-xl sm:text-2xl text-[#FAF6FB] leading-tight">
+                Una cartografía colectiva de la memoria viva de Laureles–Estadio
+              </h3>
+
+              <p className="mt-3 text-sm text-[#D1C6DA] leading-relaxed">
+                Este mapa sintetiza un proceso comunitario que identifica colectivos escénicos, bibliotecas populares, academias, centros de desarrollo social y espacios barriales que dinamizan la vida cultural de la Comuna 11.
+              </p>
+
+              {/* Sample Categories */}
+              <div className="mt-6 pt-5 border-t border-[#3D2254]">
+                <h4 className="font-mono-meta text-xs uppercase tracking-wider text-[#B184D5] font-semibold mb-3">
+                  Categorías identificadas en el mapa
+                </h4>
+                <div className="flex flex-wrap gap-1.5">
+                  {CULTURAL_MAP_CATEGORIES.slice(0, 8).map((cat) => (
+                    <span
+                      key={cat.id}
+                      className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-mono-meta text-[#FAF6FB] border border-[#3D2254]"
+                      style={{ backgroundColor: `${cat.bgBadge}CC` }}
+                    >
+                      <span
+                        className="w-2 h-2 rounded-full shrink-0"
+                        style={{ backgroundColor: cat.color }}
+                        aria-hidden="true"
+                      />
+                      <span>{cat.name}</span>
+                    </span>
+                  ))}
+                  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-mono-meta text-[#D1C6DA] bg-[#29143B] border border-[#3D2254]">
+                    +2 más
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* Connection with project 06 */}
+            <div className="mt-8 pt-6 border-t border-[#3D2254] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+              <div className="text-xs text-[#D1C6DA]">
+                <p className="font-semibold text-[#FAF6FB]">
+                  Articulado con Presupuesto Participativo
+                </p>
+                <p className="mt-0.5 text-xs text-[#B184D5]">
+                  Iniciativa 06: Pensar, narrar y habitar el territorio
+                </p>
+              </div>
+
+              <Link
+                to="/proyectos/pensar-narrar-y-habitar-el-territorio"
+                className="inline-flex items-center gap-1.5 text-xs font-bold text-[#F9C63C] hover:text-[#FAF6FB] transition-colors shrink-0"
+              >
+                <span>Ver iniciativa 06</span>
+                <ArrowUpRight className="w-3.5 h-3.5 stroke-[2.2]" aria-hidden="true" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </EditorialSection>
 
       {/* Sección 6 — Puente Editorial: Sobre Revelado Cultural 2026 */}
       <section id="manifiesto-resumen" className="relative w-full bg-[#170B25] border-t border-[#3D2254] py-16 sm:py-20 lg:py-24">

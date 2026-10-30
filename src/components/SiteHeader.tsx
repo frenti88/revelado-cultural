@@ -15,6 +15,7 @@ export const SiteHeader: React.FC = () => {
   const navItems = [
     { to: "/", label: "Inicio", end: true },
     { to: "/explorar", label: "Explorar", end: false },
+    { to: "/otros-proyectos", label: "Otros proyectos", end: false },
     { to: "/revelado-cultural", label: "Revelado Cultural", end: false },
   ];
 

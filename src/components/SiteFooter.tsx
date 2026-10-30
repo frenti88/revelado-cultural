@@ -55,11 +55,29 @@ export const SiteFooter: React.FC = () => {
               </li>
               <li>
                 <Link
+                  to="/otros-proyectos"
+                  className="text-[#D1C6DA] hover:text-[#F9C63C] transition-colors font-medium"
+                >
+                  Otros proyectos culturales (Mapa)
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/revelado-cultural"
                   className="text-[#D1C6DA] hover:text-[#F9C63C] transition-colors font-medium"
                 >
                   Revelado Cultural
                 </Link>
+              </li>
+              <li>
+                <a
+                  href="/docs/mapa-cartografia-cultural-comuna-11.pdf"
+                  download
+                  className="text-[#D1C6DA] hover:text-[#F9C63C] transition-colors font-medium inline-flex items-center gap-1"
+                >
+                  <span>Descargar Mapa PDF</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-[#F9C63C]" aria-hidden="true" />
+                </a>
               </li>
               <li>
                 <a

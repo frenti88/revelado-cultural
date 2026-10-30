@@ -68,6 +68,27 @@ const staticRoutes = [
     description:
       "Manifiesto y presentación oficial de Revelado Cultural 2026: objetivos, componentes y memorias de las ocho iniciativas ganadoras de Presupuesto Participativo de la Comuna 11, Medellín.",
   },
+  {
+    route: "otros-proyectos",
+    title: "Otros proyectos culturales · Cartografía Cultural Comuna 11",
+    description:
+      "Mapa cultural y afiche cartográfico de la Comuna 11, Laureles–Estadio: directorio interactivo de 57 colectivos, escenarios, parques, bibliotecas y lugares de encuentro.",
+    image: resolvePath("/images/mapa-cartografia-cultural-1200.webp"),
+  },
+  {
+    route: "otros-proyectos-culturales",
+    title: "Otros proyectos culturales · Cartografía Cultural Comuna 11",
+    description:
+      "Mapa cultural y afiche cartográfico de la Comuna 11, Laureles–Estadio: directorio interactivo de 57 colectivos, escenarios, parques, bibliotecas y lugares de encuentro.",
+    image: resolvePath("/images/mapa-cartografia-cultural-1200.webp"),
+  },
+  {
+    route: "cartografia-cultural",
+    title: "Cartografía Cultural Comuna 11 · Mapa y Afiche Oficial",
+    description:
+      "Mapa cultural y afiche cartográfico de la Comuna 11, Laureles–Estadio: directorio interactivo de 57 colectivos, escenarios, parques, bibliotecas y lugares de encuentro.",
+    image: resolvePath("/images/mapa-cartografia-cultural-1200.webp"),
+  },
 ];
 
 for (const item of staticRoutes) {

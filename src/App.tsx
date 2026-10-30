@@ -10,11 +10,13 @@ const loadExplorePage = () => import("./pages/ExplorePage");
 const loadProjectDetailPage = () => import("./pages/ProjectDetailPage");
 const loadAboutPage = () => import("./pages/AboutPage");
 const loadAdminPage = () => import("./pages/AdminPage");
+const loadCulturalMapPage = () => import("./pages/CulturalMapPage");
 
 const ExplorePage = lazy(loadExplorePage);
 const ProjectDetailPage = lazy(loadProjectDetailPage);
 const AboutPage = lazy(loadAboutPage);
 const AdminPage = lazy(loadAdminPage);
+const CulturalMapPage = lazy(loadCulturalMapPage);
 
 const ScrollToTop: React.FC = () => {
   const { pathname, hash, search } = useLocation();
@@ -47,6 +49,7 @@ export const App: React.FC = () => {
       void loadExplorePage();
       void loadProjectDetailPage();
       void loadAboutPage();
+      void loadCulturalMapPage();
     };
     if ("requestIdleCallback" in window) {
       const id = window.requestIdleCallback(prefetchRoutes, { timeout: 1500 });
@@ -90,6 +93,9 @@ export const App: React.FC = () => {
                 />
                 <Route path="/acerca-de" element={<AboutPage />} />
                 <Route path="/revelado-cultural" element={<AboutPage />} />
+                <Route path="/otros-proyectos" element={<CulturalMapPage />} />
+                <Route path="/otros-proyectos-culturales" element={<CulturalMapPage />} />
+                <Route path="/cartografia-cultural" element={<CulturalMapPage />} />
                 <Route path="/admin" element={<AdminPage />} />
                 <Route
                   path="*"

@@ -1,14 +1,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { motion, useReducedMotion } from "motion/react";
-import { Compass, Home, Info } from "lucide-react";
+import { Compass, Home, Info, MapPin } from "lucide-react";
 
 export const MobileBottomNav: React.FC = () => {
   const shouldReduceMotion = useReducedMotion();
   const destinations = [
     { to: "/", label: "Inicio", icon: Home, end: true },
     { to: "/explorar", label: "Explorar", icon: Compass, end: false },
-    { to: "/revelado-cultural", label: "Revelado Cultural", icon: Info, end: false },
+    { to: "/otros-proyectos", label: "Otros proyectos", icon: MapPin, end: false },
+    { to: "/revelado-cultural", label: "Revelado", icon: Info, end: false },
   ];
 
   return (
@@ -16,7 +17,7 @@ export const MobileBottomNav: React.FC = () => {
       aria-label="Navegación móvil inferior"
       className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-[#170B25]/96 backdrop-blur-lg border-t border-[#3D2254] bottom-safe-bar"
     >
-      <ul className="grid grid-cols-3 max-w-md mx-auto px-4 h-16 items-center gap-2">
+      <ul className="grid grid-cols-4 max-w-md mx-auto px-2 sm:px-4 h-16 items-center gap-1">
         {destinations.map((item) => {
           const Icon = item.icon;
           return (
