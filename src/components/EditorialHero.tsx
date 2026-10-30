@@ -126,7 +126,7 @@ export const EditorialHero: React.FC<EditorialHeroProps> = ({ projects }) => {
                   Hay una cultura que se mueve cerca de ti.
                 </p>
                 <p className="mt-2 text-base sm:text-lg text-[#D1C6DA] font-normal leading-relaxed">
-                  Revelado Cultural visibiliza ocho iniciativas culturales generadas en la Comuna 11 ganadoras de la convocatoria de Presupuesto Participativo. Propuestas de danza, música, teatro, gestión cultural, literatura y patrimonio que demuestran la riqueza creadora de Laureles–Estadio.
+                  Revelado cultural es un proyecto que visibiliza las iniciativas culturales generadas en la Comuna 11 ganadoras de la convocatoria de Presupuesto Participativo. Son 8 iniciativas de áreas de danza, música, teatro, gestión cultural, literatura, patrimonio e investigación que demuestran la riqueza cultural de Laureles–Estadio. ¡Conócelas!
                 </p>
               </motion.div>
             </div>

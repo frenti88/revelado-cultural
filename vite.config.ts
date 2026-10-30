@@ -4,10 +4,11 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig(({ command }) => {
   const isVercel = Boolean(process.env.VERCEL);
-  // Default to '/revelado-cultural/' for hosting builds, or '/' for Vercel and dev server
+  const isHosting = Boolean(process.env.HOSTING_BUILD);
+  // Default to '/' for localhost dev, preview, tests and Vercel; '/revelado-cultural/' when explicitly building for cPanel/Apache subdirectory hosting
   const base =
     process.env.VITE_BASE_PATH ||
-    (isVercel || command === 'serve' ? '/' : '/revelado-cultural/');
+    (isHosting ? '/revelado-cultural/' : '/');
 
   return {
     base,

@@ -46,6 +46,7 @@ export const CONFIRMED_CATEGORIES = [
   "Gestión cultural",
   "Artes escénicas",
   "Música",
+  "Danza",
   "Investigación",
   "Literatura",
   "Artes visuales y plásticas",

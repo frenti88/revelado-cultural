@@ -81,9 +81,9 @@ export const HomePage: React.FC = () => {
       >
         <ProjectGrid
           projects={publishedProjects}
-          columns={4}
+          columns={3}
           aspect="square"
-          variant="editorial-rhythm"
+          variant="standard"
         />
       </EditorialSection>
 

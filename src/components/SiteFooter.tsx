@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { ArrowUpRight } from "lucide-react";
 import { BrandLogo } from "./BrandLogo";
 import { CONFIRMED_CATEGORIES } from "../data/catalog";
 import { BrushDivider } from "./BrushMotifs";
@@ -59,6 +60,28 @@ export const SiteFooter: React.FC = () => {
                 >
                   Revelado Cultural
                 </Link>
+              </li>
+              <li>
+                <a
+                  href="https://www.youtube.com/playlist?list=PLNSEJl5L7Jwc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#D1C6DA] hover:text-[#F9C63C] transition-colors font-medium inline-flex items-center gap-1"
+                >
+                  <span>Pódcasts en YouTube</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-[#F9C63C]" aria-hidden="true" />
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://drive.google.com/drive/u/0/folders/1h76zT9pI1cBzQwbnEiIZaN-VDUuvCnVn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#D1C6DA] hover:text-[#F9C63C] transition-colors font-medium inline-flex items-center gap-1"
+                >
+                  <span>Reels en Drive</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 text-[#F9C63C]" aria-hidden="true" />
+                </a>
               </li>
             </ul>
           </div>

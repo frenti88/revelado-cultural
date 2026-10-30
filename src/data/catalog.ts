@@ -99,20 +99,26 @@ export const DISCIPLINE_META: Record<
     accentColor: "#F5B0C8",
     posterGradient: "from-[#170B25] via-[#2e153b] to-[#5a1b55]",
   },
-  Investigación: {
+  Danza: {
     code: "Disciplina 04",
+    subtitle: "Lenguajes del cuerpo, coreografía y exploración escénica en diálogo con los objetos y el movimiento.",
+    accentColor: "#F9C63C",
+    posterGradient: "from-[#170B25] via-[#351842] to-[#583178]",
+  },
+  Investigación: {
+    code: "Disciplina 05",
     subtitle: "Caminatas para observar cómo han cambiado las casas y las calles con el paso de los años.",
     accentColor: "#F9E2A8",
     posterGradient: "from-[#170B25] via-[#291e36] to-[#37105F]",
   },
   Literatura: {
-    code: "Disciplina 05",
+    code: "Disciplina 06",
     subtitle: "Dibujo sobre mesa de luz y relatos contados en viñetas.",
     accentColor: "#F7C69E",
     posterGradient: "from-[#170B25] via-[#2a1a36] to-[#37105F]",
   },
   "Artes visuales y plásticas": {
-    code: "Disciplina 06",
+    code: "Disciplina 07",
     subtitle: "Trabajo con la imagen y el cuerpo en busca de lo propio.",
     accentColor: "#D9C2F5",
     posterGradient: "from-[#170B25] via-[#26153d] to-[#4c1c6e]",

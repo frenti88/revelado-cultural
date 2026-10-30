@@ -84,6 +84,19 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
               Reproducción interna
             </span>
 
+            {asset.sourceUrl && asset.sourceUrl.includes("instagram.com") && (
+              <a
+                href={asset.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 font-semibold text-xs text-[#FAF6FB] hover:text-[#F9C63C] transition-colors"
+                aria-label={`Ver reel de ${projectName ?? "la obra"} en Instagram (se abre en nueva pestaña)`}
+              >
+                <span>Ver en Instagram</span>
+                <ArrowUpRight className="w-3.5 h-3.5 text-[#F9C63C]" aria-hidden="true" />
+              </a>
+            )}
+
             {projectSlug && compact && (
               <Link
                 to={`/proyectos/${projectSlug}`}

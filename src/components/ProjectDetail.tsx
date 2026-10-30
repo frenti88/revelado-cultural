@@ -296,7 +296,7 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
         </div>
 
         {/* Galería Documental Completa */}
-        {readyImages.length > 0 && (
+        {(readyImages.length > 0 || project.gallerySource) && (
           <section
             id="galeria-fotografica"
             aria-labelledby="galeria-heading"
@@ -311,12 +311,29 @@ export const ProjectDetail: React.FC<ProjectDetailProps> = ({
                   Galería fotográfica
                 </h2>
               </div>
-              <span className="font-mono-meta text-xs text-[#F9C63C] font-bold">
-                {readyImages.length} {readyImages.length === 1 ? "fotografía" : "fotografías"}
-              </span>
+              <div className="flex flex-wrap items-center gap-3">
+                {readyImages.length > 0 && (
+                  <span className="font-mono-meta text-xs text-[#F9C63C] font-bold">
+                    {readyImages.length} {readyImages.length === 1 ? "fotografía" : "fotografías"}
+                  </span>
+                )}
+                {project.gallerySource && (
+                  <a
+                    href={project.gallerySource}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-press inline-flex items-center gap-1.5 min-h-9 px-3.5 py-1.5 rounded-full bg-[#29143B] hover:bg-[#37105F] border border-[#3D2254] hover:border-[#F9C63C] text-xs font-mono-meta text-[#D1C6DA] hover:text-[#FAF6FB] transition-colors shadow-sm"
+                  >
+                    <span>Ver archivo completo en Google Drive</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 text-[#F9C63C]" aria-hidden="true" />
+                  </a>
+                )}
+              </div>
             </div>
 
-            <MediaGallery images={readyImages} projectName={project.name} />
+            {readyImages.length > 0 && (
+              <MediaGallery images={readyImages} projectName={project.name} />
+            )}
           </section>
         )}
 

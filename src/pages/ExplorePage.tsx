@@ -154,7 +154,7 @@ export const ExplorePage: React.FC = () => {
         {filteredProjects.length > 0 ? (
           <ProjectGrid
             projects={filteredProjects}
-            columns={4}
+            columns={3}
             aspect="square"
           />
         ) : (

@@ -413,7 +413,7 @@ export const AboutPage: React.FC = () => {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
             {publishedProjects.map((proj) => (
               <div
                 key={proj.id}
@@ -474,37 +474,129 @@ export const AboutPage: React.FC = () => {
       </section>
 
       {/* 06 — Canales de Difusión y Acceso Ciudadano */}
-      <section className="w-full py-16 sm:py-20 bg-[#29143B]">
+      <section className="w-full py-16 sm:py-20 bg-[#29143B] border-t border-[#3D2254]">
         <div className="layout-container">
-          <div className="rounded-3xl bg-[#170B25] border border-[#3D2254] p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="max-w-xl">
-              <h2 className="font-display font-black text-2xl sm:text-3xl text-[#FAF6FB] tracking-tight">
-                Acceso ciudadano y archivo en video
-              </h2>
-              <p className="mt-3 text-sm sm:text-base text-[#D1C6DA] leading-relaxed">
-                Todas las entrevistas en formato falso podcast están disponibles en la lista de reproducción oficial de YouTube, de acceso libre para la comunidad de Laureles–Estadio y la ciudad.
-              </p>
-            </div>
+          <div className="mb-10 max-w-2xl">
+            <h2 className="font-display font-black text-2xl sm:text-3xl lg:text-4xl text-[#FAF6FB] tracking-tight">
+              Archivos abiertos y acceso ciudadano
+            </h2>
+            <p className="mt-3 text-sm sm:text-base text-[#D1C6DA] leading-relaxed">
+              Todos los registros documentales, fotográficos, sonoros y audiovisuales generados por el proyecto están disponibles en plataformas de libre consulta para la comunidad.
+            </p>
+          </div>
 
-            <div className="flex flex-wrap items-center gap-4 shrink-0">
-              <a
-                href="https://www.youtube.com/playlist?list=PLNSEJl5L7Jwc"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-press inline-flex items-center gap-2 min-h-12 px-6 py-3 rounded-full bg-[#F9C63C] text-[#170B25] text-sm font-bold shadow-[0_6px_24px_rgba(249,198,60,0.3)] hover:bg-[#EAB428] transition-colors"
-              >
-                <span>Ver lista en YouTube</span>
-                <ExternalLink className="w-4 h-4 stroke-[2.2]" aria-hidden="true" />
-              </a>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* Card 1: YouTube Playlist */}
+            <a
+              href="https://www.youtube.com/playlist?list=PLNSEJl5L7Jwc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group rounded-2xl bg-[#170B25] border border-[#3D2254] hover:border-[#F9C63C] p-5 flex flex-col justify-between transition-all shadow-sm"
+              aria-label="Lista de reproducción de podcasts en YouTube (abre en nueva pestaña)"
+            >
+              <div>
+                <div className="w-10 h-10 rounded-xl bg-[#29143B] border border-[#583178] flex items-center justify-center text-[#F9C63C] mb-4">
+                  <Play className="w-5 h-5 fill-current" aria-hidden="true" />
+                </div>
+                <span className="font-mono-meta text-[11px] text-[#B184D5] uppercase tracking-wider font-semibold block">
+                  YouTube Playlist
+                </span>
+                <h3 className="font-display font-bold text-base sm:text-lg text-[#FAF6FB] mt-1 group-hover:text-[#F9C63C] transition-colors">
+                  Pódcasts y Entrevistas
+                </h3>
+                <p className="text-xs text-[#D1C6DA] mt-2 leading-relaxed">
+                  8 entrevistas audiovisuales completas con los creadores de cada iniciativa.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-[#3D2254] flex items-center justify-between text-xs font-mono-meta text-[#F9C63C]">
+                <span>Ver en YouTube</span>
+                <ExternalLink className="w-3.5 h-3.5" aria-hidden="true" />
+              </div>
+            </a>
 
-              <Link
-                to="/explorar"
-                className="btn-press inline-flex items-center gap-2 min-h-12 px-6 py-3 rounded-full bg-[#29143B] hover:bg-[#37105F] text-[#FAF6FB] text-sm font-medium border border-[#3D2254] hover:border-[#F9C63C] transition-colors"
-              >
-                <span>Explorar archivo fotográfico</span>
-                <ArrowUpRight className="w-4 h-4 text-[#B184D5]" aria-hidden="true" />
-              </Link>
-            </div>
+            {/* Card 2: Drive Fotos Grupo 1 */}
+            <a
+              href="https://drive.google.com/drive/folders/1DKtU66IGE7r0Z9XQ5JOae0ecYMw9Jqu0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group rounded-2xl bg-[#170B25] border border-[#3D2254] hover:border-[#F9C63C] p-5 flex flex-col justify-between transition-all shadow-sm"
+              aria-label="Archivo fotográfico general Grupo 1 en Google Drive (abre en nueva pestaña)"
+            >
+              <div>
+                <div className="w-10 h-10 rounded-xl bg-[#29143B] border border-[#583178] flex items-center justify-center text-[#F9C63C] mb-4">
+                  <Camera className="w-5 h-5 stroke-[2.2]" aria-hidden="true" />
+                </div>
+                <span className="font-mono-meta text-[11px] text-[#B184D5] uppercase tracking-wider font-semibold block">
+                  Google Drive · Fotos
+                </span>
+                <h3 className="font-display font-bold text-base sm:text-lg text-[#FAF6FB] mt-1 group-hover:text-[#F9C63C] transition-colors">
+                  Archivo Fotos · Grupo 1
+                </h3>
+                <p className="text-xs text-[#D1C6DA] mt-2 leading-relaxed">
+                  Galería fotográfica en alta resolución de las primeras iniciativas documentadas.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-[#3D2254] flex items-center justify-between text-xs font-mono-meta text-[#F9C63C]">
+                <span>Abrir carpeta</span>
+                <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
+              </div>
+            </a>
+
+            {/* Card 3: Drive Fotos Grupo 2 */}
+            <a
+              href="https://drive.google.com/drive/u/0/folders/1-g7VtPixwALMtqq6kmtizp7zfYkzNx1-"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group rounded-2xl bg-[#170B25] border border-[#3D2254] hover:border-[#F9C63C] p-5 flex flex-col justify-between transition-all shadow-sm"
+              aria-label="Archivo fotográfico general Grupo 2 en Google Drive (abre en nueva pestaña)"
+            >
+              <div>
+                <div className="w-10 h-10 rounded-xl bg-[#29143B] border border-[#583178] flex items-center justify-center text-[#F9C63C] mb-4">
+                  <Camera className="w-5 h-5 stroke-[2.2]" aria-hidden="true" />
+                </div>
+                <span className="font-mono-meta text-[11px] text-[#B184D5] uppercase tracking-wider font-semibold block">
+                  Google Drive · Fotos
+                </span>
+                <h3 className="font-display font-bold text-base sm:text-lg text-[#FAF6FB] mt-1 group-hover:text-[#F9C63C] transition-colors">
+                  Archivo Fotos · Grupo 2
+                </h3>
+                <p className="text-xs text-[#D1C6DA] mt-2 leading-relaxed">
+                  Registros fotográficos complementarios de las iniciativas culturales.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-[#3D2254] flex items-center justify-between text-xs font-mono-meta text-[#F9C63C]">
+                <span>Abrir carpeta</span>
+                <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
+              </div>
+            </a>
+
+            {/* Card 4: Drive Reels */}
+            <a
+              href="https://drive.google.com/drive/u/0/folders/1h76zT9pI1cBzQwbnEiIZaN-VDUuvCnVn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group rounded-2xl bg-[#170B25] border border-[#3D2254] hover:border-[#F9C63C] p-5 flex flex-col justify-between transition-all shadow-sm"
+              aria-label="Repositorio de Reels en Google Drive (abre en nueva pestaña)"
+            >
+              <div>
+                <div className="w-10 h-10 rounded-xl bg-[#29143B] border border-[#583178] flex items-center justify-center text-[#F9C63C] mb-4">
+                  <Film className="w-5 h-5 stroke-[2.2]" aria-hidden="true" />
+                </div>
+                <span className="font-mono-meta text-[11px] text-[#B184D5] uppercase tracking-wider font-semibold block">
+                  Google Drive · Video
+                </span>
+                <h3 className="font-display font-bold text-base sm:text-lg text-[#FAF6FB] mt-1 group-hover:text-[#F9C63C] transition-colors">
+                  Repositorio de Reels
+                </h3>
+                <p className="text-xs text-[#D1C6DA] mt-2 leading-relaxed">
+                  Cápsulas de video verticales producidas para redes y memoria audiovisual.
+                </p>
+              </div>
+              <div className="mt-4 pt-3 border-t border-[#3D2254] flex items-center justify-between text-xs font-mono-meta text-[#F9C63C]">
+                <span>Abrir carpeta</span>
+                <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
+              </div>
+            </a>
           </div>
         </div>
       </section>
