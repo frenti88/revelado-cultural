@@ -30,6 +30,14 @@ export function trackEvent(event: AnalyticsEvent): void {
           ...event,
         });
       }
+
+      // Enviar evento estructurado a Google Analytics 4 (gtag)
+      const win = window as unknown as { gtag?: (...args: unknown[]) => void };
+      if (typeof win.gtag === "function") {
+        win.gtag("event", event.type, {
+          ...event,
+        });
+      }
     }
   } catch {
     // Falla silenciosa para nunca interrumpir la experiencia de usuario

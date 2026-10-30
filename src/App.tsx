@@ -17,13 +17,25 @@ const AboutPage = lazy(loadAboutPage);
 const AdminPage = lazy(loadAdminPage);
 
 const ScrollToTop: React.FC = () => {
-  const { pathname, hash } = useLocation();
+  const { pathname, hash, search } = useLocation();
 
   useEffect(() => {
     if (!hash) {
       window.scrollTo({ top: 0, left: 0, behavior: "instant" });
     }
-  }, [pathname, hash]);
+
+    // Registrar cambio de página en Google Analytics para Single Page Applications (SPA)
+    if (
+      typeof window !== "undefined" &&
+      typeof (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag === "function"
+    ) {
+      (window as unknown as { gtag: (...args: unknown[]) => void }).gtag("event", "page_view", {
+        page_path: pathname + search,
+        page_location: window.location.href,
+        page_title: document.title,
+      });
+    }
+  }, [pathname, hash, search]);
 
   return null;
 };
