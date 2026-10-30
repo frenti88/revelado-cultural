@@ -60,7 +60,8 @@ export const App: React.FC = () => {
     import.meta.env.BASE_URL && import.meta.env.BASE_URL !== "/"
       ? import.meta.env.BASE_URL.replace(/\/$/, "")
       : typeof window !== "undefined" &&
-          window.location.pathname.startsWith("/revelado-cultural/")
+          (window.location.pathname === "/revelado-cultural" ||
+            window.location.pathname.startsWith("/revelado-cultural/"))
         ? "/revelado-cultural"
         : "";
 
