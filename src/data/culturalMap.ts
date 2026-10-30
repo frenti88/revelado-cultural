@@ -54,7 +54,7 @@ export const CULTURAL_MAP_PLACES: CulturalMapPlace[] = [
   { id: 7, name: "Jazzdance", categoryId: "arte", categoryName: "Arte, Escena y Cultura" },
   { id: 8, name: "La Korte", categoryId: "arte", categoryName: "Arte, Escena y Cultura" },
   { id: 9, name: "Living in the Sky", categoryId: "arte", categoryName: "Arte, Escena y Cultura" },
-  { id: 10, name: "Org. Musical Arley Orejuela", categoryId: "arte", categoryName: "Arte, Escena y Cultura", outsideMap: true, notes: "Sede ubicada fuera de la delimitación de Comuna 11" },
+  { id: 10, name: "Org. Musical Arley Orejuela", categoryId: "arte", categoryName: "Arte, Escena y Cultura" },
   { id: 11, name: "Parche Cultural La Trilla", categoryId: "arte", categoryName: "Arte, Escena y Cultura" },
   { id: 12, name: "Sala A Puro Tango", categoryId: "arte", categoryName: "Arte, Escena y Cultura" },
   { id: 13, name: "Teatro Laureles", categoryId: "arte", categoryName: "Arte, Escena y Cultura" },
@@ -113,7 +113,7 @@ export const CULTURAL_MAP_PLACES: CulturalMapPlace[] = [
   { id: 50, name: "Parroquia de la Consolata", categoryId: "parroquias", categoryName: "Parroquias y Otros" },
   { id: 51, name: "Parroquia San Joaquín", categoryId: "parroquias", categoryName: "Parroquias y Otros" },
   { id: 52, name: "Múnera Eastman Radio", categoryId: "parroquias", categoryName: "Parroquias y Otros" },
-  { id: 53, name: "Viajes La Buenaventura", categoryId: "parroquias", categoryName: "Parroquias y Otros", outsideMap: true, notes: "Ubicado fuera de la delimitación de Comuna 11" },
+  { id: 53, name: "Viajes La Buenaventura", categoryId: "parroquias", categoryName: "Parroquias y Otros" },
   { id: 54, name: "Viva Laureles", categoryId: "parroquias", categoryName: "Parroquias y Otros" },
 
   // Metro · Línea B (55 a 57)

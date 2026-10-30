@@ -382,11 +382,6 @@ export const CulturalMapPage: React.FC = () => {
                           </span>
                           <span className="text-[11px] font-mono-meta text-[#A697B3] block truncate">
                             {place.categoryName}
-                            {place.outsideMap && (
-                              <span className="text-[#F97316] font-semibold ml-1">
-                                · Fuera del mapa
-                              </span>
-                            )}
                           </span>
                         </div>
                       </div>
