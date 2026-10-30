@@ -136,41 +136,81 @@
       {
         "id": "teatro-1",
         "type": "image",
-        "title": "No entres Ahí: Escena de improvisación",
-        "sourceUrl": "https://drive.google.com/file/d/19ONW4cofOnj_sHf4G8rPHU_HHhQpnuMI/view?usp=drivesdk",
+        "title": "No entres Ahí: Elenco en escena con el cartel de la obra",
+        "sourceUrl": "https://drive.google.com/file/d/19ONW4cofOnj_sHf4G8rPHU_HHhQpnuMI/view?usp=drive_link",
         "publicUrl": "/images/teatro-1-1200.webp",
         "thumbnailUrl": "/images/teatro-1-480.webp",
-        "alt": "Dos intérpretes en escena junto al cartel «¡No entres ahí!» durante la función de improvisación.",
+        "alt": "Karla y David en escena junto al cartel de improvisación «¡No entres ahí!» en el teatro.",
         "status": "ready"
       },
       {
         "id": "teatro-2",
         "type": "image",
-        "title": "No entres Ahí: Atmósfera escénica",
-        "sourceUrl": "https://drive.google.com/file/d/1FTVmvx5E8mBhdKX1t_gsSs8mhPlQ8Y0c/view?usp=drivesdk",
+        "title": "Backstage en camerino: Humor y caracterización",
+        "sourceUrl": "https://drive.google.com/file/d/1SmzfmVeGEE3HQWOXVaOF3f7_zALhBaT7/view?usp=drive_link",
         "publicUrl": "/images/teatro-2-1200.webp",
         "thumbnailUrl": "/images/teatro-2-480.webp",
-        "alt": "Silueta de los intérpretes bajo iluminación cálida y humo escénico en No entres Ahí.",
+        "alt": "Elenco de No entres Ahí en el camerino con expresiones teatrales y vestuario temático.",
         "status": "ready"
       },
       {
         "id": "teatro-3",
         "type": "image",
-        "title": "No entres Ahí: Saludo en tablas",
-        "sourceUrl": "https://drive.google.com/file/d/143QNU6O42jHlyjb9sZW3VOxuJgF-5aYL/view?usp=drivesdk",
+        "title": "Atmósfera escénica: Luz cenital cálida y suspenso",
+        "sourceUrl": "https://drive.google.com/file/d/1FTVmvx5E8mBhdKX1t_gsSs8mhPlQ8Y0c/view?usp=drive_link",
         "publicUrl": "/images/teatro-3-1200.webp",
         "thumbnailUrl": "/images/teatro-3-480.webp",
-        "alt": "Dos intérpretes de No entres Ahí saludan al público desde el escenario de madera.",
+        "alt": "Karla y David bajo iluminación cenital dorada y niebla teatral durante la función.",
         "status": "ready"
       },
       {
         "id": "teatro-4",
         "type": "image",
-        "title": "No entres Ahí: Diálogo con los espectadores",
-        "sourceUrl": "https://drive.google.com/file/d/15LV9UVB3uJmrP2dn__yhQ5Z6LCUWUrfb/view?usp=drivesdk",
+        "title": "La caja de decisiones: Inicio de la improvisación",
+        "sourceUrl": "https://drive.google.com/file/d/1NOAAe8RLmEfVQfYhOTIEg1ARdnJUtHfD/view?usp=drive_link",
         "publicUrl": "/images/teatro-4-1200.webp",
         "thumbnailUrl": "/images/teatro-4-480.webp",
-        "alt": "El público observa y participa frente a los intérpretes de No entres Ahí desde sus asientos.",
+        "alt": "Karla sostiene la caja de madera de improvisación en escena junto a David.",
+        "status": "ready"
+      },
+      {
+        "id": "teatro-5",
+        "type": "image",
+        "title": "Participación del público: Decidiendo el destino de la obra",
+        "sourceUrl": "https://drive.google.com/file/d/1VRdI_Q4elcdbGBqh3xukTOsRH7jylmDp/view?usp=drive_link",
+        "publicUrl": "/images/teatro-5-1200.webp",
+        "thumbnailUrl": "/images/teatro-5-480.webp",
+        "alt": "Un niño del público interactúa con la actriz y saca una tarjeta de la caja de improvisación.",
+        "status": "ready"
+      },
+      {
+        "id": "teatro-6",
+        "type": "image",
+        "title": "Actuación física y juego escénico en tablas",
+        "sourceUrl": "https://drive.google.com/file/d/1NfJ2vK7Hais055AyntB7dWXYG1x0Cs4d/view?usp=drive_link",
+        "publicUrl": "/images/teatro-6-1200.webp",
+        "thumbnailUrl": "/images/teatro-6-480.webp",
+        "alt": "Dinámica corporal y expresión dramática de los actores sobre el escenario de madera.",
+        "status": "ready"
+      },
+      {
+        "id": "teatro-7",
+        "type": "image",
+        "title": "Momento clímax: Comedia y terror teatral",
+        "sourceUrl": "https://drive.google.com/file/d/1B2-fvw5mNjsvfpqupzLxuYGYPSwGgiyq/view?usp=drive_link",
+        "publicUrl": "/images/teatro-7-1200.webp",
+        "thumbnailUrl": "/images/teatro-7-480.webp",
+        "alt": "Escena dramática de suspenso y humor físico entre los dos personajes principales.",
+        "status": "ready"
+      },
+      {
+        "id": "teatro-8",
+        "type": "image",
+        "title": "Reverencia final y despedida del público",
+        "sourceUrl": "https://drive.google.com/file/d/1euXgrHkCs03kYUw3bVLQAJ1IN1d93v0I/view?usp=drive_link",
+        "publicUrl": "/images/teatro-8-1200.webp",
+        "thumbnailUrl": "/images/teatro-8-480.webp",
+        "alt": "Los actores se inclinan en reverencia ante el público entre aplausos al finalizar la función.",
         "status": "ready"
       },
       {
