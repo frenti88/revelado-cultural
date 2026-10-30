@@ -20,6 +20,7 @@ export function resolvePublicPath(path: string | null | undefined): string {
   if (
     base === "/" &&
     typeof window !== "undefined" &&
+    window.location.hostname.includes("sabbath.com.co") &&
     window.location.pathname.startsWith("/revelado-cultural")
   ) {
     base = "/revelado-cultural/";
