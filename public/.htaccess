@@ -14,6 +14,8 @@
 # Tipos MIME para fuentes, vectores y contenido multimedia
 <IfModule mod_mime.c>
   AddType image/svg+xml .svg
+  AddType image/webp .webp
+  AddType application/pdf .pdf
   AddType font/woff .woff
   AddType font/woff2 .woff2
   AddType video/mp4 .mp4
