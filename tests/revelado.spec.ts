@@ -62,9 +62,9 @@ test.describe('Revelado Cultural — Flujos principales, Responsive y Accesibili
 
     await expect(page.getByText(/MOSTRANDO 8 DE 8 INICIATIVAS/i)).toBeVisible();
 
-    // Búsqueda por responsable ("Margarita Ortiz")
+    // Búsqueda por responsable ("Margarita Villada")
     const searchInput = page.getByRole('searchbox');
-    await searchInput.fill('Margarita Ortiz');
+    await searchInput.fill('Margarita Villada');
     await expect(page.getByText(/MOSTRANDO 1 DE 8 INICIATIVA/i)).toBeVisible();
     await expect(
       page.getByRole('heading', {
@@ -153,7 +153,7 @@ test.describe('Revelado Cultural — Flujos principales, Responsive y Accesibili
     });
 
     // Navegar a Revelado Cultural desde barra inferior móvil
-    await mobileNav.getByRole('link', { name: /Revelado Cultural/i }).click();
+    await mobileNav.getByRole('link', { name: /Revelado/i }).click();
     await expect(page).toHaveURL(/\/revelado-cultural|\/acerca-de/);
 
     const aboutAxe = await new AxeBuilder({ page })

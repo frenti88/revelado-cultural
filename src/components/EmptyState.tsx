@@ -9,7 +9,7 @@ interface EmptyStateProps {
   onSuggestQuery?: (suggestion: string) => void;
 }
 
-const SUGGESTIONS = ["Ferales", "Teatro", "Viñetas", "Margarita Ortiz"];
+const SUGGESTIONS = ["Ferales", "Teatro", "Viñetas", "Margarita Villada"];
 
 export const EmptyState: React.FC<EmptyStateProps> = ({
   query,
